@@ -1,0 +1,11 @@
+{
+  "p301_lote": "index",
+  "p301_opcion": "p301_opcion_value",
+  "p301a": "p301a_value",
+  "p301b_total": "p301b_total_value",
+  "p301b_unidad": "p301b_unidad_value",
+  "p301b_equivalencia": "p301b_equivalencia_value",
+  "p301c_total": "p301c_total_value",
+  "p301c_unidad": "p301c_unidad_value",
+  "p301c_equivalencia": "p301c_equivalencia_value"
+}

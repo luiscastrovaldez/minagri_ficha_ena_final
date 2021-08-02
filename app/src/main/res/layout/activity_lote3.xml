@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/loteCapitulo3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CAPÍTULO III.  ÁREA TOTAL EN USOS Y COBERTURAS DE LA TIERRA DENTRO DE LA PARCELA, NÚMERO DE PARCELAS EN EL DISTRITO Y RÉGIMEN DE TENENCIA"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="301. Hoy, ¿Qué uso y/o cobertura de la tierra tienen los lotes de la parcela?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p301_opcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="301a. Tipos de Usos y Coberturas de la Tierra de la Parcela Agraria y No Agraria" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p301a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="301b. Área Total medida del Lote de la Parcela" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Cantidad" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p301b_total"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="CANTIDAD"
+                android:inputType="numberDecimal" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Unidad de Medida" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p301b_unidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Equivalencia" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p301b_equivalencia"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="EQUIVALENCIA"
+                android:inputType="numberDecimal" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="301c. Área Total del Lote dentro de la cuadrícula o segmento de muestreo" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Cantidad" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p301c_total"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="CANTIDAD"
+                android:inputType="numberDecimal" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Unidad de Medida" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p301c_unidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Equivalencia" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p301c_equivalencia"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="EQUIVALENCIA"
+                android:inputType="numberDecimal" />
+
+            <View style="@style/Divider" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/material_design_android_floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="11dp"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="#045D04"
+        fab:menu_colorPressed="#045D04"
+        fab:menu_colorRipple="#99d4d4d4"
+        fab:menu_fab_label="Menu"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#66efecec"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66aff198"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="4dp"
+        fab:menu_showShadow="true">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/guardarLote3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_save_24_white"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_guardar"
+            fab:fab_size="mini" />
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/salirLote3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_exit_to_app_24"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_salir"
+            fab:fab_size="mini" />
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

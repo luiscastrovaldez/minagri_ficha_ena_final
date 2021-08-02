@@ -1,0 +1,34 @@
+{
+  "p301": ["lotes_value"],
+  "p301d_total_parcela": "p301d_total_parcela_value",
+  "p301d_unidad_parcela": "p301d_unidad_parcela_value",
+  "p301d_equivalencia_parcela": "p301d_equivalencia_parcela_value",
+  "p301d_total_segmento": "p301d_total_segmento_value",
+  "p301d_unidad_segmento": "p301d_unidad_segmento_value",
+  "p301d_equivalencia_segmento": "p301d_equivalencia_segmento_value",
+  "p301_observacion": "p301_observacion_value",
+  "p302": "p302_value",
+  "p303": "p303_value",
+  "p304": [
+    {
+      "p304_orden_parcela_2": "2",
+      "p304_superficie_2": "p304_superficie_2_value",
+      "p304_um_parcela_2": "p304_um_parcela_2_value",
+      "p304_equivalencia_2": "p304_equivalencia_2_value"
+    },
+    {
+      "p304_orden_parcela_3": "3",
+      "p304_superficie_3": "p304_superficie_3_value",
+      "p304_um_parcela_3": "p304_um_parcela_3_value",
+      "p304_equivalencia_3": "p304_equivalencia_3_value"
+    },
+    {
+      "p304_orden_parcela_4": "4",
+      "p304_superficie_4": "p304_superficie_4_value",
+      "p304_um_parcela_4": "p304_um_parcela_4_value",
+      "p304_equivalencia_4": "p304_equivalencia_4_value"
+    }
+  ],
+  "p305_regimen_tenencia": "p305_regimen_tenencia_value",
+  "p305_otro": "p305_otro_value"
+}

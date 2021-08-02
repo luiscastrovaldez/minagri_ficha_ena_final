@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pe.gob.minagri.ena">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icono"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ENA2">
+        <activity android:name=".activity.LoteActivity3">
+
+        </activity>
+        <activity android:name=".activity.Capitulo6Activity">
+
+        </activity>
+        <activity android:name=".activity.Capitulo5Activity">
+
+        </activity>
+        <activity android:name=".activity.Capitulo4Activity" />
+        <activity android:name=".activity.Capitulo3Activity">
+
+        </activity>
+        <activity android:name=".activity.Capitulo7Activity">
+
+        </activity>
+        <activity android:name=".activity.ListadoCapitulosActivity" />
+        <activity android:name=".activity.MapaActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.ModuloKCapitulo5Activity" />
+        <activity android:name=".activity.ModuloJCapitulo5Activity" />
+        <activity android:name=".activity.ModuloICapitulo5Activity" />
+        <activity android:name=".activity.ModuloHCapitulo5Activity" />
+        <activity android:name=".activity.ModuloGCapitulo5Activity" />
+        <activity android:name=".activity.ModuloFCapitulo5Activity" />
+        <activity android:name=".activity.ModuloECapitulo5Activity" />
+        <activity android:name=".activity.ModuloDCapitulo5Activity" />
+        <activity android:name=".activity.ModuloCCapitulo5Activity" />
+        <activity android:name=".activity.ModuloBCapitulo5Activity" />
+        <activity android:name=".activity.ModuloACapitulo5Activity" />
+
+
+        <activity android:name=".activity.Capitulo2Activity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+</manifest>

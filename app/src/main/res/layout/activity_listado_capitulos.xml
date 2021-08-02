@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:id="@+id/capitulo1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="TODO"
+                android:src="@drawable/banner1"></ImageView>
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/titulo"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/txtGeocodigo"
+                style="@style/subtitulo_principal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="UBIGEO" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/txtUbigeo"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="REGIÓN NATURAL" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/txtRegionNatural"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="PISO ECOLÓGICO" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/txtPisoEcologico"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="SUBESTRATO" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/txtSubEstrato"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TIPO DE GRILLA" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/txtTipoGrilla"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="NÚMERO DEL SERPENTÍN" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/txtNumeroSerpentin"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="NOMBRE DE LA COMUNIDAD CAMPESINA  O COMUNIDAD NATIVA:" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/comunidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="NÚMERO DE  SEGMENTO/EMPRESA:" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/txtSegmentoEmpresa"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="NÚMERO DE PARCELA EN EL  SEGMENTO/EN LA EMPRESA:" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/txtNumeroParcela"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TOTAL PARCELAS EN EL  SEGMENTO/EMPRESA:" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/txtTotalParcelas"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="REGION:" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/departamentos"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:prompt="@string/departamentos_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="PROVINCIA:" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/provincias"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:prompt="@string/provincias_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="DISTRITO:" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/distritos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/distritos_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="NOMBRE CENTRO POBLADO  MÁS CERCANO:" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/centroPoblados"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:prompt="@string/centro_poblado_prompt"
+                tools:ignore="MissingConstraints" />
+
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CAPÍTULO I.  CLASE DE PARCELA SEGÚN LAS ACTIVIDADES REALIZADAS" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="101 Desde enero de 2020 hasta hoy ¿Ud realizo actividad? (Seleccion Multiple)" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p101_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:gravity="center"
+                android:onClick="onCheckboxClicked"
+                android:text="1 Agrícola?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p101_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="2 Pecuaria?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p101_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="3 Vivero y/o almácigo y/o semillero y/o huerto semillero?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p101_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="4 Extracción (productos de los bosques naturales, etc)?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p101_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="5 Extracción (petróleo, gas, generación y transmisión de energía, minería, etc) ?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p101_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="6 Transformación (producción de chancaca, productos lácteos, produccion de biogas, artesanías, etc)?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p101_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="7 Comercio (venta de productos agrarios y no agrarios (artesanías) ?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p101_8"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="8 Servicios (alquiler de maquinaria, taller de mecánica, agroturismo, servicios ambientales, etc)?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p101_9"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="9 Pesca artesanal?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p101_10"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="10 Acuicultura (cría y engorde de peces y camarones)?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p101_11"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="11 Tiene infraestructura agraria pero no está activa los últimos 12 meses? " />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p101_12"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="12 Ninguna." />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p101_observaciones"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="OBSERVACIONES"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:background="@drawable/border_ui"
+                android:divider="@color/white"
+                android:nestedScrollingEnabled="true">
+
+            </ListView>
+
+            <View style="@style/Divider" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/material_design_android_floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="11dp"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="#045D04"
+        fab:menu_colorPressed="#045D04"
+        fab:menu_colorRipple="#99d4d4d4"
+        fab:menu_fab_label="Menu"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#66efecec"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66aff198"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="4dp"
+        fab:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/posicion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_gps_fixed_24"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="Posicion Actual"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_save_24_white"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_guardar"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/enviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_send_24_white"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_enviar"
+            fab:fab_size="mini" />
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

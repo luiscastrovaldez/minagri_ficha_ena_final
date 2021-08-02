@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/capitulo3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="LISTADO DE LOTES"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <ListView
+                android:id="@+id/lotesView3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/table_layout_marginTop"
+                android:background="@drawable/border_ui"
+                android:divider="@color/white"
+                android:gravity="center"
+                android:nestedScrollingEnabled="true"
+                android:paddingLeft="@dimen/table_layout_padding_left"
+                android:paddingRight="@dimen/table_layout_padding_right" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="301d. Área total de la parcela agraria o parcela no agraria - Área Total medida del Lote de la Parcela" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Total Parcela" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p301d_total_parcela"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="TOTAL PARCELA"
+                android:inputType="numberDecimal" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Unidad de Medida Parcela" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p301d_unidad_parcela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Equivalencia Parcela" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p301d_equivalencia_parcela"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="EQUIVALENCIA PARCELA"
+                android:inputType="numberDecimal" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Total Segmento" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p301d_total_segmento"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="TOTAL SEGMENTO"
+                android:inputType="numberDecimal" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Unidad de Medida Segmento" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p301d_unidad_segmento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Equivalencia Segmento" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p301d_equivalencia_segmento"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="EQUIVALENCIA SEGMENTO"
+                android:inputType="numberDecimal" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Total Segmento" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p301_observacion"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="TOTAL SEGMENTO"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Módulo III.B.  NÚMERO DE PARCELAS AGRARIA EN EL DISTRITO, AL DIA DE LA ENTREVISTA"
+                android:textAlignment="center" />
+
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="302.Además de esta parcela, ¿conduce o trabaja como productor/a en otras parcelas dentro de este distrito?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p302"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="303. ¿Incluyendo esta parcela, actualmente ¿Cuántas parcelas en total conduce en este distrito?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p303"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="number" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304. ¿Cual es la superficie total de las parcelas que conduce en este distrito?" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304a. No Parcela" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="2" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304b. Superficie total" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p304_superficie_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="number" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304c. Unidad de medida" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p304_um_parcela_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304d. Equivalencia" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p304_equivalencia_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="number" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304a. No Parcela" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="3" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304b. Superficie total" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p304_superficie_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="number" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304c. Unidad de medida" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p304_um_parcela_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304d. Equivalencia" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p304_equivalencia_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="number" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304a. No Parcela" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="4" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304b. Superficie total" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p304_superficie_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="number" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304c. Unidad de medida" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p304_um_parcela_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="304d. Equivalencia" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p304_equivalencia_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="number" />
+
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Módulo III.C.  RÉGIMEN DE TENENCIA DE LAS TIERRAS DE LA PARCELA AGRARIA, AL DÍA DE LA ENTREVISTA"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="305. De esta parcela agraria, ¿Usted es:" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p305_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:gravity="center"
+                android:onClick="onCheckboxClicked3"
+                android:text="1. Propietario/a?" />
+
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p305_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:onClick="onCheckboxClicked3"
+                android:text="2. Arrendatario/a?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p305_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:onClick="onCheckboxClicked3"
+                android:text="3. Comunero/a?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p305_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:onClick="onCheckboxClicked3"
+                android:text="4. Posesonario/a?" />
+
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p305_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:onClick="onCheckboxClicked3"
+                android:text="5. Otro:" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p305_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/material_design_android_floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="11dp"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="#045D04"
+        fab:menu_colorPressed="#045D04"
+        fab:menu_colorRipple="#99d4d4d4"
+        fab:menu_fab_label="Menu"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#66efecec"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66aff198"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="4dp"
+        fab:menu_showShadow="true">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/lote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_24"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/agregar_lote"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/guardar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_save_24_white"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_guardar"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/salirCapitulo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_exit_to_app_24"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_salir"
+            fab:fab_size="mini" />
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

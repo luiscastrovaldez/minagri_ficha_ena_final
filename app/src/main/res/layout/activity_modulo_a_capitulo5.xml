@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/table_layout_marginTop"
+                android:gravity="center"
+                android:paddingLeft="@dimen/table_layout_padding_left"
+                android:paddingRight="@dimen/table_layout_padding_right"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tablerow_background_titulo"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/subtitulo_principal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="4"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Módulo V.A. POBLACIÓN  DE ESPECIES PECUARIAS EN LA UNIDAD AGRARIA AL DÍA DE LA ENTREVISTA"
+                        android:textAlignment="center" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/table_layout_marginTop"
+                android:gravity="center"
+                android:paddingLeft="@dimen/table_layout_padding_left"
+                android:paddingRight="@dimen/table_layout_padding_right"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="501. Hoy, ¿cuántos .... tiene, cría, engorda, y/o conserva en esta unidad agraria?" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/table_layout_marginTop"
+                android:gravity="center"
+                android:paddingLeft="@dimen/table_layout_padding_left"
+                android:paddingRight="@dimen/table_layout_padding_right"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Especie" />
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="Hembra" />
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="Macho" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="1. Vacunos"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_1"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_1"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2.  Llamas"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_2"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_2"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="3.  Alpacas"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_3"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_3"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="4.  Vicuñas"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_4"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_4"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="5.  Ovinos"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_5"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_5"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="6.  Caprinos"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_6"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_6"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="7.  Porcinos"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_7"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_7"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="8.  Pollos"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_8"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_8"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="9.  Gallinas (incluye gallos de pelea)"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_9"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_9"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="10.  Gallinas en postura"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_10"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_10"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="11.  Pavos"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_11"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_11"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="12.  Patos"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_12"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_12"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="13.  Gansos"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_13"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_13"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="14.  Avestruces"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_14"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_14"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="15.  Codornices"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_15"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_15"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="16.  Suri / ñandú (ave)"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_16"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_16"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="17.  Cría y engorde de caracoles"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_17"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_17"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="18.  Cuyes"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_18"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_18"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="19.  Conejos"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_19"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_19"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="20.  Búfalos"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_20"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_20"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="21.  Caballos "
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_21"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_21"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="22.  Burros"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_22"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_22"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="23.  Mulos"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_23"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_23"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="24.  Colmenas para producción de miel"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_24"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_24"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="25.  Colmenas para producción de polen"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_25"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_25"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="26.  Colmenas productoras de otros productos"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_26"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_26"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="27.  Otras"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_27"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_27"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/tablerow_background_contenido"
+                    android:padding="@dimen/table_row_padding">
+
+                    <TextView
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="28.  Ninguna"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_h_28"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/p501_cant_m_28"
+                        style="@style/titulo_pregunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:hint="CANTIDAD"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </TableRow>
+
+
+            </TableLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/material_design_android_floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="11dp"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="#045D04"
+        fab:menu_colorPressed="#045D04"
+        fab:menu_colorRipple="#99d4d4d4"
+        fab:menu_fab_label="Menu"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#66efecec"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66aff198"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="4dp"
+        fab:menu_showShadow="true">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/guardar5a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_save_24_white"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_guardar"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/validar5a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_format_align_justify_24"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_validar"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/salirLoteCapitulo5a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_exit_to_app_24"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_salir"
+            fab:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

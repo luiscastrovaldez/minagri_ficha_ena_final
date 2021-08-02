@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/capitulo2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/banner1"></ImageView>
+
+            <TextView
+                style="@style/titulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/titulo" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CAPÍTULO II. IDENTIFICACIÓN DEL PRODUCTOR/A  AGRARIO/A  Y CARACTERÍSTICAS DE LA PARCELA AGRARIA"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="201. El Productor es:" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p201_tipo_productor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/P201_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p201_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Módulo II.A. IDENTIFICACIÓN DEL  PRODUCTOR/A PERSONA NATURAL"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="202. ¿En esta parcela quién o quiénes toman las principales decisiones de la actividad agraria?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p202"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="203. ¿Cuáles son los apellidos y nombres del productor/a?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p203_nombres"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="NOMBRES"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p203_apellidos"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="APELLIDOS"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="204. ¿Cuál es su N° de DNI?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p204"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="DNI"
+                android:inputType="number"
+                android:maxLength="8" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="205. ¿Cuál es su número de teléfono/celular?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p205_fijo"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="FIJO N°"
+                android:inputType="phone"
+                android:maxLength="7" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p205_celular"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="CELULAR N°"
+                android:inputType="phone"
+                android:maxLength="9" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="206. ¿Cuál es el correo electrónico?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p206"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="CORREO"
+                android:inputType="textEmailAddress" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="207. La información fue proporcionada por:" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p207_cargo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/P207_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="208. ¿Cuáles son los apellidos y nombres del informante?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p208_nombres"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="NOMBRES"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p208_apellidos"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="APELLIDOS"
+                android:inputType="textCapCharacters" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="209. ¿Cuál es su número de teléfono/celular?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p209_fijo"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="FIJO N°"
+                android:inputType="phone"
+                android:maxLength="7" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p209_celular"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="CELULAR N°"
+                android:inputType="phone"
+                android:maxLength="9" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="210. ¿Dónde vive el productor/a agrario/a?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p210"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/P210_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/departamentos1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/departamentos_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/provincias1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/provincias_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/distritos1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/distritos_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p210_cod_ccpp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/P201_prompt"
+                tools:ignore="MissingConstraints" />
+
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="211. ¿Usted pertenece a una comunidad campesina/comunidad nativa?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p211"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/provincias_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p211_observacion"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="212. ¿Cuál es la razón social de productor/a agrario/a?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p212"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="RAZON SOCIAL"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="213. ¿Cuál es el número de RUC?  (11 dígitos)" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p213"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="RUC"
+                android:inputType="phone"
+                android:maxLength="11" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="214. ¿Cuáles son los apellidos y nombres del representante legal?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p214_nombres"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="NOMBRES"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p214_apellidos"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="APELLIDOS"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="215. ¿Cuál es el nombre del Centro Poblado o Ciudad donde está ubicada la empresa?" />
+
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p215_cod_ccpp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/P201_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="216. ¿Cuál es el domicilio fiscal de la empresa?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p216_tipo_via"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/P216_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p216_otra_via"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p216_nombre_avenida"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="NOMBRE AVENIDA,CALLE,JIRON,CARRETERA,ETC"
+                android:inputType="textCapCharacters" />
+
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p216_puerta"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="PUERTA"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p216_block"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="BLOQUE"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p216_interior"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="INTERIOR"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p216_piso"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="PISO"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p216_manzana"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="MANZANA"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p216_lote"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="LOTE"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="217. ¿Cuáles son los apellidos y nombres del informante?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p217_nombres"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="NOMBRES"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p217_apellidos"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="APELLIDOS"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="218. ¿Qué cargo ocupa en la empresa?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p218_cargo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/P201_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p218_otro_cargo"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="219. ¿Cuál es su número de teléfono/celular?" />
+
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p219_fijo"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="FIJO N°"
+                android:inputType="phone"
+                android:maxLength="7" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p219_celular"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="CELULAR N°"
+                android:inputType="phone"
+                android:maxLength="9" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="220. ¿Cuál es el correo electrónico?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p220"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="CORREO"
+                android:inputType="textEmailAddress" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="221. ¿Cuál es el nombre de esta parcela, chacra o fundo?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p221"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="NOMBRE DE LA PARCELA"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p221_observaciones"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/material_design_android_floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="11dp"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="#045D04"
+        fab:menu_colorPressed="#045D04"
+        fab:menu_colorRipple="#99d4d4d4"
+        fab:menu_fab_label="Menu"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#66efecec"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66aff198"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="4dp"
+        fab:menu_showShadow="true">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/guardar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_save_24_white"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_guardar"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/validar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_format_align_justify_24"
+            android:visibility="gone"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_validar"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/salirCapitulo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_exit_to_app_24"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_salir"
+            fab:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>
