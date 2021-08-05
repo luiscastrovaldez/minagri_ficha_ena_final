@@ -144,7 +144,7 @@ public class Capitulo2Activity extends AppCompatActivity {
     }
 
     private void guardarFormulario() {
-        formulario = Util.loadData(getAssets(), Constants.FORMULARIO_JSON);
+        formulario = Util.loadData(getAssets(), Constants.CAPITULO2_FORMULARIO_JSON);
         LinearLayout layout = findViewById(R.id.capitulo2);
         for (int i = 0; i < layout.getChildCount(); i++) {
             View view = layout.getChildAt(i);

@@ -70,6 +70,8 @@ public class MapaActivity extends AppCompatActivity implements
 
     private SupportMapFragment mapFragment;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

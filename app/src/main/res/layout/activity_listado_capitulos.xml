@@ -37,12 +37,20 @@
             <View style="@style/Divider" />
 
             <TextView
-                android:id="@+id/txtGeocodigo"
                 style="@style/subtitulo_principal"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_span="4"
-                android:layout_weight="1"
+                android:gravity="center"
+                android:text="UBICACIÓN GEOGRÁFICA DEL SEGMENTO Y LA PARCELA AGRARIA"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/cod_geocodigo"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textAlignment="center" />
 
@@ -58,7 +66,7 @@
             <View style="@style/Divider" />
 
             <TextView
-                android:id="@+id/txtUbigeo"
+                android:id="@+id/cod_ubigeo"
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,12 +84,12 @@
             <View style="@style/Divider" />
 
             <TextView
-                android:id="@+id/txtRegionNatural"
+                android:id="@+id/cod_region_natural"
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
-
+            
             <View style="@style/Divider" />
 
             <TextView
@@ -94,7 +102,7 @@
             <View style="@style/Divider" />
 
             <TextView
-                android:id="@+id/txtPisoEcologico"
+                android:id="@+id/cod_piso_ecologico"
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -112,7 +120,7 @@
             <View style="@style/Divider" />
 
             <TextView
-                android:id="@+id/txtSubEstrato"
+                android:id="@+id/cod_subestrato"
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -130,7 +138,7 @@
             <View style="@style/Divider" />
 
             <TextView
-                android:id="@+id/txtTipoGrilla"
+                android:id="@+id/cod_tipo_grilla"
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -148,7 +156,7 @@
             <View style="@style/Divider" />
 
             <TextView
-                android:id="@+id/txtNumeroSerpentin"
+                android:id="@+id/cod_serpentin"
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -184,7 +192,7 @@
             <View style="@style/Divider" />
 
             <TextView
-                android:id="@+id/txtSegmentoEmpresa"
+                android:id="@+id/cod_segmento_empresa"
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -202,7 +210,7 @@
             <View style="@style/Divider" />
 
             <TextView
-                android:id="@+id/txtNumeroParcela"
+                android:id="@+id/num_parcela_sm"
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -220,7 +228,7 @@
             <View style="@style/Divider" />
 
             <TextView
-                android:id="@+id/txtTotalParcelas"
+                android:id="@+id/num_total_parcelas_sm"
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -242,7 +250,7 @@
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="left"
                 android:prompt="@string/departamentos_prompt"
                 tools:ignore="MissingConstraints" />
 
@@ -262,7 +270,7 @@
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="left"
                 android:prompt="@string/provincias_prompt"
                 tools:ignore="MissingConstraints" />
 
@@ -272,7 +280,7 @@
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="left"
                 android:text="DISTRITO:" />
 
             <View style="@style/Divider" />
@@ -281,6 +289,7 @@
                 android:id="@+id/distritos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="left"
                 android:prompt="@string/distritos_prompt"
                 tools:ignore="MissingConstraints" />
 
@@ -300,7 +309,7 @@
                 style="@style/titulo_pregunta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="left"
                 android:prompt="@string/centro_poblado_prompt"
                 tools:ignore="MissingConstraints" />
 

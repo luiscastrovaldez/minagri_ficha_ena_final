@@ -33,7 +33,7 @@
 
             <TextView
                 style="@style/titulo_pregunta"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="601. ¿Qué hace con los residuos de sus cultivos?" />
@@ -140,7 +140,7 @@
 
             <TextView
                 style="@style/titulo_pregunta"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="602. ¿Qué hace con los residuos de sus animales de crianza?" />
@@ -245,7 +245,7 @@
 
             <TextView
                 style="@style/titulo_pregunta"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="603. ¿Existen minas de explotación cerca a sus cultivos  y animales de crianza?" />
@@ -263,7 +263,7 @@
 
             <TextView
                 style="@style/titulo_pregunta"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="604. ¿Alguna entidad del estado le ha  informado sobre la contaminación de los alimentos?" />
@@ -282,7 +282,7 @@
 
             <TextView
                 style="@style/titulo_pregunta"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="605. ¿Qué entidad del estado le informó?" />
@@ -378,7 +378,7 @@
 
             <TextView
                 style="@style/titulo_pregunta"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="606. ¿En qué lugar conserva o guarda los alimentos  que produce? (solo para productos primarios) (Nota: Selección múltiple)" />
@@ -460,7 +460,7 @@
 
             <TextView
                 style="@style/titulo_pregunta"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="607.¿Sabe Usted, que los alimentos de consumo humano  que produce,deben estar identificados para ser consumidos?" />
@@ -479,7 +479,7 @@
 
             <TextView
                 style="@style/titulo_pregunta"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="608. Sus productos agrarios, ¿Cuentan con algún tipo de  certificación de calidad otorgada por una institución?" />
@@ -497,7 +497,7 @@
 
             <TextView
                 style="@style/titulo_pregunta"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="609. La certificación de buenas prácticas  agrarias. ¿Fué otorgada como?" />
@@ -515,7 +515,7 @@
 
             <TextView
                 style="@style/titulo_pregunta"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="610. ¿Cuál es el nombre de la certificación?" />

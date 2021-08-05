@@ -63,6 +63,7 @@ public class Constants {
     public static final String INDEX = "index";
     public static final String SIZE = "size";
     public static final String FORMULARIO_JSON = "formulario.json";
+    public static final String UBICACION_FORMULARIO_JSON = "ubicaciongeografica.json";
     public static final String CAPITULO1_FORMULARIO_JSON = "capitulo1.json";
     public static final String CAPITULO2_FORMULARIO_JSON = "capitulo2.json";
     public static final String CAPITULO3_FORMULARIO_JSON = "capitulo3.json";
