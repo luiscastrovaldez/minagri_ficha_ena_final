@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/personas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CAPÍTULO XI.  CARACTERÍSTICAS SOCIODEMOGRÁFICAS DEL PRODUCTOR/A AGRARIO/A Y SU HOGAR"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="1101. Nombres de las personas que viven en el hogar" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p1101_nombre"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="NOMBRES Y APELLIDOS"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="1102. ¿Cuál es la relación de parentesco con el productor/a agrario/a?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p1102"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/mensaje_seleccionar"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="1103. Sexo" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p1103"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/mensaje_seleccionar"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="1104. ¿Cuántos años cumplidos tiene?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p1104_anio"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑOS"
+                android:inputType="number"
+                android:maxLength="3" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="1105. ¿Cuál es el nivel de educación alcanzado? " />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p1105"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/mensaje_seleccionar"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="1106.  ¿Cuál es el idioma o lengua que aprendió en su niñez? " />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p1106"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/mensaje_seleccionar"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="1107. ¿Participa en las labores agrarias?  " />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p1107"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/mensaje_seleccionar"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:id="@+id/Bloque1107a"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="1107a.   ¿Qué labores realiza en esta unidad agraria?" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_1"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="1 Administrar la parcela agraria" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_2"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="2 Arar, desterronar, realizar surcos, aporcar o nivelar la tierra" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_3"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="3 Seleccionar, almacenar o desinfectar semillas" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_4"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="4 Sembrar cultivos" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_5"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="5 Regar los cultivos" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_6"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="6 Aplicar abonos" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_7"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="7 Aplicar fertilizantes y/o plaguicidas" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_8"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="8 Cosechar cultivos,recolectar y almacenar los frutos" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_9"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="9 Realizar el pastoreo del ganado" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_10"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="10 Realizar mantenimiento de instalaciones" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_11"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="11 Manejar maquinaria y/o equipos" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_12"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="12 Alimentar y dar de beber al ganado, aves de corral y otros animales de crianza" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_13"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="13 Cuidado de la salud de los animales" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_14"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="14 Ordeñar  las vacas" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_15"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="15 Esquilado de camélidos y ovejas" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_16"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="16 Elaboración de subproductos y derivados agrarios" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_17"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="17 Actividades domésticas" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1107_18"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="18 Otros" />
+
+                <View style="@style/Divider" />
+
+                <EditText
+                    android:id="@+id/p1107a_otro"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:hint="ESPECIFIQUE OTRO"
+                    android:inputType="textCapCharacters" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="1108.  ¿cuántas horas en total realizó esta(s) labor(es)?" />
+
+                <View style="@style/Divider" />
+
+                <EditText
+                    android:id="@+id/p1108"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:hint="HORAS"
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+            </LinearLayout>
+            <View style="@style/Divider" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/material_design_android_floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="11dp"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="#045D04"
+        fab:menu_colorPressed="#045D04"
+        fab:menu_colorRipple="#99d4d4d4"
+        fab:menu_fab_label="Menu"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#66efecec"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66aff198"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="4dp"
+        fab:menu_showShadow="true">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnGuardarPersona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_save_24_white"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_guardar"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnSalirPersona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_exit_to_app_24"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_salir"
+            fab:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>
