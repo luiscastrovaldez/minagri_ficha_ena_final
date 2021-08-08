@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/capitulo11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CAPÍTULO XI.  CARACTERÍSTICAS SOCIODEMOGRÁFICAS DEL PRODUCTOR/A AGRARIO/A Y SU HOGAR"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="LISTADO DE PERSONAS EN EL HOGAR" />
+
+            <View style="@style/Divider" />
+
+            <ListView
+                android:id="@+id/listViewPers"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/table_layout_marginTop"
+                android:layout_marginBottom="@dimen/table_layout_marginTop"
+                android:background="@drawable/border_ui"
+                android:divider="@color/black"
+                android:dividerHeight="1dp"
+                android:gravity="center"
+                android:nestedScrollingEnabled="true"
+                android:paddingLeft="@dimen/table_layout_padding_left"
+                android:paddingRight="@dimen/table_layout_padding_right"></ListView>
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="1109. Por sus costumbres y antepasados, ¿Usted se siente o considera: " />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p1109"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/mensaje_seleccionar"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p1109_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE OTRO"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="1110.Para el manejo de sus parcelas o chacras de la unidad agraria, ¿tiene administrador/a o encargado/a remunerado/a de manera permanente? " />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p1110"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/mensaje_seleccionar"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="1111.Durante el 2020 ¿Ha tenido trabajadores remunerados/as?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p1111"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/mensaje_seleccionar"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:id="@+id/Bloque1112"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="1112.De estos trabajadores/as remunerados ¿Cuántos han sido?" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="1. Permanentes " />
+
+                <View style="@style/Divider" />
+
+                <EditText
+                    android:id="@+id/p1112_perm"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:hint="Total"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="  1.1 Hombres " />
+
+                <View style="@style/Divider" />
+
+                <EditText
+                    android:id="@+id/p1112_perm_h"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:hint="Total"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="  1.2 Mujeres " />
+
+                <View style="@style/Divider" />
+
+                <EditText
+                    android:id="@+id/p1112_perm_m"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:hint="Total"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+                <View style="@style/Divider" />
+
+
+                <TextView
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="2. Eventuales " />
+
+                <View style="@style/Divider" />
+
+                <EditText
+                    android:id="@+id/p1112_even"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:hint="Total"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="  2.1 Hombres " />
+
+                <View style="@style/Divider" />
+
+                <EditText
+                    android:id="@+id/p1112_even_h"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:hint="Total"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="  2.2 Mujeres " />
+
+                <View style="@style/Divider" />
+
+                <EditText
+                    android:id="@+id/p1112_even_m"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:hint="Total"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="1113.¿Usualmente, durante el año 2020, además de trabajar en sus parcelas o chacras o en la crianza de sus animales realizó otra actividad para conseguir ingresos? " />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p1113"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/mensaje_seleccionar"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:id="@+id/Bloque1114"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/titulo_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="1114.¿Qué actividad principal realiza además de trabajar en las parcelas o en la crianza de sus animales?" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_1"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="1 En agricultura, ganadería y pesca" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_2"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="2 Producción de derivados y subproductos agrarios" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_3"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="3 Acuicultura" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_4"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="4 En extracción de productos de los bosques" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_5"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="5 En explotaciones mineras" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_6"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="6 En comercio" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_7"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="7 En servicios (alquiler de maquinaria, taller de mecánica, agroturismo)" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_8"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="8 En la fabricación de artesanías" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_9"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="9 En fabricación de prendas de vestir/otros productos" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_10"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="10 En construcción" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_11"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="11 En restaurantes y hoteles" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_12"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="12 En transporte" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1114_13"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="13 Otro" />
+
+                <View style="@style/Divider" />
+
+                <EditText
+                    android:id="@+id/p1114_otro"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:hint="ESPECIFIQUE OTRO"
+                    android:inputType="textCapCharacters" />
+
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="115. ¿A cuántos kilómetros de su parcela hay una carretera?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p1115"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="KM"
+                android:inputType="number"
+                android:maxLength="6" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="1116.Desde enero del 2020 al día de hoy  ¿Usted o algún miembro de su hogar ha sido beneficiario de algún programa social?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p1116"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/mensaje_seleccionar"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:id="@+id/Bloque1116"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="1116a. ¿Cuál es el programa? " />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1116_1"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="1 Programa nacional de asistencia solidaria - Pensión 65" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1116_2"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="2 Programa nacional de apoyo directo a los más Pobres - Juntos" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1116_3"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="3 Cuna Más - Wawa Wasi" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1116_4"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="4 Programa Nacional de Becas y Crédito Educativo - PRONABEC" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1116_5"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="5 Seguro Integral de Salud -SIS" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1116_6"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="6 Fondo de Inclusión Social Energético - FISE" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1116_7"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="7 Vales del gas de los gobiernos regionales" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1116_8"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="8 Bono de protección de viviendas vulnerables a los riesgos sísmicos - Mi Vivienda" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1116_9"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="9 Bono o recurso financiero o en especie por conservación de los recursos naturales" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1116_10"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="10 Programa nacional de entrega de la pensión no contributiva a personas con discapacidad severa en situación de pobreza - CONTIGO" />
+
+                <View style="@style/Divider" />
+
+                <CheckBox
+                    android:id="@+id/p1116_11"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="11 Otro" />
+
+                <View style="@style/Divider" />
+
+                <EditText
+                    android:id="@+id/p1116a_otro"
+                    style="@style/titulo_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:hint="ESPECIFIQUE OTRO"
+                    android:inputType="textCapCharacters" />
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="1117. ¿Señor productor cuáles son las limitaciones  más importantes que impiden el desarrollo eficiente de la actividad agraria?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="1 Robos" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="2 Extorsiones" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="3 Impuestos" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="4 Intereses altos" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="5 Falta de mano de obra" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="6 Falta infraestructura de frío" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="7 Falta infraestructura de almacenamiento" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_8"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="8 Falta mantenimiento de la infraestructura vial" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_9"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="9 Por salinidad, erosión o mal drenaje" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_10"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="10 Falta de agua" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_11"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="11 Cambio climático" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_12"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="12 Falta orientación de las instituciones agrarias" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p1117_13"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="13 Otro" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p1117_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE OTRO"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Observaciones : " />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p1117_observacion"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="OBSERVACIONES"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+        </LinearLayout>
+    </ScrollView>
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/material_design_android_floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="11dp"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="#045D04"
+        fab:menu_colorPressed="#045D04"
+        fab:menu_colorRipple="#99d4d4d4"
+        fab:menu_fab_label="Menu"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#66efecec"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66aff198"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="4dp"
+        fab:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnPersona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_24"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="Agregar Información"
+            fab:fab_size="mini" />
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnGuardar11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_save_24_white"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_guardar"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnSalirCap11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_exit_to_app_24"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_salir"
+            fab:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

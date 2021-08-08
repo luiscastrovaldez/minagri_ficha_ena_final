@@ -77,6 +77,10 @@ public class Constants {
     public static final String CAPITULO10_FORMULARIO_JSON = "capitulo10.json";
     public static final String CAPITULO11_FORMULARIO_JSON = "capitulo11.json";
     public static final String CAPITULO12_FORMULARIO_JSON = "capitulo12.json";
+    public static final String EQUIPO_FORMULARIO_JSON = "equipo.json";
+    public static final String INFRAESTRUCTURA_FORMULARIO_JSON = "infraestructura.json";
+    public static final String PERSONA_FORMULARIO_JSON = "persona.json";
+    public static final String VISITA_FORMULARIO_JSON = "visita.json";
 
 
 }

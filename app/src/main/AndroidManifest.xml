@@ -53,7 +53,15 @@
         <activity android:name=".activity.ModuloCCapitulo5Activity" />
         <activity android:name=".activity.ModuloBCapitulo5Activity" />
         <activity android:name=".activity.ModuloACapitulo5Activity" />
-
+        <activity android:name=".activity.VisitaActivity"/>
+        <activity android:name=".activity.Capitulo11Activity" />
+        <activity android:name=".activity.PersonaActivity" />
+        <activity android:name=".activity.Capitulo10Activity" />
+        <activity android:name=".activity.InfraestructuraActivity" />
+        <activity android:name=".activity.Capitulo9Activity" />
+        <activity android:name=".activity.EquipoActivity" />
+        <activity android:name=".activity.Capitulo8Activity" />
+        <activity android:name=".activity.Capitulo12Activity" />
 
         <activity android:name=".activity.Capitulo2Activity" />
 
