@@ -1,0 +1,15 @@
+"datos_generales": {
+"cod_geocodigo": "cod_geocodigo_value",
+"cod_ubigeo": "cod_ubigeo_value",
+"cod_region_natural": cod_region_natural_value,
+"cod_piso_ecologico": cod_piso_ecologico_value,
+"cod_subestrato": "cod_subestrato_value",
+"cod_tipo_grilla": cod_tipo_grilla_value,
+"cod_serpentin": "cod_serpentin_value",
+"cod_cc_cn": "cod_cc_cn_value",
+"cod_segmento_empresa": "cod_segmento_empresa_value",
+"num_parcela_sm": num_parcela_sm_Value,
+"num_total_parcelas_sm":  num_total_parcelas_sm_value,
+"cod_ccpp": "cod_ccpp_value",
+"fec_encuesta": "fec_encuesta_value"
+}
