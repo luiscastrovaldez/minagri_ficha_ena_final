@@ -54,6 +54,7 @@ public class Capitulo6Activity extends AppCompatActivity {
         Intent intent = getIntent();
         segmentoEmpresa = intent.getStringExtra(Constants.SEGMENTO_EMPRESA);
         nroParcela = intent.getStringExtra(Constants.NRO_PARCELA);
+        dni = intent.getStringExtra(Constants.DNI);
         this.sqlHelper = new SqlHelper(getApplicationContext());
 
         p603 = (Spinner) findViewById(R.id.p603);

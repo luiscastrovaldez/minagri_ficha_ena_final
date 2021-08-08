@@ -74,7 +74,7 @@ public class Capitulo2Activity extends AppCompatActivity {
         nroParcela = intent.getStringExtra(Constants.NRO_PARCELA);
 
         guardar = findViewById(R.id.guardar2);
-        salir = findViewById(R.id.guardar2);
+        salir = findViewById(R.id.salirCapitulo2);
         validar = findViewById(R.id.validar2);
         this.sqlHelper = new SqlHelper(getApplicationContext());
         formulario = Util.loadData(getAssets(), Constants.CAPITULO2_FORMULARIO_JSON);

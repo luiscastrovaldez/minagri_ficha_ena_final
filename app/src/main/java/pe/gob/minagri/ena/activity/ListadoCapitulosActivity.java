@@ -361,224 +361,53 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Intent intent = null;
                 if (position == 0) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[0]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[0]);
-                    intent.putExtra("description", mDescription[0]);
-                    // also put your position
-                    intent.putExtra("position", "" + 0);
-
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-
-                    intent.putExtra("noAgricola", noAgricola);
-
-                    startActivity(intent);
-
-
+                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
                 }
                 if (position == 1) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[1]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[1]);
-                    intent.putExtra("description", mDescription[1]);
-                    // also put your position
-                    intent.putExtra("position", "" + 1);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo3Activity.class);
                 }
                 if (position == 2) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[2]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[2]);
-                    intent.putExtra("description", mDescription[2]);
-                    // also put your position
-                    intent.putExtra("position", "" + 2);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo4Activity.class);
                 }
                 if (position == 3) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[3]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[3]);
-                    intent.putExtra("description", mDescription[3]);
-                    // also put your position
-                    intent.putExtra("position", "" + 3);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo5Activity.class);
                 }
                 if (position == 4) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[4]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[4]);
-                    intent.putExtra("description", mDescription[4]);
-                    // also put your position
-                    intent.putExtra("position", "" + 4);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
+                    intent = new Intent(getApplicationContext(), Capitulo6Activity.class);
 
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
                 }
                 if (position == 5) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //undle.putInt("image", images[5]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[5]);
-                    intent.putExtra("description", mDescription[5]);
-                    // also put your position
-                    intent.putExtra("position", "" + 5);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo7Activity.class);
                 }
 
                 if (position == 6) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[6]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[6]);
-                    intent.putExtra("description", mDescription[6]);
-                    // also put your position
-                    intent.putExtra("position", "" + 6);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
                 }
                 if (position == 7) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[7]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[7]);
-                    intent.putExtra("description", mDescription[7]);
-                    // also put your position
-                    intent.putExtra("position", "" + 7);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
                 }
                 if (position == 8) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[8]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[8]);
-                    intent.putExtra("description", mDescription[8]);
-                    // also put your position
-                    intent.putExtra("position", "" + 8);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
                 }
                 if (position == 9) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[9]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[9]);
-                    intent.putExtra("description", mDescription[9]);
-                    // also put your position
-                    intent.putExtra("position", "" + 9);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
                 }
                 if (position == 10) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[10]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[10]);
-                    intent.putExtra("description", mDescription[10]);
-                    // also put your position
-                    intent.putExtra("position", "" + 10);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
                 }
+                intent.putExtra(Constants.DEPARTAMENTO, codDepartamento);
+                intent.putExtra(Constants.PROVINCIA, codProvincia);
+                intent.putExtra(Constants.DISTRITO, codDistrito);
+                intent.putExtra(Constants.SEGMENTO_EMPRESA, segmentoEmpresa);
+                intent.putExtra(Constants.NRO_PARCELA, nroParcela);
+                intent.putExtra(Constants.DNI, dni);
+                //intent.putExtra("noAgricola", noAgricola);
+                startActivity(intent);
             }
+
+
         });
         listView.setVisibility(View.GONE);
     }

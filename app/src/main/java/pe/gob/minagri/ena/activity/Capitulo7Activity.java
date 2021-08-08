@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -78,6 +79,90 @@ public class Capitulo7Activity extends AppCompatActivity {
         p729 = new ArrayList<>();
         p727 = new ArrayList<>();
         p726 = new ArrayList<>();
+
+        p727_1 = (CheckBox) findViewById(R.id.p727_1);
+        p727_2 = (CheckBox) findViewById(R.id.p727_2);
+        p727_3 = (CheckBox) findViewById(R.id.p727_3);
+        p727_4 = (CheckBox) findViewById(R.id.p727_4);
+        p727_5 = (CheckBox) findViewById(R.id.p727_5);
+        p727_6 = (CheckBox) findViewById(R.id.p727_6);
+        p727_7 = (CheckBox) findViewById(R.id.p727_7);
+        p727_8 = (CheckBox) findViewById(R.id.p727_8);
+        p727_9 = (CheckBox) findViewById(R.id.p727_9);
+        p727_10 = (CheckBox) findViewById(R.id.p727_10);
+        p729_1 = (CheckBox) findViewById(R.id.p729_1);
+        p729_2 = (CheckBox) findViewById(R.id.p729_2);
+        p729_3 = (CheckBox) findViewById(R.id.p729_3);
+        p729_4 = (CheckBox) findViewById(R.id.p729_4);
+        p729_5 = (CheckBox) findViewById(R.id.p729_5);
+        p731_1 = (CheckBox) findViewById(R.id.p731_1);
+        p731_2 = (CheckBox) findViewById(R.id.p731_2);
+        p731_3 = (CheckBox) findViewById(R.id.p731_3);
+        p731_4 = (CheckBox) findViewById(R.id.p731_4);
+        p731_5 = (CheckBox) findViewById(R.id.p731_5);
+        p731_6 = (CheckBox) findViewById(R.id.p731_6);
+
+        p714_1 = (CheckBox) findViewById(R.id.p714_1);
+        p714_2 = (CheckBox) findViewById(R.id.p714_2);
+        p714_3 = (CheckBox) findViewById(R.id.p714_3);
+        p714_4 = (CheckBox) findViewById(R.id.p714_4);
+        p714_5 = (CheckBox) findViewById(R.id.p714_5);
+        p714_6 = (CheckBox) findViewById(R.id.p714_6);
+        p714_7 = (CheckBox) findViewById(R.id.p714_7);
+
+        p715_1 = (CheckBox) findViewById(R.id.p715_1);
+        p715_2 = (CheckBox) findViewById(R.id.p715_2);
+        p715_3 = (CheckBox) findViewById(R.id.p715_3);
+        p715_4 = (CheckBox) findViewById(R.id.p715_4);
+        p715_5 = (CheckBox) findViewById(R.id.p715_5);
+        p715_6 = (CheckBox) findViewById(R.id.p715_6);
+        p715_7 = (CheckBox) findViewById(R.id.p715_7);
+        p716_1 = (CheckBox) findViewById(R.id.p716_1);
+        p716_2 = (CheckBox) findViewById(R.id.p716_2);
+        p716_3 = (CheckBox) findViewById(R.id.p716_3);
+        p716_4 = (CheckBox) findViewById(R.id.p716_4);
+        p716_5 = (CheckBox) findViewById(R.id.p716_5);
+        p716_6 = (CheckBox) findViewById(R.id.p716_6);
+        p716_7 = (CheckBox) findViewById(R.id.p716_7);
+
+        p717_1 = (CheckBox) findViewById(R.id.p717_1);
+        p717_2 = (CheckBox) findViewById(R.id.p717_2);
+        p717_3 = (CheckBox) findViewById(R.id.p717_3);
+        p717_4 = (CheckBox) findViewById(R.id.p717_4);
+        p717_5 = (CheckBox) findViewById(R.id.p717_5);
+        p717_6 = (CheckBox) findViewById(R.id.p717_6);
+        p717_7 = (CheckBox) findViewById(R.id.p717_7);
+
+        p718_1 = (CheckBox) findViewById(R.id.p718_1);
+        p718_2 = (CheckBox) findViewById(R.id.p718_2);
+        p718_3 = (CheckBox) findViewById(R.id.p718_3);
+        p718_4 = (CheckBox) findViewById(R.id.p718_4);
+        p718_5 = (CheckBox) findViewById(R.id.p718_5);
+        p718_6 = (CheckBox) findViewById(R.id.p718_6);
+        p718_7 = (CheckBox) findViewById(R.id.p718_7);
+
+        p719_1 = (CheckBox) findViewById(R.id.p719_1);
+        p719_2 = (CheckBox) findViewById(R.id.p719_2);
+        p719_3 = (CheckBox) findViewById(R.id.p719_3);
+        p719_4 = (CheckBox) findViewById(R.id.p719_4);
+        p719_5 = (CheckBox) findViewById(R.id.p719_5);
+        p719_6 = (CheckBox) findViewById(R.id.p719_6);
+
+        p724 = (Spinner) findViewById(R.id.p724);
+        p725 = (Spinner) findViewById(R.id.p725);
+        p726_1 = (CheckBox) findViewById(R.id.p726_1);
+        p726_2 = (CheckBox) findViewById(R.id.p726_2);
+        p726_3 = (CheckBox) findViewById(R.id.p726_3);
+        p726_4 = (CheckBox) findViewById(R.id.p726_4);
+        p726_5 = (CheckBox) findViewById(R.id.p726_5);
+        p726_7 = (CheckBox) findViewById(R.id.p726_6);
+        p726_6 = (CheckBox) findViewById(R.id.p726_7);
+        p726_8 = (CheckBox) findViewById(R.id.p726_8);
+        p726_9 = (CheckBox) findViewById(R.id.p726_9);
+        p726_10 = (CheckBox) findViewById(R.id.p726_10);
+        p726_11 = (CheckBox) findViewById(R.id.p726_11);
+        p728 = (Spinner) findViewById(R.id.p728);
+        p730 = (Spinner) findViewById(R.id.p730);
 
         p727_1 = (CheckBox) findViewById(R.id.p727_1);
         p727_2 = (CheckBox) findViewById(R.id.p727_2);
@@ -292,10 +377,10 @@ public class Capitulo7Activity extends AppCompatActivity {
                     p729_5.setChecked(Boolean.TRUE);
                 }
                 if (p718.contains("6")) {
-                    p718_5.setChecked(Boolean.TRUE);
+                    p718_6.setChecked(Boolean.TRUE);
                 }
                 if (p718.contains("7")) {
-                    p718_5.setChecked(Boolean.TRUE);
+                    p718_7.setChecked(Boolean.TRUE);
                 }
 
 
