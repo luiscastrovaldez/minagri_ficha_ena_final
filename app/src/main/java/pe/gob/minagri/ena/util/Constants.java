@@ -63,6 +63,7 @@ public class Constants {
     public static final String INDEX = "index";
     public static final String SIZE = "size";
     public static final String FORMULARIO_JSON = "formulario.json";
+    public static final String UBICACION_FORMULARIO_JSON = "ubicaciongeografica.json";
     public static final String CAPITULO1_FORMULARIO_JSON = "capitulo1.json";
     public static final String CAPITULO2_FORMULARIO_JSON = "capitulo2.json";
     public static final String CAPITULO3_FORMULARIO_JSON = "capitulo3.json";
@@ -76,6 +77,10 @@ public class Constants {
     public static final String CAPITULO10_FORMULARIO_JSON = "capitulo10.json";
     public static final String CAPITULO11_FORMULARIO_JSON = "capitulo11.json";
     public static final String CAPITULO12_FORMULARIO_JSON = "capitulo12.json";
+    public static final String EQUIPO_FORMULARIO_JSON = "equipo.json";
+    public static final String INFRAESTRUCTURA_FORMULARIO_JSON = "infraestructura.json";
+    public static final String PERSONA_FORMULARIO_JSON = "persona.json";
+    public static final String VISITA_FORMULARIO_JSON = "visita.json";
 
 
 }

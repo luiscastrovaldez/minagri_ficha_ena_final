@@ -1,0 +1,12 @@
+{
+  "codigo_usuario":"codigo_usuario_value",
+  "num_visita":"num_visita_value",
+  "fecha_encuesta":"fecha_encuesta_value",
+  "hora_inicio":"hora_inicio_value",
+  "hora_fin":"hora_fin_value",
+  "fecha_proxima":"fecha_proxima_value",
+  "hora_proxima":"hora_proxima_value",
+  "resultado_visita":"resultado_visita_value",
+  "resultado_visita_otro":"resultado_visita_otro_value",
+  "modifico":"modifico_value"
+}

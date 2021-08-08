@@ -57,9 +57,7 @@ public class LoteActivity3 extends AppCompatActivity {
 
         guardar = (FloatingActionButton) findViewById(R.id.guardarLote3);
         salir = (FloatingActionButton) findViewById(R.id.salirLote3);
-        segmentoEmpresa = "10";
-        dni = "40932086";
-        nroParcela = "01";
+
 
         agregarUnidadMedidaB();
         agregarUnidadMedidaC();
@@ -104,7 +102,7 @@ public class LoteActivity3 extends AppCompatActivity {
     private void obternerFormulario() {
         try {
             int indice = new Integer(index) + 1;
-            lote = sqlHelper.getLote(String.valueOf(indice), dni, "01", "10");
+            lote = sqlHelper.getLote(indice, dni, nroParcela, segmentoEmpresa);
             if (lote != null) {
                 this.formulario = lote.getJson();
                 LinearLayout layout = findViewById(R.id.loteCapitulo3);
@@ -117,7 +115,7 @@ public class LoteActivity3 extends AppCompatActivity {
             /*
             enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela("10", "01");
             if (enaForm != null) {
-                this.formulario = enaForm.getCapitulo3();
+                this.formulario = enaForm.get3();
                 LinearLayout layout = findViewById(R.id.capitulo3);
                 for (int i = 0; i < layout.getChildCount(); i++) {
                     View view = layout.getChildAt(i);
@@ -135,45 +133,25 @@ public class LoteActivity3 extends AppCompatActivity {
     private void guardarFormulario() {
 
         formulario = Util.loadData(getAssets(), Constants.LOTE3_FORMULARIO_JSON);
-        LinearLayout layout = findViewById(R.id.capitulo3);
+        LinearLayout layout = findViewById(R.id.loteCapitulo3);
         for (int i = 0; i < layout.getChildCount(); i++) {
             View view = layout.getChildAt(i);
             this.formulario = Util.generarJson(getResources(), view, this.formulario);
         }
-        Lote3 lote = sqlHelper.getLote(index, dni, nroParcela, segmentoEmpresa);
+        int indice = new Integer(index) + 1;
+        Lote3 lote = sqlHelper.getLote(indice, dni, nroParcela, segmentoEmpresa);
         if (lote == null) {
             lote = new Lote3();
+            lote.setIndex(String.valueOf(indice));
         }
-        lote.setDni(dni);
-        int indice = new Integer(index) + 1;
         this.formulario = this.formulario.replace("index", String.valueOf(indice));
-        lote.setIndex(String.valueOf(indice));
+        lote.setDni(dni);
         lote.setJson(this.formulario);
         lote.setParcela(nroParcela);
         lote.setSegmento(segmentoEmpresa);
         sqlHelper.saveLote(lote);
 
         Toast.makeText(getApplicationContext(), getResources().getString(R.string.mensaje_guardo_informacion_correctamente), Toast.LENGTH_SHORT).show();
-
-        /*
-        formulario = Util.loadData(getAssets(), Constants.CAPITULO3_FORMULARIO_JSON);
-        LinearLayout layout = findViewById(R.id.capitulo3);
-        for (int i = 0; i < layout.getChildCount(); i++) {
-            View view = layout.getChildAt(i);
-            this.formulario = Util.generarJson(getResources(), view, this.formulario);
-            enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela("10", "01");
-            if (enaForm == null) {
-                enaForm = new EnaForm();
-            }
-
-            enaForm.setCapitulo3(this.formulario);
-            enaForm.setSegmentoEmpresa("10");
-            enaForm.setNroParcela("01");
-            sqlHelper.deleteEna("10", "01");
-            sqlHelper.saveInformation(enaForm);
-            Toast.makeText(getApplicationContext(), getResources().getString(R.string.mensaje_guardo_informacion_correctamente), Toast.LENGTH_SHORT).show();
-        }
-        */
 
     }
 

@@ -11,7 +11,7 @@
     tools:context=".activity.MapaActivity">
 
     <LinearLayout
-        android:id="@+id/test"
+        android:id="@+id/firstLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -23,6 +23,8 @@
             android:layout_gravity="center_horizontal"
             android:src="@drawable/banner1"></ImageView>
     </LinearLayout>
+
+    <!--
 
     <LinearLayout
         android:id="@+id/firstLayout1"
@@ -68,6 +70,8 @@
             android:text="Habilitar Segmentos"
             android:textSize="20sp" />
     </LinearLayout>
+
+    -->
 
     <LinearLayout
         android:id="@+id/secondLayout"
@@ -158,6 +162,16 @@
             fab:fab_colorNormal="#4CAF50"
             fab:fab_colorPressed="#4CAF50"
             fab:fab_label="Sincronizar"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/descargar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_cloud_download_24"
+            fab:fab_colorNormal="#4CAF50"
+            fab:fab_colorPressed="#4CAF50"
+            fab:fab_label="Descargar KML"
             fab:fab_size="mini" />
 
 

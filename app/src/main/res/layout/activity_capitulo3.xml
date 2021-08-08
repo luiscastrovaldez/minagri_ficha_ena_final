@@ -630,7 +630,7 @@
         fab:menu_shadowYOffset="4dp"
         fab:menu_showShadow="true">
 
-
+<!--
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/lote"
             android:layout_width="wrap_content"
@@ -640,6 +640,8 @@
             fab:fab_colorPressed="#045D04"
             fab:fab_label="@string/agregar_lote"
             fab:fab_size="mini" />
+
+        -->
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/guardar3"

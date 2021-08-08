@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -122,15 +123,26 @@ public final class Util {
             if (view instanceof EditText) {
                 EditText editText = (EditText) view;
                 name = resources.getResourceEntryName(editText.getId());
+                System.out.println("name edite = " + name);
                 String valor = coderollsJSONObject.getString(name);
                 if (!valor.contains("_value")) {
                     editText.setText(valor);
                 }
             }
 
+            if (view instanceof TextView) {
+                TextView textView = (TextView) view;
+                name = resources.getResourceEntryName(textView.getId());
+                String valor = coderollsJSONObject.getString(name);
+                if (!valor.contains("_value")) {
+                    textView.setText(valor);
+                }
+            }
+
             if (view instanceof Spinner) {
                 Spinner spinner = (Spinner) view;
                 name = resources.getResourceEntryName(spinner.getId());
+                System.out.println("name spinner = " + name);
                 String valor = coderollsJSONObject.getString(name);
                 spinner.setSelection(Util.getIndex(spinner, valor));
             }
@@ -139,7 +151,7 @@ public final class Util {
         }
     }
 
-    public static String getJsonValue( String formulario, String name) {
+    public static String getJsonValue(String formulario, String name) {
         String valor = "";
         try {
             JSONObject coderollsJSONObject = new JSONObject(formulario);
@@ -166,7 +178,7 @@ public final class Util {
                         if (!valor.contains("_value")) {
                             editText.setText(valor);
                         }
-                    } catch (Exception e){
+                    } catch (Exception e) {
                         continue;
                     }
                 }
@@ -181,7 +193,7 @@ public final class Util {
                     try {
                         String valor = help.getString(name);
                         spinner.setSelection(Util.getIndex(spinner, valor));
-                    }catch (Exception e){
+                    } catch (Exception e) {
                         continue;
                     }
                 }
@@ -198,6 +210,7 @@ public final class Util {
             EditText editText = (EditText) view;
             name = resources.getResourceEntryName(editText.getId());
             name = name.concat("_value");
+            System.out.println("name edite = " + name);
             if (editText.getText() != null && !editText.getText().toString().isEmpty()) {
                 formulario = formulario.replace(name, editText.getText());
             }
@@ -214,7 +227,7 @@ public final class Util {
         if (view instanceof Spinner) {
             Spinner spinner = (Spinner) view;
             name = resources.getResourceEntryName(spinner.getId());
-            System.out.println(name);
+            System.out.println("name spinner = " + name);
             name = name.concat("_value");
             Combo combo = ((Combo) (spinner).getSelectedItem());
             formulario = formulario.replace(name, combo.getId());

@@ -1,0 +1,51 @@
+{
+  "p710": "p710_value",
+  "p710_cant": "p710_cant_value",
+  "p711": [
+    {
+      "p711_nom": "MIDAGRI COOPERATIVA",
+      "p712": 2,
+      "p713": "2015"
+    },
+    {
+      "p711_nom": "MIDAGRI COMITE",
+      "p712": 3,
+      "p713": "2019"
+    }
+  ],
+  "p714": "p714_value",
+  "p714_otro": "p714_otro_value",
+  "p715": "p715_value",
+  "p716": "p716_value",
+  "p716_otro": "p716_otro_value",
+  "p717": "p717_value",
+  "p717_otro": "p717_otro_value",
+  "p718": [
+    {
+      "num": 1,
+      "otro": "",
+      "rpta": "a",
+      "rpta_otro": null
+    },
+    {
+      "num": 7,
+      "otro": "CASITA",
+      "rpta": "d",
+      "rpta_otro": "EMPEÑADO"
+    }
+  ],
+  "p719": "p719_value",
+  "p719_otro": "p719_otro_value",
+  "p724": "p724_value",
+  "p725": "p725_value",
+  "p726": "p726_value",
+  "p726_otro": "p726_otro_value",
+  "p727": "p727_value",
+  "p727_otro": "p727_otro_value",
+  "p728": "p728_value",
+  "p729": "p729_value",
+  "p729_otro": "p729_otro_value",
+  "p730": "p730_value",
+  "p731": "p731_value",
+  "p731_otro": "p731_otro_value"
+}

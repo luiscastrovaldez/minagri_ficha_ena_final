@@ -41,13 +41,16 @@ public class Ubigeo {
     private String cod_ccpp;
     private String ccpp;
     private String fec_encuesta;
+    private String dni;
 
     @Generated(hash = 1920155935)
     public Ubigeo() {
     }
 
-    @Generated(hash = 1205336332)
-    public Ubigeo(Long id, String cod_departamento, String departamento, String cod_provincia, String provincia, String cod_distrito, String distrito, String cod_geocodigo, String cod_ubigeo, String cod_region_natural, String region_natural, String cod_piso_ecologico, String piso_ecologico, String cod_subestrato, String cod_tipo_grilla, String cod_serpentin, String cod_cc, String cc, String cod_cn, String cn, String cod_segmento_empresa, String num_parcela_sm, String num_total_parcelas_sm, String cod_ccpp, String ccpp, String fec_encuesta) {
+    @Generated(hash = 140925768)
+    public Ubigeo(Long id, String cod_departamento, String departamento, String cod_provincia, String provincia, String cod_distrito, String distrito, String cod_geocodigo, String cod_ubigeo, String cod_region_natural, String region_natural,
+            String cod_piso_ecologico, String piso_ecologico, String cod_subestrato, String cod_tipo_grilla, String cod_serpentin, String cod_cc, String cc, String cod_cn, String cn, String cod_segmento_empresa, String num_parcela_sm,
+            String num_total_parcelas_sm, String cod_ccpp, String ccpp, String fec_encuesta, String dni) {
         this.id = id;
         this.cod_departamento = cod_departamento;
         this.departamento = departamento;
@@ -74,6 +77,7 @@ public class Ubigeo {
         this.cod_ccpp = cod_ccpp;
         this.ccpp = ccpp;
         this.fec_encuesta = fec_encuesta;
+        this.dni = dni;
     }
 
     public Long getId() {
@@ -282,5 +286,13 @@ public class Ubigeo {
 
     public void setFec_encuesta(String fec_encuesta) {
         this.fec_encuesta = fec_encuesta;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 }

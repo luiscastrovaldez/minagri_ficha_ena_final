@@ -1,0 +1,1300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/capitulo7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CAPÍTULO VII. SERVICIOS DE EXTENSIÓN AGRARIA REQUERIDOS"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Módulo VII.C.  ASOCIATIVIDAD (PARA TODO PRODUCTOR/A AGRARIO/A) DESDE ENERO DE 2020 HASTA EL DÍA DE LA ENTREVISTA"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="710. ¿Ud pertenece a alguna asociación, cooperativa, comité o comunidad de productores/as agrarios/as?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p710"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p710_cant"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="CANTIDAD"
+                android:inputType="number" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="714. Desde enero 2020 hasta hoy, su participación en esta asociación, cooperativa,comité y/o comunidad de productores/as agrarios/as. \n ¿Qué beneficios o servicios le brindó?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p714_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="1. Acceso o mercados locales/nacionales para la venta de las cosechas y/productos pecuarios" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p714_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="2. Acceso al mercado exterior para la venta de las cosechas y/productos pecuarios" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p714_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="3. Abastecimiento de insumos agrícolas y/o pecuarios" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p714_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="4. Obtener asistencia técnica y/o capacitación" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p714_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="5.Acceso a servicios financieros y/o créditos" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p714_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="6. Otro:" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p714_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="CANTIDAD"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p714_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="7. Ningún beneficio o servicio" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="715. Desde enero de 2020 hasta hoy, ¿Usted a través de la asociación, cooperativa,  comité, comunidad de productores/as agrarios/as \n a la cual pertenece ha participado en:" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p715_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="1. Ferias locales, regionales o nacionales?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p715_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="2. Bioferias locales, regionales o nacionales?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p715_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="3. Ferias internacionales?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p715_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="4. Ruedas de negocios?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p715_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="5. Misiones comerciales?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p715_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="6. Pasantías?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p715_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="7. Ninguno" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="716. Cuando usted participó a través de la organización a la que pertenece en Ferias, Ruedas de negocios, etc. ¿logró?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p716_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="1. Vender al público?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p716_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="2. Definir un contrato?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p716_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="3. Obtener un pedido, cotización?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p716_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="4. Coordinar un envío de muestras?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p716_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="5. Compromiso verbal de ventas a futuro?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p716_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="6. Otro:" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p716_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:hint="ESPECIFIQUE"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p716_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="7. Ninguna" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="717. Ud. como productor/a, a través de la organización a la que pertenece ¿Tuvo acceso a:" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p717_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="1. Centro de acopio o almacén para cosecha?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p717_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="2. Almacén para granos y forrajes?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p717_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="3. Secadores?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p717_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="4. Seleccionador o equipo de clasificación?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p717_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="5. Cámara de frío/tanque de enfriamento?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p717_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="6. Despulpadora o fermentadores?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p717_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="7. Otro:" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p717_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:hint="ESPECIFIQUE"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="718. ¿El / La/Los …………………………...…………… es: Nota:Selección Múltiple:" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p718_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="1. Centro de acopio o almacén para cosecha?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p718_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="2. Almacén para granos y forrajes?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p718_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="3.Secadores?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p718_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="4. Seleccionador o equipo de clasificación?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p718_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="5. Cámara de frío/tanque de enfriamento?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p718_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="6. Despulpadora o fermentadores?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p718_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="7. Otras: " />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p718_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:hint="ESPECIFIQUE"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="719. ¿ Señor productor por qué no esta asociado?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p719_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="1. Por desconfianza respecto al modelo" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p719_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="2. Por qué no hay disponibilidad de cooperativas en la zona" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p719_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="3. Por desconocimiento" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p719_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="4. No lo considera útil asociarse" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p719_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="5. Por pérdida de ingresos por pago de impuestos" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p719_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="6. Otro:" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p719_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:hint="ESPECIFIQUE"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Módulo  VII.E.  SERVICIOS FINANCIEROS (PARA TODO PRODUCTOR/A AGRARIO/A) Desde Enero 2020 al día de entrevista"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="724. Desde enero de 2020 hasta la fecha ¿Ud. solicitó algún crédito o préstamo?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p724"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="725. ¿Obtuvo el crédito o préstamo que solicitó?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p725"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="726. ¿Quién le proporcionó el crédito o préstamo  que obtuvo? " />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p726_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="1. Agrobanco" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p726_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="2. Caja municipal" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p726_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="3. Caja rural" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p726_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="4. Banca privada" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p726_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="5. Financiera/EDPYME (Empresas de Desarrollo de Pequeña" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p726_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="6. Organismo No Gubernamental - ONG" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p726_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="7. Cooperativa" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p726_8"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="8. Establecimiento comercial" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p726_9"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="9. Prestamista/habilitador" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p726_10"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="10. Programas del estado" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p726_11"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="11. Otro:" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p726_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:hint="ESPECIFIQUE"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="727. ¿Utilizó el crédito o préstamo que obtuvo para:  " />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p727_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="1. Comprar insumos agrícolas?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p727_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="2. Comprar insumos pecuario?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p727_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="3. Pagar mano de obra (pago de jornaleros)?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p727_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="4. Asistencia técnica?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p727_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="5. Alquiler de maquinaria (agraria)?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p727_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="6. Compra de terrenos agrícolas?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p727_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="7. Compra de ganado?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p727_8"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="8. Pago de deudas agrarias?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p727_9"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="9. Otro:" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p727_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:hint="ESPECIFIQUE"
+                android:inputType="number"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p727_10"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="10. No utilizó para su actividad agraria?" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="728. Desde enero de 2020 a hoy, ¿Ud. ha sido beneficiario de algún seguro agrario?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p728"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="729. ¿Quién le proporcionó el seguro agrario?   " />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p729_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="1. MIDAGRI" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p729_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="2. Empresa aseguradora" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p729_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="3. Gobierno Regional (definir fondo de prevención)" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p729_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="4. Agrobanco (Programa de rescate financiero agropecuario)" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p729_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="5. OTRO" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p729_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="730. Desde enero de 2020 hasta hoy. ¿Tiene alguna cuenta de ahorro?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p730"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="731. ¿En que institución tiene cuenta de ahorro?:  " />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p731_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="1. Banco de la Nación" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p731_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="2. Banca privada" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p731_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="3. Caja municipal" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p731_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="4. Caja rural" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p731_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="5. Financiera / EDPYME (Empresas de Desarrollo de Pequeña y Microempresa)" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p731_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked7"
+                android:text="6. Otro" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p731_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters" />
+
+            <View style="@style/Divider" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/material_design_android_floating_action_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="11dp"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="#045D04"
+        fab:menu_colorPressed="#045D04"
+        fab:menu_colorRipple="#99d4d4d4"
+        fab:menu_fab_label="Menu"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#66efecec"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66aff198"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="4dp"
+        fab:menu_showShadow="true">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/guardar7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_save_24_white"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_guardar"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/salirCapitulo7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_exit_to_app_24"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_salir"
+            fab:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

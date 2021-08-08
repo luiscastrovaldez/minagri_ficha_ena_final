@@ -62,6 +62,7 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
 
     ListView listView;
     private String formulario;
+    private String formularioUbicacion;
 
     String mTitle[] = {"CAPÍTULO II.", "CAPÍTULO III.", "CAPÍTULO IV.", "CAPÍTULO V.", "CAPÍTULO VI.", "CAPÍTULO VII.",
             "CAPÍTULO VIII.", "CAPÍTULO IX.", "CAPÍTULO X.",
@@ -85,15 +86,6 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
     private String segmentoEmpresa, nroParcela;
     private EnaForm enaForm;
 
-    private TextView txtUbigeo;
-    private TextView txtRegionNatural;
-    private TextView txtPisoEcologico;
-    private TextView txtSubEstrato;
-    private TextView txtTipoGrilla;
-    private TextView txtNumeroSerpentin;
-    private TextView txtSegmentoEmpresa;
-    private TextView txtNumeroParcela;
-    private TextView txtTotalParcelas, txtGeocodigo;
 
     private Spinner departamentos;
     private Spinner provincias;
@@ -150,16 +142,6 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
         this.posicion = (FloatingActionButton) findViewById(R.id.posicion);
         this.guardar = (FloatingActionButton) findViewById(R.id.guardar);
         this.enviar = (FloatingActionButton) findViewById(R.id.enviar);
-        this.txtUbigeo = findViewById(R.id.txtUbigeo);
-        this.txtRegionNatural = findViewById(R.id.txtRegionNatural);
-        this.txtPisoEcologico = findViewById(R.id.txtPisoEcologico);
-        this.txtSubEstrato = findViewById(R.id.txtSubEstrato);
-        this.txtTipoGrilla = findViewById(R.id.txtTipoGrilla);
-        this.txtNumeroSerpentin = findViewById(R.id.txtNumeroSerpentin);
-        this.txtSegmentoEmpresa = findViewById(R.id.txtSegmentoEmpresa);
-        this.txtNumeroParcela = findViewById(R.id.txtNumeroParcela);
-        this.txtTotalParcelas = findViewById(R.id.txtTotalParcelas);
-        this.txtGeocodigo = findViewById(R.id.txtGeocodigo);
 
 
         this.departamentos = (Spinner) findViewById(R.id.departamentos);
@@ -379,224 +361,53 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Intent intent = null;
                 if (position == 0) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[0]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[0]);
-                    intent.putExtra("description", mDescription[0]);
-                    // also put your position
-                    intent.putExtra("position", "" + 0);
-
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-
-                    intent.putExtra("noAgricola", noAgricola);
-
-                    startActivity(intent);
-
-
+                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
                 }
                 if (position == 1) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[1]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[1]);
-                    intent.putExtra("description", mDescription[1]);
-                    // also put your position
-                    intent.putExtra("position", "" + 1);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo3Activity.class);
                 }
                 if (position == 2) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[2]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[2]);
-                    intent.putExtra("description", mDescription[2]);
-                    // also put your position
-                    intent.putExtra("position", "" + 2);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo4Activity.class);
                 }
                 if (position == 3) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[3]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[3]);
-                    intent.putExtra("description", mDescription[3]);
-                    // also put your position
-                    intent.putExtra("position", "" + 3);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo5Activity.class);
                 }
                 if (position == 4) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[4]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[4]);
-                    intent.putExtra("description", mDescription[4]);
-                    // also put your position
-                    intent.putExtra("position", "" + 4);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
+                    intent = new Intent(getApplicationContext(), Capitulo6Activity.class);
 
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
                 }
                 if (position == 5) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //undle.putInt("image", images[5]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[5]);
-                    intent.putExtra("description", mDescription[5]);
-                    // also put your position
-                    intent.putExtra("position", "" + 5);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo7Activity.class);
                 }
 
                 if (position == 6) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[6]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[6]);
-                    intent.putExtra("description", mDescription[6]);
-                    // also put your position
-                    intent.putExtra("position", "" + 6);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
                 }
                 if (position == 7) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[7]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[7]);
-                    intent.putExtra("description", mDescription[7]);
-                    // also put your position
-                    intent.putExtra("position", "" + 7);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
                 }
                 if (position == 8) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[8]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[8]);
-                    intent.putExtra("description", mDescription[8]);
-                    // also put your position
-                    intent.putExtra("position", "" + 8);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
                 }
                 if (position == 9) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[9]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[9]);
-                    intent.putExtra("description", mDescription[9]);
-                    // also put your position
-                    intent.putExtra("position", "" + 9);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
                 }
                 if (position == 10) {
-                    Intent intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
-                    // this intent put our 0 index image to another activity
-                    Bundle bundle = new Bundle();
-                    //bundle.putInt("image", images[10]);
-                    intent.putExtras(bundle);
-                    // now put title and description to another activity
-                    intent.putExtra("title", mTitle[10]);
-                    intent.putExtra("description", mDescription[10]);
-                    // also put your position
-                    intent.putExtra("position", "" + 10);
-                    intent.putExtra("codDepartamento", codDepartamento);
-                    intent.putExtra("codProvincia", codProvincia);
-                    intent.putExtra("codDistrito", codDistrito);
-                    intent.putExtra("segmentoEmpresa", segmentoEmpresa);
-
-                    intent.putExtra("nroParcela", nroParcela);
-                    startActivity(intent);
+                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
                 }
+                intent.putExtra(Constants.DEPARTAMENTO, codDepartamento);
+                intent.putExtra(Constants.PROVINCIA, codProvincia);
+                intent.putExtra(Constants.DISTRITO, codDistrito);
+                intent.putExtra(Constants.SEGMENTO_EMPRESA, segmentoEmpresa);
+                intent.putExtra(Constants.NRO_PARCELA, nroParcela);
+                intent.putExtra(Constants.DNI, dni);
+                //intent.putExtra("noAgricola", noAgricola);
+                startActivity(intent);
             }
+
+
         });
         listView.setVisibility(View.GONE);
     }
@@ -1024,89 +835,242 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void guardarFormulario() {
-        formulario = Util.loadData(getAssets(), Constants.CAPITULO1_FORMULARIO_JSON);
+
         LinearLayout layout = findViewById(R.id.capitulo1);
+        formularioUbicacion = Util.loadData(getAssets(), Constants.UBICACION_FORMULARIO_JSON);
+        formulario = Util.loadData(getAssets(), Constants.CAPITULO1_FORMULARIO_JSON);
+
+        ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+        if (this.formularioUbicacion == null) {
+            formularioUbicacion = Util.loadData(getAssets(), Constants.UBICACION_FORMULARIO_JSON);
+        }
+        if (ubigeo != null) {
+            this.formularioUbicacion = this.formularioUbicacion.replace("cod_geocodigo_value", ubigeo.getCod_geocodigo());
+            this.formularioUbicacion = this.formularioUbicacion.replace("cod_ubigeo_value", ubigeo.getCod_geocodigo());
+            cod_region_natural = ubigeo.getCod_region_natural();
+            this.formularioUbicacion = this.formularioUbicacion.replace("cod_region_natural_value", ubigeo.getCod_region_natural());
+            cod_piso_ecologico = ubigeo.getCod_piso_ecologico();
+            this.formularioUbicacion = this.formularioUbicacion.replace("cod_piso_ecologico_value", ubigeo.getCod_piso_ecologico());
+            this.formularioUbicacion = this.formularioUbicacion.replace("cod_subestrato_value", ubigeo.getCod_subestrato());
+            this.formularioUbicacion = this.formularioUbicacion.replace("cod_tipo_grilla_value", ubigeo.getCod_tipo_grilla());
+            this.formularioUbicacion = this.formularioUbicacion.replace("cod_serpentin_value", ubigeo.getCod_serpentin());
+            codDepartamento = ubigeo.getCod_departamento();
+            codProvincia = ubigeo.getCod_provincia();
+            codDistrito = ubigeo.getDistrito();
+            this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", ubigeo.getNum_parcela_sm());
+            this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+            this.formularioUbicacion = this.formularioUbicacion.replace("cod_ccpp_value", ubigeo.getCod_ccpp());
+            this.formularioUbicacion = this.formularioUbicacion.replace("cod_segmento_empresa_value", ubigeo.getCod_segmento_empresa());
+            this.formularioUbicacion = this.formularioUbicacion.replace("cod_cc_cn_value", ubigeo.getCod_cn());
+
+
+        }
+
         for (int i = 0; i < layout.getChildCount(); i++) {
             View view = layout.getChildAt(i);
             this.formulario = Util.generarJson(getResources(), view, this.formulario);
+            this.formularioUbicacion = Util.generarJson(getResources(), view, this.formularioUbicacion);
         }
         enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela(segmentoEmpresa, nroParcela, dni);
         if (enaForm == null) {
             enaForm = new EnaForm();
         }
         this.formulario = this.formulario.replace("p101_value", String.join(",", p101));
+        enaForm.setUbicaciongGeografica(this.formularioUbicacion);
         enaForm.setCapitulo1(this.formulario);
         enaForm.setSegmentoEmpresa(segmentoEmpresa);
         enaForm.setNroParcela(nroParcela);
         enaForm.setDni(dni);
         sqlHelper.saveInformation(enaForm);
+        listView.setVisibility(View.VISIBLE);
         Toast.makeText(getApplicationContext(), getResources().getString(R.string.mensaje_guardo_informacion_correctamente), Toast.LENGTH_SHORT).show();
     }
 
     private void obternerFormulario() {
         try {
-            enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela(segmentoEmpresa, nroParcela, dni);
-            if (enaForm != null) {
-                this.formulario = enaForm.getCapitulo1();
-                LinearLayout layout = findViewById(R.id.capitulo1);
-                for (int i = 0; i < layout.getChildCount(); i++) {
-                    View view = layout.getChildAt(i);
-                    Util.setearInformacion(getResources(), view, this.formulario);
+
+            long count = sqlHelper.countUbigeo();
+            if (count == 0) {
+                AlertDialog alertDialog = new AlertDialog.Builder(ListadoCapitulosActivity.this)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setTitle(getResources().getString(R.string.titulo_informacion))
+                        .setMessage(getResources().getString(R.string.titulo_alerta_sincronizando))
+                        .setPositiveButton(getResources().getString(R.string.si), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                finish();
+                            }
+                        }).show();
+            } else {
+                enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela(segmentoEmpresa, nroParcela, dni);
+                if (enaForm != null) {
+                    this.formulario = enaForm.getCapitulo1();
+                    LinearLayout layout = findViewById(R.id.capitulo1);
+                    for (int i = 0; i < layout.getChildCount(); i++) {
+                        View view = layout.getChildAt(i);
+                        Util.setearInformacion(getResources(), view, this.formulario);
+                    }
+                    this.formularioUbicacion = enaForm.getUbicaciongGeografica();
+                    layout = findViewById(R.id.capitulo1);
+
+                    ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+                    this.formularioUbicacion = this.formularioUbicacion.replace("cod_geocodigo_value", ubigeo.getCod_geocodigo());
+                    this.formularioUbicacion = this.formularioUbicacion.replace("cod_ubigeo_value", ubigeo.getCod_geocodigo());
+                    cod_region_natural = ubigeo.getCod_region_natural();
+                    this.formularioUbicacion = this.formularioUbicacion.replace("cod_region_natural_value", ubigeo.getCod_region_natural());
+                    cod_piso_ecologico = ubigeo.getCod_piso_ecologico();
+                    this.formularioUbicacion = this.formularioUbicacion.replace("cod_piso_ecologico_value", ubigeo.getCod_piso_ecologico());
+                    this.formularioUbicacion = this.formularioUbicacion.replace("cod_subestrato_value", ubigeo.getCod_subestrato());
+                    this.formularioUbicacion = this.formularioUbicacion.replace("cod_tipo_grilla_value", ubigeo.getCod_tipo_grilla());
+                    this.formularioUbicacion = this.formularioUbicacion.replace("cod_serpentin_value", ubigeo.getCod_serpentin());
+                    codDepartamento = ubigeo.getCod_departamento();
+                    codProvincia = ubigeo.getCod_provincia();
+                    codDistrito = ubigeo.getDistrito();
+                    this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", ubigeo.getNum_parcela_sm());
+                    this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+                    this.formularioUbicacion = this.formularioUbicacion.replace("cod_ccpp_value", ubigeo.getCod_ccpp());
+                    this.formularioUbicacion = this.formularioUbicacion.replace("cod_segmento_empresa_value", ubigeo.getCod_segmento_empresa());
+                    this.formularioUbicacion = this.formularioUbicacion.replace("cod_cc_cn_value", ubigeo.getCod_cn());
+
+                    departamentos.setSelection(Util.getIndex(departamentos, ubigeo.getCod_departamento()));
+                    agregarProvincias(ubigeo.getCod_departamento());
+                    provincias.setSelection(Util.getIndex(provincias, ubigeo.getCod_provincia()));
+                    agregarDistritos(ubigeo.getCod_departamento(), ubigeo.getCod_provincia());
+                    distritos.setSelection(Util.getIndex(distritos, ubigeo.getCod_distrito()));
+                    agregarCentroPoblados(ubigeo.getCod_departamento(), ubigeo.getCod_provincia(), ubigeo.getCod_distrito(), segmentoEmpresa);
+                    agregarComunidad(ubigeo.getCod_departamento(), ubigeo.getCod_provincia(), ubigeo.getCod_distrito(), segmentoEmpresa);
+
+                    if (ubigeo.getCod_cn().isEmpty()) {
+                        txtCcCn = ubigeo.getCod_cc();
+                    } else {
+                        txtCcCn = ubigeo.getCod_cn();
+                    }
+                    comunidad.setSelection(Util.getIndex(comunidad, txtCcCn));
+                    centroPoblados.setSelection(Util.getIndex(centroPoblados, ubigeo.getCod_ccpp()));
+                    this.codDepartamento = ubigeo.getCod_departamento();
+                    this.codProvincia = ubigeo.getCod_provincia();
+                    this.codDistrito = ubigeo.getCod_distrito();
+
+                    this.formularioUbicacion = this.formularioUbicacion.replace("cod_geocodigo_value", ubigeo.getCod_geocodigo());
+
+                    layout = findViewById(R.id.capitulo1);
+                    for (int i = 0; i < layout.getChildCount(); i++) {
+                        View view = layout.getChildAt(i);
+                        Util.setearInformacion(getResources(), view, this.formularioUbicacion);
+                    }
+
+
+                } else {
+                    ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+                    if (this.formularioUbicacion == null) {
+                        formularioUbicacion = Util.loadData(getAssets(), Constants.UBICACION_FORMULARIO_JSON);
+                    }
+                    if (ubigeo != null) {
+                        this.formularioUbicacion = this.formularioUbicacion.replace("cod_geocodigo_value", ubigeo.getCod_geocodigo());
+                        this.formularioUbicacion = this.formularioUbicacion.replace("cod_ubigeo_value", ubigeo.getCod_geocodigo());
+                        cod_region_natural = ubigeo.getCod_region_natural();
+                        this.formularioUbicacion = this.formularioUbicacion.replace("cod_region_natural_value", ubigeo.getCod_region_natural());
+                        cod_piso_ecologico = ubigeo.getCod_piso_ecologico();
+                        this.formularioUbicacion = this.formularioUbicacion.replace("cod_piso_ecologico_value", ubigeo.getCod_piso_ecologico());
+                        this.formularioUbicacion = this.formularioUbicacion.replace("cod_subestrato_value", ubigeo.getCod_subestrato());
+                        this.formularioUbicacion = this.formularioUbicacion.replace("cod_tipo_grilla_value", ubigeo.getCod_tipo_grilla());
+                        this.formularioUbicacion = this.formularioUbicacion.replace("cod_serpentin_value", ubigeo.getCod_serpentin());
+                        codDepartamento = ubigeo.getCod_departamento();
+                        codProvincia = ubigeo.getCod_provincia();
+                        codDistrito = ubigeo.getDistrito();
+                        this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", ubigeo.getNum_parcela_sm());
+                        this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+                        this.formularioUbicacion = this.formularioUbicacion.replace("cod_ccpp_value", ubigeo.getCod_ccpp());
+                        this.formularioUbicacion = this.formularioUbicacion.replace("cod_segmento_empresa_value", ubigeo.getCod_segmento_empresa());
+                        this.formularioUbicacion = this.formularioUbicacion.replace("cod_cc_cn_value", ubigeo.getCod_cn());
+
+                        departamentos.setSelection(Util.getIndex(departamentos, ubigeo.getCod_departamento()));
+                        agregarProvincias(ubigeo.getCod_departamento());
+                        provincias.setSelection(Util.getIndex(provincias, ubigeo.getCod_provincia()));
+                        agregarDistritos(ubigeo.getCod_departamento(), ubigeo.getCod_provincia());
+                        distritos.setSelection(Util.getIndex(distritos, ubigeo.getCod_distrito()));
+                        agregarCentroPoblados(ubigeo.getCod_departamento(), ubigeo.getCod_provincia(), ubigeo.getCod_distrito(), segmentoEmpresa);
+                        agregarComunidad(ubigeo.getCod_departamento(), ubigeo.getCod_provincia(), ubigeo.getCod_distrito(), segmentoEmpresa);
+
+                        if (ubigeo.getCod_cn().isEmpty()) {
+                            txtCcCn = ubigeo.getCod_cc();
+                        } else {
+                            txtCcCn = ubigeo.getCod_cn();
+                        }
+                        comunidad.setSelection(Util.getIndex(comunidad, txtCcCn));
+                        centroPoblados.setSelection(Util.getIndex(centroPoblados, ubigeo.getCod_ccpp()));
+                        this.codDepartamento = ubigeo.getCod_departamento();
+                        this.codProvincia = ubigeo.getCod_provincia();
+                        this.codDistrito = ubigeo.getCod_distrito();
+
+                        this.formularioUbicacion = this.formularioUbicacion.replace("cod_geocodigo_value", ubigeo.getCod_geocodigo());
+
+                        LinearLayout layout = findViewById(R.id.capitulo1);
+                        for (int i = 0; i < layout.getChildCount(); i++) {
+                            View view = layout.getChildAt(i);
+                            Util.setearInformacion(getResources(), view, this.formularioUbicacion);
+                        }
+                    } else {
+                        Toast.makeText(this, "No existe Información para mostrar para la parcela " + segmentoEmpresa + " " + nroParcela, Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
                 }
+
+
+                String p101Value = Util.getJsonValue(this.formulario, "p101");
+                p101 = new LinkedList<>(Arrays.asList(p101Value.split("\\s*,\\s*")));
+                List<String> p101Values = Arrays.asList(p101Value.split("\\s*,\\s*"));
+
+
+                if (p101Values.contains("1")) {
+                    p101_1.setChecked(Boolean.TRUE);
+                }
+                if (p101Values.contains("2")) {
+                    p101_2.setChecked(Boolean.TRUE);
+                }
+
+                if (p101Values.contains("3")) {
+                    p101_3.setChecked(Boolean.TRUE);
+                }
+
+                if (p101Values.contains("4")) {
+                    p101_4.setChecked(Boolean.TRUE);
+                }
+
+                if (p101Values.contains("5")) {
+                    p101_5.setChecked(Boolean.TRUE);
+                }
+
+                if (p101Values.contains("6")) {
+                    p101_6.setChecked(Boolean.TRUE);
+                }
+
+                if (p101Values.contains("7")) {
+                    p101_7.setChecked(Boolean.TRUE);
+                }
+
+                if (p101Values.contains("8")) {
+                    p101_8.setChecked(Boolean.TRUE);
+                }
+
+                if (p101Values.contains("9")) {
+                    p101_9.setChecked(Boolean.TRUE);
+                }
+
+                if (p101Values.contains("10")) {
+                    p101_10.setChecked(Boolean.TRUE);
+                }
+
+                if (p101Values.contains("11")) {
+                    p101_11.setChecked(Boolean.TRUE);
+                }
+
+                if (p101Values.contains("12")) {
+                    p101_12.setChecked(Boolean.TRUE);
+                }
+
             }
-
-            String p101Value = Util.getJsonValue(this.formulario, "p101");
-            p101 = new LinkedList<>(Arrays.asList(p101Value.split("\\s*,\\s*")));
-            List<String> p101Values = Arrays.asList(p101Value.split("\\s*,\\s*"));
-
-
-            if (p101Values.contains("1")) {
-                p101_1.setChecked(Boolean.TRUE);
-            }
-            if (p101Values.contains("2")) {
-                p101_2.setChecked(Boolean.TRUE);
-            }
-
-            if (p101Values.contains("3")) {
-                p101_3.setChecked(Boolean.TRUE);
-            }
-
-            if (p101Values.contains("4")) {
-                p101_4.setChecked(Boolean.TRUE);
-            }
-
-            if (p101Values.contains("5")) {
-                p101_5.setChecked(Boolean.TRUE);
-            }
-
-            if (p101Values.contains("6")) {
-                p101_6.setChecked(Boolean.TRUE);
-            }
-
-            if (p101Values.contains("7")) {
-                p101_7.setChecked(Boolean.TRUE);
-            }
-
-            if (p101Values.contains("8")) {
-                p101_8.setChecked(Boolean.TRUE);
-            }
-
-            if (p101Values.contains("9")) {
-                p101_9.setChecked(Boolean.TRUE);
-            }
-
-            if (p101Values.contains("10")) {
-                p101_10.setChecked(Boolean.TRUE);
-            }
-
-            if (p101Values.contains("11")) {
-                p101_11.setChecked(Boolean.TRUE);
-            }
-
-            if (p101Values.contains("12")) {
-                p101_12.setChecked(Boolean.TRUE);
-            }
-
+            listView.setVisibility(View.VISIBLE);
 
         } catch (Exception e) {
             e.printStackTrace();

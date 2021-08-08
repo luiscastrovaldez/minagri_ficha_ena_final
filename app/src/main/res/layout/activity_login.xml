@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/capitulo2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/banner1"></ImageView>
+
+    <TextView
+        style="@style/titulo_principal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="@string/titulo" />
+
+
+    <View style="@style/Divider" />
+
+    <TextView
+        style="@style/titulo_pregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Tipo Usuario" />
+
+    <View style="@style/Divider" />
+
+    <Spinner
+        android:id="@+id/tipo_role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/P201_prompt"
+        tools:ignore="MissingConstraints" />
+
+    <View style="@style/Divider" />
+
+    <TextView
+        style="@style/titulo_pregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Dni" />
+
+    <View style="@style/Divider" />
+
+    <EditText
+        android:id="@+id/dni"
+        style="@style/titulo_pregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:maxLength="8"
+        android:hint="DNI"
+        android:inputType="number" />
+
+    <View style="@style/Divider" />
+
+    <Button
+        android:id="@+id/ir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="Ingresar" />
+
+</LinearLayout>

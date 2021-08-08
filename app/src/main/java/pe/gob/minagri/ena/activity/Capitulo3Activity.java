@@ -55,7 +55,7 @@ public class Capitulo3Activity extends AppCompatActivity {
         guardar = (FloatingActionButton) findViewById(R.id.guardar3);
 
         salir = (FloatingActionButton) findViewById(R.id.salirCapitulo3);
-        lote = (FloatingActionButton) findViewById(R.id.lote);
+        //lote = (FloatingActionButton) findViewById(R.id.lote);
         segmentoEmpresa = intent.getStringExtra(Constants.SEGMENTO_EMPRESA);
         nroParcela = intent.getStringExtra(Constants.NRO_PARCELA);
         dni = intent.getStringExtra(Constants.DNI);

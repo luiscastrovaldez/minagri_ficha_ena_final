@@ -69,7 +69,7 @@ public class SqlHelper {
     }
 
 
-    public Lote3 getLote(String index, String dni, String parcela, String segmento) {
+    public Lote3 getLote(int index, String dni, String parcela, String segmento) {
         List<Lote3> resultado;
         Lote3 lote = null;
         try {
