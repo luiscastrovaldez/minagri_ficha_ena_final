@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Módulo IV. B. ARBOLES FRUTALES, INDUSTRIALES Y ESPECIES FORESTALES PLANTADOS EN FORMA DISPERSA EN LA PARCELA AGRARIA, AL DÍA DE LA ENTREVISTA"
+                android:textAlignment="center" />
+
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="428. ¿Qué especies de árboles frutales, industriales y forestales tiene en esta parcela o chacra?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p428_rpta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="429.  ¿Cuántas plantas tiene? " />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p429"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="CANTIDAD"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="430. ¿Cuántas plantas están en produccion?" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/p430"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="CANTIDAD"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="431. ¿Cuáles fueron los meses de producción en el año 2020?" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p430_01"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="ENERO" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p430_02"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="FEBRERO" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p430_03"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="MARZO" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p430_04"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="ABRIL" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p430_05"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="MAYO" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p430_06"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="JUNIO" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p430_07"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="JULIO" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p430_08"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="AGOSTO" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p430_09"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="SEPTIEMBRE" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p430_10"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="OCTUBRE" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p430_11"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="NOVIEMBRE" />
+
+            <View style="@style/Divider" />
+
+            <CheckBox
+                android:id="@+id/p430_12"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="DICIEMBRE" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

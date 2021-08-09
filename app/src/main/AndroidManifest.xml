@@ -17,14 +17,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ENA2">
-        <activity android:name=".activity.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".activity.LoginActivity"></activity>
         <activity android:name=".activity.LoteActivity3"></activity>
+        <activity android:name=".activity.LoteActivity4" />
+        <activity android:name=".activity.LoteActivity5" />
         <activity android:name=".activity.Capitulo6Activity"></activity>
         <activity android:name=".activity.Capitulo5Activity"></activity>
         <activity android:name=".activity.Capitulo4Activity" />
@@ -45,6 +41,16 @@
         <activity android:name=".activity.ModuloCCapitulo5Activity" />
         <activity android:name=".activity.ModuloBCapitulo5Activity" />
         <activity android:name=".activity.ModuloACapitulo5Activity" />
+
+        <activity
+            android:name=".activity.Screen"
+            android:label="@string/title_activity_login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".activity.VisitaActivity" />
         <activity android:name=".activity.Capitulo11Activity" />

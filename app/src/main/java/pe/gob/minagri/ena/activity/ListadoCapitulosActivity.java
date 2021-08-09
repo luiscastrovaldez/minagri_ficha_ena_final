@@ -383,19 +383,19 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                 }
 
                 if (position == 6) {
-                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
+                    intent = new Intent(getApplicationContext(), Capitulo8Activity.class);
                 }
                 if (position == 7) {
-                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
+                    intent = new Intent(getApplicationContext(), Capitulo9Activity.class);
                 }
                 if (position == 8) {
-                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
+                    intent = new Intent(getApplicationContext(), Capitulo10Activity.class);
                 }
                 if (position == 9) {
-                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
+                    intent = new Intent(getApplicationContext(), Capitulo11Activity.class);
                 }
                 if (position == 10) {
-                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
+                    intent = new Intent(getApplicationContext(), Capitulo12Activity.class);
                 }
                 intent.putExtra(Constants.DEPARTAMENTO, codDepartamento);
                 intent.putExtra(Constants.PROVINCIA, codProvincia);
