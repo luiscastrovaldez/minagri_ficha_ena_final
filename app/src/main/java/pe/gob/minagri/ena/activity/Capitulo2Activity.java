@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
@@ -63,6 +64,7 @@ public class Capitulo2Activity extends AppCompatActivity {
         departamentos1 = findViewById(R.id.departamentos1);
         provincias1 = findViewById(R.id.provincias1);
         distritos1 = findViewById(R.id.distritos1);
+
         p210_cod_ccpp = findViewById(R.id.p210_cod_ccpp);
         p210 = findViewById(R.id.p210);
         Intent intent = getIntent();
@@ -123,6 +125,55 @@ public class Capitulo2Activity extends AppCompatActivity {
             }
         });
 
+        /*
+        p201_tipo_productor.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                // Get the spinner selected item text
+                Combo combo = (Combo) adapterView.getItemAtPosition(i);
+                switch (combo.getId()) {
+                    case "0":
+                        P201_OBSERVACIONES.setEnabled(Boolean.FALSE);
+                        NoEnabledNatutal();
+                        NoenabledJuridico();
+                        TABLE_221.setVisibility(View.GONE);
+                        TABLE_208.setVisibility(View.GONE);
+                        break;
+                    case "1":
+                        P201_OBSERVACIONES.setEnabled(Boolean.FALSE);
+                        enabledNatutal();
+                        NoenabledJuridico();
+                        TABLE_221.setVisibility(View.VISIBLE);
+                        TABLE_208.setVisibility(View.VISIBLE);
+                        break;
+
+                    case "2":
+                        P201_OBSERVACIONES.setEnabled(Boolean.FALSE);
+                        NoEnabledNatutal();
+                        enabledJuridico();
+                        TABLE_221.setVisibility(View.VISIBLE);
+                        TABLE_208.setVisibility(View.GONE);
+                        break;
+                    case "3":
+                        P201_OBSERVACIONES.setEnabled(Boolean.TRUE);
+                        enabledNatutal();
+                        enabledJuridico();
+                        TABLE_221.setVisibility(View.VISIBLE);
+                        TABLE_208.setVisibility(View.VISIBLE);
+                        break;
+
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(Capitulo2Activity.this, "No selection", Toast.LENGTH_SHORT).show();
+            }
+        });
+        */
+
         obternerFormulario();
     }
 
@@ -141,6 +192,10 @@ public class Capitulo2Activity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void ocultarCampos() {
+        LinearLayout layout = findViewById(R.id.capitulo2);
     }
 
     private void guardarFormulario() {

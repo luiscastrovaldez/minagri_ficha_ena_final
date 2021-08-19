@@ -36,7 +36,6 @@ public class LoteActivity3 extends AppCompatActivity {
     private SqlHelper sqlHelper;
     private String index;
     private String formulario;
-    private EnaForm enaForm;
     private FloatingActionButton guardar, salir;
     private Lote3 lote;
 
@@ -102,7 +101,7 @@ public class LoteActivity3 extends AppCompatActivity {
     private void obternerFormulario() {
         try {
             int indice = new Integer(index) + 1;
-            lote = sqlHelper.getLote(indice, dni, nroParcela, segmentoEmpresa);
+            lote = sqlHelper.getLote3(indice, dni, nroParcela, segmentoEmpresa);
             if (lote != null) {
                 this.formulario = lote.getJson();
                 LinearLayout layout = findViewById(R.id.loteCapitulo3);
@@ -139,7 +138,7 @@ public class LoteActivity3 extends AppCompatActivity {
             this.formulario = Util.generarJson(getResources(), view, this.formulario);
         }
         int indice = new Integer(index) + 1;
-        Lote3 lote = sqlHelper.getLote(indice, dni, nroParcela, segmentoEmpresa);
+        Lote3 lote = sqlHelper.getLote3(indice, dni, nroParcela, segmentoEmpresa);
         if (lote == null) {
             lote = new Lote3();
             lote.setIndex(String.valueOf(indice));
@@ -149,7 +148,7 @@ public class LoteActivity3 extends AppCompatActivity {
         lote.setJson(this.formulario);
         lote.setParcela(nroParcela);
         lote.setSegmento(segmentoEmpresa);
-        sqlHelper.saveLote(lote);
+        sqlHelper.saveLote3(lote);
 
         Toast.makeText(getApplicationContext(), getResources().getString(R.string.mensaje_guardo_informacion_correctamente), Toast.LENGTH_SHORT).show();
 

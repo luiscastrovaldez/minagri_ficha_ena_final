@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -123,6 +124,8 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
     private Intent mapIntent;
     private ObjectMapper obj;
     private Ubigeo ubigeo;
+    private TextView num_total_parcelas_sm;
+    private String totalParcelas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,6 +136,7 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
         this.dni = mapIntent.getStringExtra(Constants.DNI);
         this.segmentoEmpresa = mapIntent.getStringExtra(Constants.SEGMENTO_EMPRESA);
         this.nroParcela = mapIntent.getStringExtra(Constants.NRO_PARCELA);
+        this.totalParcelas = mapIntent.getStringExtra("totalParcelas");
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -149,8 +153,8 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
         this.distritos = (Spinner) findViewById(R.id.distritos);
         this.centroPoblados = (Spinner) findViewById(R.id.centroPoblados);
         this.comunidad = (Spinner) findViewById(R.id.comunidad);
-
-
+        num_total_parcelas_sm = findViewById(R.id.num_total_parcelas_sm);
+        num_total_parcelas_sm.setText(this.totalParcelas);
         this.p101_1 = (CheckBox) findViewById(R.id.p101_1);
         this.p101_2 = (CheckBox) findViewById(R.id.p101_2);
         this.p101_3 = (CheckBox) findViewById(R.id.p101_3);
@@ -227,6 +231,11 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                         .show();
             }
         });
+
+        /*
+        listView.getChildAt(1).setBackgroundColor(
+                Color.parseColor("#00743D"));
+        */
 
     }
 /*
@@ -841,6 +850,7 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
         formulario = Util.loadData(getAssets(), Constants.CAPITULO1_FORMULARIO_JSON);
 
         ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+        //ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa);
         if (this.formularioUbicacion == null) {
             formularioUbicacion = Util.loadData(getAssets(), Constants.UBICACION_FORMULARIO_JSON);
         }
@@ -856,9 +866,10 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
             this.formularioUbicacion = this.formularioUbicacion.replace("cod_serpentin_value", ubigeo.getCod_serpentin());
             codDepartamento = ubigeo.getCod_departamento();
             codProvincia = ubigeo.getCod_provincia();
-            codDistrito = ubigeo.getDistrito();
-            this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", ubigeo.getNum_parcela_sm());
-            this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+            codDistrito = ubigeo.getCod_distrito();
+            this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", nroParcela);
+            //this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+            this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", num_total_parcelas_sm.getText());
             this.formularioUbicacion = this.formularioUbicacion.replace("cod_ccpp_value", ubigeo.getCod_ccpp());
             this.formularioUbicacion = this.formularioUbicacion.replace("cod_segmento_empresa_value", ubigeo.getCod_segmento_empresa());
             this.formularioUbicacion = this.formularioUbicacion.replace("cod_cc_cn_value", ubigeo.getCod_cn());
@@ -914,6 +925,7 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                     layout = findViewById(R.id.capitulo1);
 
                     ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+                    //ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa);
                     this.formularioUbicacion = this.formularioUbicacion.replace("cod_geocodigo_value", ubigeo.getCod_geocodigo());
                     this.formularioUbicacion = this.formularioUbicacion.replace("cod_ubigeo_value", ubigeo.getCod_geocodigo());
                     cod_region_natural = ubigeo.getCod_region_natural();
@@ -926,8 +938,9 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                     codDepartamento = ubigeo.getCod_departamento();
                     codProvincia = ubigeo.getCod_provincia();
                     codDistrito = ubigeo.getDistrito();
-                    this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", ubigeo.getNum_parcela_sm());
-                    this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+                    this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", nroParcela);
+                    //this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+                    this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", num_total_parcelas_sm.getText());
                     this.formularioUbicacion = this.formularioUbicacion.replace("cod_ccpp_value", ubigeo.getCod_ccpp());
                     this.formularioUbicacion = this.formularioUbicacion.replace("cod_segmento_empresa_value", ubigeo.getCod_segmento_empresa());
                     this.formularioUbicacion = this.formularioUbicacion.replace("cod_cc_cn_value", ubigeo.getCod_cn());
@@ -962,6 +975,7 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
 
                 } else {
                     ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+                    //ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa);
                     if (this.formularioUbicacion == null) {
                         formularioUbicacion = Util.loadData(getAssets(), Constants.UBICACION_FORMULARIO_JSON);
                     }
@@ -978,8 +992,9 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                         codDepartamento = ubigeo.getCod_departamento();
                         codProvincia = ubigeo.getCod_provincia();
                         codDistrito = ubigeo.getDistrito();
-                        this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", ubigeo.getNum_parcela_sm());
-                        this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+                        this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", nroParcela);
+                        //this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+                        this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", num_total_parcelas_sm.getText());
                         this.formularioUbicacion = this.formularioUbicacion.replace("cod_ccpp_value", ubigeo.getCod_ccpp());
                         this.formularioUbicacion = this.formularioUbicacion.replace("cod_segmento_empresa_value", ubigeo.getCod_segmento_empresa());
                         this.formularioUbicacion = this.formularioUbicacion.replace("cod_cc_cn_value", ubigeo.getCod_cn());

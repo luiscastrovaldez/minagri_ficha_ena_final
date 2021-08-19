@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -28,6 +29,8 @@ import java.util.List;
 import pe.gob.minagri.ena.R;
 import pe.gob.minagri.ena.entity.Combo;
 import pe.gob.minagri.ena.entity.EnaForm;
+import pe.gob.minagri.ena.entity.Lote3;
+import pe.gob.minagri.ena.entity.Lote4;
 import pe.gob.minagri.ena.envio.Capitulo4;
 import pe.gob.minagri.ena.envio.Envio;
 import pe.gob.minagri.ena.envio.capitulo4.P401;
@@ -37,17 +40,17 @@ import pe.gob.minagri.ena.util.Util;
 
 public class LoteActivity4 extends AppCompatActivity {
 
+    private String formulario;
     private String segmentoEmpresa, nroParcela, dni;
     private Intent intent;
-    private EnaForm enaForm;
     private SqlHelper sqlHelper;
-    private Envio envio;
-    private FloatingActionButton guardar4, validar4, salir;
 
-    private Spinner p401_rpta, p402, p404, p405b, p409, p412b, p418, p419b, p419d, p421, p425c;
+    private FloatingActionButton guardar4, salir;
+    private Lote4 lote;
 
-    private Spinner p439, p440_rpta_1, p440_rpta_2, p440_rpta_3, p440_rpta_4, p440_rpta_5, p440_rpta_6, p440_rpta_7, p440_rpta_8, p440_rpta_9, p440_rpta_10, p440_rpta_11,
-            p440_rpta_12, p440_rpta_13, p440_rpta_14, p440_rpta_15, p440_rpta_16, p440_rpta_17, p440_rpta_18, p440_rpta_19, p440_rpta_20, p440_rpta_21, p440_rpta_22, p442, p445, p446;
+    private Spinner p401_rpta, p402, p404, p405b, p409, p412b, p418, p419b, p419d, p421, p423c, p425c;
+
+
 
     private EditText p403_mes, p403_anio, p405a, p405c, p406, p407_otro, p408_otro, p410a_mes, p410a_anio, p410b_mes, p410b_anio, p412a, p412c, p413, p414;
 
@@ -55,25 +58,22 @@ public class LoteActivity4 extends AppCompatActivity {
 
     private String index;
 
-    private P401 p401Entity;
 
-    private ListView capitulo4ModuloC, capitulo4ModuloB;
 
-    private List<String> ordenes;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lote4);
-        ordenes = new ArrayList<>();
+
         intent = getIntent();
 
         segmentoEmpresa = intent.getStringExtra(Constants.SEGMENTO_EMPRESA);
         nroParcela = intent.getStringExtra(Constants.NRO_PARCELA);
         dni = intent.getStringExtra(Constants.DNI);
         index = intent.getStringExtra(Constants.INDEX);
-        guardar4 = (FloatingActionButton) findViewById(R.id.guardar4);
-        validar4 = (FloatingActionButton) findViewById(R.id.validar4);
+        guardar4 = (FloatingActionButton) findViewById(R.id.guardarLote4);
         salir = (FloatingActionButton) findViewById(R.id.salirLoteCapitulo4);
 
         p403_mes = (EditText) findViewById(R.id.p403_mes);
@@ -110,95 +110,12 @@ public class LoteActivity4 extends AppCompatActivity {
         p419d = (Spinner) findViewById(R.id.p419d);
         p421 = (Spinner) findViewById(R.id.p421);
         p425c = (Spinner) findViewById(R.id.p425c);
-
-        p439 = (Spinner) findViewById(R.id.p439);
-
-        p440_rpta_1 = (Spinner) findViewById(R.id.p440_rpta_1);
-        p440_rpta_2 = (Spinner) findViewById(R.id.p440_rpta_2);
-        p440_rpta_3 = (Spinner) findViewById(R.id.p440_rpta_3);
-        p440_rpta_4 = (Spinner) findViewById(R.id.p440_rpta_4);
-        p440_rpta_5 = (Spinner) findViewById(R.id.p440_rpta_5);
-        p440_rpta_6 = (Spinner) findViewById(R.id.p440_rpta_6);
-        p440_rpta_7 = (Spinner) findViewById(R.id.p440_rpta_7);
-        p440_rpta_8 = (Spinner) findViewById(R.id.p440_rpta_8);
-        p440_rpta_9 = (Spinner) findViewById(R.id.p440_rpta_9);
-        p440_rpta_10 = (Spinner) findViewById(R.id.p440_rpta_10);
-        p440_rpta_11 = (Spinner) findViewById(R.id.p440_rpta_11);
-        p440_rpta_12 = (Spinner) findViewById(R.id.p440_rpta_12);
-        p440_rpta_13 = (Spinner) findViewById(R.id.p440_rpta_13);
-        p440_rpta_14 = (Spinner) findViewById(R.id.p440_rpta_14);
-        p440_rpta_15 = (Spinner) findViewById(R.id.p440_rpta_15);
-        p440_rpta_16 = (Spinner) findViewById(R.id.p440_rpta_16);
-        p440_rpta_17 = (Spinner) findViewById(R.id.p440_rpta_17);
-        p440_rpta_18 = (Spinner) findViewById(R.id.p440_rpta_18);
-        p440_rpta_19 = (Spinner) findViewById(R.id.p440_rpta_19);
-        p440_rpta_20 = (Spinner) findViewById(R.id.p440_rpta_20);
-        p440_rpta_21 = (Spinner) findViewById(R.id.p440_rpta_21);
-        p440_rpta_22 = (Spinner) findViewById(R.id.p440_rpta_22);
-        p442 = (Spinner) findViewById(R.id.p442);
-        p445 = (Spinner) findViewById(R.id.p445);
-        p446 = (Spinner) findViewById(R.id.p446);
+        p423c = (Spinner) findViewById(R.id.p423c);
 
 
-        capitulo4ModuloC = findViewById(R.id.capitulo4ModuloC);
-        capitulo4ModuloB = findViewById(R.id.capitulo4ModuloB);
-
-        for (int i = 0; i < 20; i++) {
-            ordenes.add(i, "Orden " + (i + 1));
-        }
-
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, ordenes);
-        capitulo4ModuloC.setAdapter(adapter);
-        capitulo4ModuloB.setAdapter(adapter);
-
-        capitulo4ModuloC.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-
-                // ListView Clicked item index
-                int itemPosition = position;
-
-                // ListView Clicked item value
-                String itemValue = (String) capitulo4ModuloC.getItemAtPosition(position);
-
-                Intent intent = new Intent(getApplicationContext(), Capitulo4ModuloCActivity.class);
-                intent.putExtra(Constants.SEGMENTO_EMPRESA, segmentoEmpresa);
-                intent.putExtra(Constants.NRO_PARCELA, nroParcela);
-                intent.putExtra(Constants.DNI, dni);
-                intent.putExtra("index", "" + itemPosition);
 
 
-                startActivity(intent);
-            }
 
-        });
-
-        capitulo4ModuloB.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-
-                // ListView Clicked item index
-                int itemPosition = position;
-
-                // ListView Clicked item value
-                String itemValue = (String) capitulo4ModuloB.getItemAtPosition(position);
-
-                Intent intent = new Intent(getApplicationContext(), Capitulo4ModuloBActivity.class);
-                intent.putExtra(Constants.SEGMENTO_EMPRESA, segmentoEmpresa);
-                intent.putExtra(Constants.NRO_PARCELA, nroParcela);
-                intent.putExtra(Constants.DNI, dni);
-                intent.putExtra("index", "" + itemPosition);
-
-
-                startActivity(intent);
-            }
-
-        });
 
         this.sqlHelper = new SqlHelper(getApplicationContext());
         salir.setOnClickListener(new View.OnClickListener() {
@@ -217,11 +134,13 @@ public class LoteActivity4 extends AppCompatActivity {
         agregarP419b();
         agregarP421();
         agregarP45c();
-        agregarP439();
-        agregarp440_rpta_1();
+        agregarP423c();
+        agregarP419d();
 
-        enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela(segmentoEmpresa, nroParcela, dni);
-        /*
+
+
+        /* enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela(segmentoEmpresa, nroParcela, dni);
+
         if (enaForm != null) {
             String json = enaForm.getJson();
             ObjectMapper obj = new ObjectMapper();
@@ -300,6 +219,7 @@ public class LoteActivity4 extends AppCompatActivity {
                         .show();
             }
         });
+        /*
         validar4.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
@@ -311,7 +231,8 @@ public class LoteActivity4 extends AppCompatActivity {
                 }
             }
         });
-
+        */
+/*
         p405b.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
@@ -400,169 +321,67 @@ public class LoteActivity4 extends AppCompatActivity {
                 Toast.makeText(LoteActivity4.this, "No selection", Toast.LENGTH_SHORT).show();
             }
         });
+        */
+        obternerFormulario();
     }
 
+    private void obternerFormulario() {
+        try {
+            int indice = new Integer(index) + 1;
+            lote = sqlHelper.getLote4(indice, dni, nroParcela, segmentoEmpresa);
+            if (lote != null) {
+                this.formulario = lote.getJson();
+                LinearLayout layout = findViewById(R.id.loteCapitulo4);
+                for (int i = 0; i < layout.getChildCount(); i++) {
+                    View view = layout.getChildAt(i);
+                    Util.setearInformacion(getResources(), view, this.formulario);
+                    //Util.setearInformacionArray(getResources(), view, this.formulario, "p304");
+                }
+            }
+            /*
+            enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela("10", "01");
+            if (enaForm != null) {
+                this.formulario = enaForm.get3();
+                LinearLayout layout = findViewById(R.id.capitulo3);
+                for (int i = 0; i < layout.getChildCount(); i++) {
+                    View view = layout.getChildAt(i);
+                    Util.setearInformacion(getResources(), view, this.formulario);
+                    Util.setearInformacionArray(getResources(), view, this.formulario, "p304");
+                }
+            }*/
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void guardarFormulario() {
-        Combo p401_rptaValue = (Combo) p401_rpta.getSelectedItem();
-        Combo p402_value = (Combo) p402.getSelectedItem();
-        Combo p404_value = (Combo) p404.getSelectedItem();
-        Combo p405b_value = (Combo) p405b.getSelectedItem();
 
-        Combo p445_value = (Combo) p445.getSelectedItem();
-        Combo p446_value = (Combo) p446.getSelectedItem();
-
-        Combo p409_value = (Combo) p409.getSelectedItem();
-
-        Combo p412_value = (Combo) p412b.getSelectedItem();
-
-        enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela(segmentoEmpresa, nroParcela, dni);
-        ObjectMapper obj = new ObjectMapper();
-        envio = new Envio();
-        String jsonStr = null;
-        try {
-            envio = obj.readValue(enaForm.getJson(), Envio.class);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
+        formulario = Util.loadData(getAssets(), Constants.LOTE4_FORMULARIO_JSON);
+        LinearLayout layout = findViewById(R.id.loteCapitulo4);
+        for (int i = 0; i < layout.getChildCount(); i++) {
+            View view = layout.getChildAt(i);
+            this.formulario = Util.generarJson(getResources(), view, this.formulario);
         }
-        Capitulo4 capitulo4;
-        if (envio.getCapitulo4() != null) {
-            capitulo4 = envio.getCapitulo4();
-        } else {
-            capitulo4 = new Capitulo4();
+        int indice = new Integer(index) + 1;
+        Lote4 lote = sqlHelper.getLote4(indice, dni, nroParcela, segmentoEmpresa);
+        if (lote == null) {
+            lote = new Lote4();
+            lote.setIndex(String.valueOf(indice));
         }
+        this.formulario = this.formulario.replace("index", String.valueOf(indice));
+        lote.setDni(dni);
+        lote.setJson(this.formulario);
+        lote.setParcela(nroParcela);
+        lote.setSegmento(segmentoEmpresa);
+        sqlHelper.saveLote4(lote);
 
-        if (envio.getCapitulo4() != null && envio.getCapitulo4().getP401() != null && !envio.getCapitulo4().getP401().isEmpty()) {
-            p401Lista = envio.getCapitulo4().getP401();
-            try {
-                p401Entity = p401Lista.get(new Integer(index));
-            } catch (Exception e) {
-                p401Entity = new P401();
-            }
-        } else {
-            p401Entity = new P401();
-            p401Lista = new ArrayList();
-        }
-        p401Entity.setP401Num(new Integer(index) + 1);
-        p401Entity.setP401Rpta(new Integer(p401_rptaValue.getId()));
-        if (p402_value.getId() != null) {
-            p401Entity.setP402(p402_value.getId());
-        }
-
-        if (p403_anio.getText() != null && !p403_anio.getText().toString().isEmpty()) {
-            p401Entity.setP403Anio(p403_anio.getText().toString());
-        }
-
-        if (p403_mes.getText() != null && !p403_mes.getText().toString().isEmpty()) {
-            p401Entity.setP403Mes(p403_mes.getText().toString());
-        }
-        if (!p404_value.getId().isEmpty()) {
-            p401Entity.setP404(new Integer(p404_value.getId()));
-        }
-        if (p405a.getText() != null && !p405a.getText().toString().isEmpty()) {
-            p401Entity.setP405a(new Double(p405a.getText().toString()));
-        }
-        if (!p405b_value.getId().isEmpty()) {
-            p401Entity.setP405b(new Integer(p405b_value.getId()));
-        }
-
-        if (p405c.getText() != null && !p405c.getText().toString().isEmpty()) {
-            p401Entity.setP405c(new Double(p405c.getText().toString()));
-        }
-
-        if (p406.getText() != null && !p406.getText().toString().isEmpty()) {
-            p401Entity.setP406(new Double(p406.getText().toString()));
-        }
-
-        if (p407_otro.getText() != null && !p407_otro.getText().toString().isEmpty()) {
-            p401Entity.setP407Otro(p407_otro.getText().toString());
-        }
-
-        if (p408_otro.getText() != null && !p408_otro.getText().toString().isEmpty()) {
-            p401Entity.setP408Otro(p408_otro.getText().toString());
-        }
-
-        if (p409_value.getId() != null) {
-            p401Entity.setP409(new Integer(p409_value.getId()));
-        }
-
-        if (p410a_mes.getText() != null && !p410a_mes.getText().toString().isEmpty()) {
-            p401Entity.setP410aMes(p410a_mes.getText().toString());
-        }
-
-        if (p410a_anio.getText() != null && !p410a_anio.getText().toString().isEmpty()) {
-            p401Entity.setP410aAnio(p410a_anio.getText().toString());
-        }
-
-        if (p408_otro.getText() != null && !p408_otro.getText().toString().isEmpty()) {
-            p401Entity.setP408Otro(p408_otro.getText().toString());
-        }
-
-        if (p410b_mes.getText() != null && !p410b_mes.getText().toString().isEmpty()) {
-            p401Entity.setP410bMes(p410b_mes.getText().toString());
-        }
-
-        if (p410b_anio.getText() != null && !p410b_anio.getText().toString().isEmpty()) {
-            p401Entity.setP410bAnio(p410b_anio.getText().toString());
-        }
-
-        if (p412a.getText() != null && !p412a.getText().toString().isEmpty()) {
-            p401Entity.setP412a(new Double(p412a.getText().toString()));
-        }
-
-        if (p412_value.getId() != null) {
-            p401Entity.setP412b(new Integer(p412_value.getId()));
-        }
-
-        if (p412c.getText() != null && !p412c.getText().toString().isEmpty()) {
-            p401Entity.setP412c(new Double(p412c.getText().toString()));
-        }
-
-        if (p413.getText() != null && !p413.getText().toString().isEmpty()) {
-            p401Entity.setP413(new Double(p413.getText().toString()));
-        }
-
-        if (p414.getText() != null && !p414.getText().toString().isEmpty()) {
-            p401Entity.setP414(new Double(p414.getText().toString()));
-        }
-
-
-        if (!p401Lista.isEmpty()) {
-            try {
-                p401Lista.set(new Integer(index), p401Entity);
-            } catch (Exception e) {
-                p401Lista.add(new Integer(index), p401Entity);
-            }
-        } else {
-            p401Lista.add(new Integer(index), p401Entity);
-        }
-
-        if (!p445_value.getId().isEmpty()) {
-            capitulo4.setP445(new Integer(p445_value.getId()));
-        }
-
-        if (!p446_value.getId().isEmpty()) {
-            capitulo4.setP446(new Integer(p446_value.getId()));
-        }
-
-        capitulo4.setP401(p401Lista);
-        envio.setCapitulo4(capitulo4);
-
-        try {
-            jsonStr = obj.writeValueAsString(envio);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("jsonStr = " + jsonStr);
-
-        enaForm.setJson(jsonStr);
-        enaForm.setSegmentoEmpresa(segmentoEmpresa);
-        sqlHelper.saveInformation(enaForm);
         Toast.makeText(getApplicationContext(), getResources().getString(R.string.mensaje_guardo_informacion_correctamente), Toast.LENGTH_SHORT).show();
+
     }
 
+    /*
     private boolean validarFormulario() {
         Combo p401_rptaValue = (Combo) p401_rpta.getSelectedItem();
         if (p401_rptaValue.getId().equals("0")) {
@@ -651,6 +470,8 @@ public class LoteActivity4 extends AppCompatActivity {
 
         return false;
     }
+
+    */
 
     public void agregarP401() {
 
@@ -827,55 +648,10 @@ public class LoteActivity4 extends AppCompatActivity {
 
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         p421.setAdapter(dataAdapter);
-        p442.setAdapter(dataAdapter);
-        p445.setAdapter(dataAdapter);
-        p446.setAdapter(dataAdapter);
 
     }
 
-    public void agregarp440_rpta_1() {
 
-        List<Combo> list = new ArrayList<>();
-        list.add(new Combo("0", "Seleccionar"));
-        list.add(new Combo("1", "SI"));
-        list.add(new Combo("2", "NO"));
-
-
-        ArrayAdapter<Combo> dataAdapter = new ArrayAdapter<Combo>(this,
-                android.R.layout.simple_spinner_item, list);
-
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        p440_rpta_1.setAdapter(dataAdapter);
-
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        p440_rpta_2.setAdapter(dataAdapter);
-
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        p440_rpta_3.setAdapter(dataAdapter);
-
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        p440_rpta_4.setAdapter(dataAdapter);
-
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        p440_rpta_5.setAdapter(dataAdapter);
-        p440_rpta_6.setAdapter(dataAdapter);
-        p440_rpta_7.setAdapter(dataAdapter);
-        p440_rpta_8.setAdapter(dataAdapter);
-        p440_rpta_9.setAdapter(dataAdapter);
-        p440_rpta_10.setAdapter(dataAdapter);
-        p440_rpta_11.setAdapter(dataAdapter);
-        p440_rpta_12.setAdapter(dataAdapter);
-        p440_rpta_13.setAdapter(dataAdapter);
-        p440_rpta_14.setAdapter(dataAdapter);
-        p440_rpta_15.setAdapter(dataAdapter);
-        p440_rpta_16.setAdapter(dataAdapter);
-        p440_rpta_17.setAdapter(dataAdapter);
-        p440_rpta_18.setAdapter(dataAdapter);
-        p440_rpta_19.setAdapter(dataAdapter);
-        p440_rpta_20.setAdapter(dataAdapter);
-        p440_rpta_21.setAdapter(dataAdapter);
-        p440_rpta_22.setAdapter(dataAdapter);
-    }
 
 
     public void agregarP45c() {
@@ -906,7 +682,9 @@ public class LoteActivity4 extends AppCompatActivity {
         p425c.setAdapter(dataAdapter);
     }
 
-    public void agregarP439() {
+
+
+    public void agregarP419d() {
 
         List<Combo> list = new ArrayList<>();
         list.add(new Combo("0", "Seleccionar"));
@@ -919,6 +697,34 @@ public class LoteActivity4 extends AppCompatActivity {
                 android.R.layout.simple_spinner_item, list);
 
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        p439.setAdapter(dataAdapter);
+        p419d.setAdapter(dataAdapter);
+    }
+
+    public void agregarP423c() {
+
+        List<Combo> list = new ArrayList<>();
+        list.add(new Combo("0", "Seleccionar"));
+        list.add(new Combo("5", "Almud"));
+        list.add(new Combo("6", "Almud (otro)"));
+        list.add(new Combo("11", "Arroba"));
+        list.add(new Combo("12", "Arroba (otro)"));
+        list.add(new Combo("48", "Fanegada"));
+        list.add(new Combo("51", "Hectárea"));
+        list.add(new Combo("72", "Melga"));
+        list.add(new Combo("73", "Melga (otro)"));
+        list.add(new Combo("74", "Metro cuadrado"));
+        list.add(new Combo("95", "Tabla"));
+        list.add(new Combo("96", "Tabla (otro)"));
+        list.add(new Combo("19", "Vara"));
+        list.add(new Combo("110", "Yugada"));
+        list.add(new Combo("111", "Yugada (otro)"));
+        list.add(new Combo("114", "Yuntada"));
+        list.add(new Combo("115", "Yuntada (otro)"));
+
+        ArrayAdapter<Combo> dataAdapter = new ArrayAdapter<Combo>(this,
+                android.R.layout.simple_spinner_item, list);
+
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        p423c.setAdapter(dataAdapter);
     }
 }

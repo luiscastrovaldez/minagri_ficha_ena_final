@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:id="@+id/capitulo1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="TODO"
+                android:src="@drawable/banner1"></ImageView>
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/titulo"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/segmento"
+                 />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Ingrese numero Total de parcelas" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/totalParcelas"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:inputType="number" />
+
+            <View style="@style/Divider" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/generarFichas"
+                style="@style/subtitulo_principal"
+                android:text="Generar Fichas">
+
+            </Button>
+
+            <View style="@style/Divider" />
+
+            <ListView
+                android:id="@+id/listadoFichas"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:background="@drawable/border"
+                android:divider="@color/white"
+                android:nestedScrollingEnabled="true">
+
+            </ListView>
+
+            <View style="@style/Divider" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

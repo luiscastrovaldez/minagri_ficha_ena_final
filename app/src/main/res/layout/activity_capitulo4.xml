@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="600dp"
                 android:layout_marginTop="@dimen/table_layout_marginTop"
-                android:background="@drawable/border_ui"
+                android:background="@drawable/border"
                 android:divider="@color/white"
                 android:gravity="center"
                 android:nestedScrollingEnabled="true"
@@ -44,6 +44,1473 @@
                 android:paddingRight="@dimen/table_layout_padding_right">
 
             </ListView>
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Módulo IV. B. ARBOLES FRUTALES, INDUSTRIALES Y ESPECIES FORESTALES PLANTADOS EN FORMA DISPERSA EN LA PARCELA AGRARIA, AL DÍA DE LA ENTREVISTA"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <ListView
+                android:id="@+id/capitulo4ModuloB"
+                android:layout_width="fill_parent"
+                android:layout_height="600dp"
+                android:layout_marginTop="@dimen/table_layout_marginTop"
+                android:background="@drawable/border"
+                android:divider="@color/white"
+                android:gravity="center"
+                android:nestedScrollingEnabled="true"
+                android:paddingLeft="@dimen/table_layout_padding_left"
+                android:paddingRight="@dimen/table_layout_padding_right">
+
+            </ListView>
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Módulo IV.C. VIVEROS,  ALMÁCIGOS, SEMILLEROS Y HUERTOS SEMILLEROS AGRÍCOLAS Y FORESTALES EN LA PARCELA AGRARIA ENTRE ENERO A DICIEMBRE DE 2020"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <ListView
+                android:id="@+id/capitulo4ModuloC"
+                android:layout_width="fill_parent"
+                android:layout_height="600dp"
+                android:layout_marginTop="@dimen/table_layout_marginTop"
+                android:background="@drawable/border"
+                android:divider="@color/white"
+                android:gravity="center"
+                android:nestedScrollingEnabled="true"
+                android:paddingLeft="@dimen/table_layout_padding_left"
+                android:paddingRight="@dimen/table_layout_padding_right">
+
+            </ListView>
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Módulo IV. D. PASTOS NATURALES EN LA PARCELA AGRARIA  EL DÍA DE LA ENTREVISTA"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="437. ¿Qué clase de pastos naturales hay en la parcela?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p437_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="1. Pajonales (la chilligua, el iro ichu, ichu, hatun porke y el huaylla ichu)" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p437_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="2. Césped de puna (pacu pacu, mula pilli, pilli rosado, pasto estrella y thurpa)" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p437_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="3. Bofedales u Oqonales (la kunkuna, hierbas como el libro libro, sillu sillu, pilli, y puna)" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p437_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="4. Tolares (chillca tola, pasto estrella, pesq`e, y también gramíneas como chilligua e iro ichu)" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p437_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="5. Canllares (china kanlli y orqokanlli)" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p437_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="6. Totorales y juncales (aguazal, estero, carrizal, cañaveral, marisma o pantano)" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p437_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="7.  Colchas, champa, Torourco o pasto natural" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p437_8"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="8. Otro" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p437_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="OTRO"
+                android:inputType="textCapCharacters"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="438. ¿Qué labores culturales realiza en los pastos naturales?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p438_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="1. ¿Rotación de potreros?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p438_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="2. ¿Revegetación (gramíneas/leguminosas)?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p438_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="3. ¿Entresíembra con trébol?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p438_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="4. ¿Sístemas Sílvopastoriles?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p438_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="5. ¿Fertilización?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p438_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="6. ¿Abonamiento?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p438_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="7. ¿Riego?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p438_8"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="8. ¿Quema?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p438_9"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="9. ¿Construccion de terrazas, surcos, diques y waru waru?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p438_10"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="10. Otro" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p438_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="OTRO"
+                android:inputType="textCapCharacters"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p438_11"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="11. Ninguna" />
+
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="439. ¿Cómo consídera la condición de sus pastos naturales?  Nota: Selección unica" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p439"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Módulo IV. E. PRÁCTICAS AGRÍCOLAS PARA LOS CULTIVOS COSECHADOS Y NO COSECHADOS EN LA PARCELA AGRARIA ENTRE ENERO 2020 AL DIA DE LA ENTREVISTA" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="440. ¿Ud efectúa la práctica agrícola de:" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="A. Solo para cultivos transítorios" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="1. Mezcla de la tierra con materia orgánica?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="2. Arado o volteado de la tierra?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="3. Desterronado o desmenuzado de la tierra?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="4. Nivelado del terreno?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="B. Para todos los cultivos" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="5. Análisis de suelos?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="6. Recuperación de suelos erosionados?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="7. Recuperación de suelos compactados?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="8. Producción orgánica?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_8"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="9.  Uso de bioinsumos?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_9"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="10. Usar abonos (guano, estiercol, etc.)?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_10"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="11. Usar fertilizantes químicos?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_11"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="12. Usar plaguicidas?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_12"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="13. Aplicar manejo integrado de plagas y/o enfermedades?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_13"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="C. Solo para cultivos en la Síerra" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="14. Construcción de terrazas (andenes), zanjas de infiltración y/o rehabilitación de andenes?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_14"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="15. Construcción de surcos en contorno a la pendiente del terreno?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_15"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="16. Construcción de diques?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_16"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="17. Construcción de waru waru?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_17"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="D. Solo cuando la parcela tiene riego" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="18. Determinar la cantidad de agua que necesíta su cultivo antes de iniciar la campaña agrícola?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_18"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="19. Determina cada cuanto tiempo debe regar su cultivo antes de iniciar la campaña agrícola?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_19"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="20. Medición de la cantidad de agua que entra a su parcela?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_20"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="21. Realizar el mantenimiento de su sistema de riego?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_21"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="22. Realizar análisís de agua?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p440_rpta_22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p440_anno_22"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="AÑO"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="PLAGUICIDAS ENTRE ENERO 2020 AL DIA DE LA ENTREVISTA" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="442.  ¿Utiliza equipo de protección para la aplicación de los plaguicidas?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p442"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="443.  ¿Qué hace con los envases vacíos de los plaguicidas (insecticidas, fungicidas, herbicidas, acaricidas, bactericidas, nematicidas, rodenticidas, molusquicidas, etc)?" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p443_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="OTRO"
+                android:inputType="textCapCharacters"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="MANEJO DE PLAGAS, ENFERMEDADES Y MALEZAS EN LA PARCELA AGRARIA  ENTRE ENERO 2020 AL DIA DE LA ENTREVISTA" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="444.  ¿Qué tipo de control utiliza cuando aplica manejo  de plagas, enfermedades y malezas?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p444_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="1 ¿Control cultural ? (podas, preparación, limpieza de campo, etc)" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p444_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="2 ¿Control físíco? (barreras naturales, cercos vivos, plasticultura)" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p444_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="3 ¿Arroja a canal de regadío, río, acequia?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p444_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="4 ¿Deja en el campo de cultivo?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p444_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="5 ¿Efectúa el triple lavado?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p444_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="6 ¿Deposíta en almacén temporal?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p444_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="7 ¿Control legal?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p444_8"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="8 Otro" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p444_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="OTRO"
+                android:inputType="textCapCharacters"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="CONTROL BIOLOGICO (Solo si en P444 seleccionó LA alterntiva/punto 4)" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="445. ¿Realiza evaluación de plagas después de aplicado el control biológico?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p445"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="446. ¿Anota o registra la aplicación del control biológico (fecha, cantidad usada, etc)?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p446"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p446_observaciones"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="OBSERVACIONES"
+                android:inputType="textCapCharacters"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
 
 
         </LinearLayout>
@@ -89,6 +1556,16 @@
         fab:menu_shadowXOffset="1dp"
         fab:menu_shadowYOffset="4dp"
         fab:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/guardar4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_save_24_white"
+            fab:fab_colorNormal="#045D04"
+            fab:fab_colorPressed="#045D04"
+            fab:fab_label="@string/titulo_guardar"
+            fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/salirCapitulo4"

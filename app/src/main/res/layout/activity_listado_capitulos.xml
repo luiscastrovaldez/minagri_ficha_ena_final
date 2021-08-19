@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
-            
+
             <View style="@style/Divider" />
 
             <TextView
@@ -227,12 +227,16 @@
 
             <View style="@style/Divider" />
 
+
             <TextView
                 android:id="@+id/num_total_parcelas_sm"
                 style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
+
+
+
 
             <View style="@style/Divider" />
 
@@ -496,7 +500,7 @@
                 android:id="@+id/listView"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
-                android:background="@drawable/border_ui"
+                android:background="@drawable/border"
                 android:divider="@color/white"
                 android:nestedScrollingEnabled="true">
 

@@ -17,19 +17,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ENA2">
-        <activity android:name=".activity.LoginActivity"></activity>
-        <activity android:name=".activity.LoteActivity3"></activity>
+        <activity android:name=".activity.ListadoFichasActivity"></activity>
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.LoteActivity3" />
         <activity android:name=".activity.LoteActivity4" />
         <activity android:name=".activity.LoteActivity5" />
-        <activity android:name=".activity.Capitulo6Activity"></activity>
-        <activity android:name=".activity.Capitulo5Activity"></activity>
+        <activity android:name=".activity.Capitulo6Activity" />
+        <activity android:name=".activity.Capitulo5Activity" />
         <activity android:name=".activity.Capitulo4Activity" />
-        <activity android:name=".activity.Capitulo3Activity"></activity>
-        <activity android:name=".activity.Capitulo7Activity"></activity>
+        <activity android:name=".activity.Capitulo3Activity" />
+        <activity android:name=".activity.Capitulo7Activity" />
         <activity android:name=".activity.ListadoCapitulosActivity" />
-        <activity android:name=".activity.MapaActivity">
-
-        </activity>
+        <activity android:name=".activity.MapaActivity"></activity>
         <activity android:name=".activity.ModuloKCapitulo5Activity" />
         <activity android:name=".activity.ModuloJCapitulo5Activity" />
         <activity android:name=".activity.ModuloICapitulo5Activity" />
@@ -41,7 +40,8 @@
         <activity android:name=".activity.ModuloCCapitulo5Activity" />
         <activity android:name=".activity.ModuloBCapitulo5Activity" />
         <activity android:name=".activity.ModuloACapitulo5Activity" />
-
+        <activity android:name=".activity.Capitulo4ModuloBActivity" />
+        <activity android:name=".activity.Capitulo4ModuloCActivity" />
         <activity
             android:name=".activity.Screen"
             android:label="@string/title_activity_login">
@@ -51,7 +51,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".activity.VisitaActivity" />
         <activity android:name=".activity.Capitulo11Activity" />
         <activity android:name=".activity.PersonaActivity" />
@@ -61,8 +60,6 @@
         <activity android:name=".activity.EquipoActivity" />
         <activity android:name=".activity.Capitulo8Activity" />
         <activity android:name=".activity.Capitulo12Activity" />
-
-
         <activity android:name=".activity.Capitulo2Activity" />
 
         <meta-data

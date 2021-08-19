@@ -43,11 +43,15 @@ import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.httpclient.methods.PutMethod;
 import org.apache.commons.httpclient.methods.StringRequestEntity;
+import org.apache.commons.httpclient.params.HttpClientParams;
+import org.apache.commons.httpclient.params.HttpConnectionParams;
+import org.apache.commons.httpclient.params.HttpParams;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -119,7 +123,11 @@ public class MapaActivity extends AppCompatActivity implements
             public void onClick(View v) {
                 Descargar descargar = new Descargar(dni);
                 descargar.execute();
-
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 paths.add(Constants.PATH_MINAGRI_KML + File.separator + dni + File.separator + dni + ".kml");
                 generandoKml = new GenerandoKml(paths, mapa, MapaActivity.this);
                 generandoKml.execute();
@@ -161,7 +169,18 @@ public class MapaActivity extends AppCompatActivity implements
                 if (count == 0) {
                     ubigeos = Util.readCsvFile(Constants.PATH_MINAGRI_CARGA_CENTROS_POBLADOS);
                     sqlHelper.saveUbigeo(ubigeos);
-                    Toast.makeText(getApplicationContext(), "Termino la sincronizacion", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getApplicationContext(), "Termino la sincronizacion", Toast.LENGTH_LONG).show();
+                    AlertDialog alertDialog1 = new AlertDialog.Builder(MapaActivity.this)
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .setTitle(getResources().getString(R.string.titulo_informacion))
+                            .setMessage("Termino la sincronizacion")
+                            .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            })
+                            .show();
                 } else {
                     alertDialog = new AlertDialog.Builder(MapaActivity.this)
                             .setIcon(android.R.drawable.ic_dialog_alert)
@@ -173,7 +192,21 @@ public class MapaActivity extends AppCompatActivity implements
                                     sqlHelper.deleteAllUbigeo();
                                     ubigeos = Util.readCsvFile(Constants.PATH_MINAGRI_CARGA_CENTROS_POBLADOS);
                                     sqlHelper.saveUbigeo(ubigeos);
-                                    Toast.makeText(getApplicationContext(), "Termino la sincronizacion", Toast.LENGTH_LONG).show();
+                                    //Toast.makeText(getApplicationContext(), "Termino la sincronizacion", Toast.LENGTH_LONG).show();
+
+                                    AlertDialog alertDialog1 = new AlertDialog.Builder(MapaActivity.this)
+                                            .setIcon(android.R.drawable.ic_dialog_alert)
+                                            .setTitle(getResources().getString(R.string.titulo_informacion))
+                                            .setMessage("Termino la sincronizacion")
+                                            .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                                }
+                                            })
+                                            .show();
+
+
                                 }
                             }).setNegativeButton(getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
                                 @Override
@@ -251,7 +284,7 @@ public class MapaActivity extends AppCompatActivity implements
         String tag = (String) polygon.getTag();
         String html = tag.split(Constants.SPLIT)[1];
         final String codigoParcela = tag.split(Constants.SPLIT)[0];
-        dialog.setTitle(codigoParcela);
+        //dialog.setTitle(codigoParcela);
         //System.out.println("pagina = " + html);
 
         webview.loadDataWithBaseURL("", html, "text/html", "UTF-8", "");
@@ -260,11 +293,14 @@ public class MapaActivity extends AppCompatActivity implements
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listadoCapitulosActivityIntent = new Intent(getApplicationContext(), ListadoCapitulosActivity.class);
-                String nroParcela = codigoParcela.substring(codigoParcela.length() - 2, codigoParcela.length());
-                nroParcela = (new Integer(nroParcela)).toString();
-                listadoCapitulosActivityIntent.putExtra(Constants.SEGMENTO_EMPRESA, codigoParcela.substring(0, codigoParcela.length() - 2));
-                listadoCapitulosActivityIntent.putExtra(Constants.NRO_PARCELA, nroParcela);
+                //listadoCapitulosActivityIntent = new Intent(getApplicationContext(), ListadoCapitulosActivity.class);
+                listadoCapitulosActivityIntent = new Intent(getApplicationContext(), ListadoFichasActivity.class);
+
+                //String nroParcela = codigoParcela.substring(codigoParcela.length() - 2, codigoParcela.length());
+                //nroParcela = (new Integer(nroParcela)).toString();
+                //listadoCapitulosActivityIntent.putExtra(Constants.SEGMENTO_EMPRESA, codigoParcela.substring(0, codigoParcela.length() - 2));
+                listadoCapitulosActivityIntent.putExtra(Constants.SEGMENTO_EMPRESA, codigoParcela);
+                //listadoCapitulosActivityIntent.putExtra(Constants.NRO_PARCELA, nroParcela);
                 listadoCapitulosActivityIntent.putExtra(Constants.DNI, dni);
                 startActivity(listadoCapitulosActivityIntent);
             }
@@ -331,16 +367,18 @@ public class MapaActivity extends AppCompatActivity implements
 
         @RequiresApi(api = Build.VERSION_CODES.O)
         protected Void doInBackground(final String... args) {
-
+            String path = null;
+            HttpClientParams params = null;
             try {
                 Thread.sleep(1000);
                 try {
                     PostMethod httpPost = null;
                     PutMethod httpPut = null;
                     HttpClient client = new HttpClient();
+                    params = client.getParams();
+                    params.setSoTimeout(200000);
                     String response = "";
                     int statusCode = 0;
-
 
                     StringRequestEntity requestEntity = new StringRequestEntity(
                             "{\n" +
@@ -354,6 +392,17 @@ public class MapaActivity extends AppCompatActivity implements
                     statusCode = client.executeMethod(httpPost);
 
                     System.out.println("statusCode =" + statusCode);
+
+                    /*
+                    path = Constants.PATH_MINAGRI_KML + File.separator + "descarga.txt";
+                    try {
+                        Files.write( Paths.get(path), e.getMessage().getBytes());
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    }
+                    */
+
+
                     if (statusCode == 500) {
                         runOnUiThread(new Runnable() {
                             public void run() {
@@ -419,15 +468,36 @@ public class MapaActivity extends AppCompatActivity implements
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
+
+                    path = Constants.PATH_MINAGRI_KML + File.separator + "errordescarga.txt";
+                    try {
+                        Files.write(Paths.get(path), e.getMessage().getBytes());
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    }
+
                     runOnUiThread(new Runnable() {
                         public void run() {
-                            Toast.makeText(getApplicationContext(), "Error descargando KML ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Error descargando KML 1" + e.getMessage(), Toast.LENGTH_LONG).show();
                         }
                     });
                 }
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
+
+                path = Constants.PATH_MINAGRI_KML + File.separator + "errordescarga.txt";
+                try {
+                    Files.write(Paths.get(path), e.getMessage().getBytes());
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        Toast.makeText(getApplicationContext(), "Error descargando KML 2" + e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
             }
             return null;
         }

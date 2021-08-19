@@ -14,6 +14,14 @@ import pe.gob.minagri.ena.entity.EnaForm;
 import pe.gob.minagri.ena.entity.EnaFormDao;
 import pe.gob.minagri.ena.entity.Lote3;
 import pe.gob.minagri.ena.entity.Lote3Dao;
+import pe.gob.minagri.ena.entity.Lote4;
+import pe.gob.minagri.ena.entity.Lote4Dao;
+import pe.gob.minagri.ena.entity.NumeroParcela;
+import pe.gob.minagri.ena.entity.NumeroParcelaDao;
+import pe.gob.minagri.ena.entity.OrdenB;
+import pe.gob.minagri.ena.entity.OrdenBDao;
+import pe.gob.minagri.ena.entity.OrdenC;
+import pe.gob.minagri.ena.entity.OrdenCDao;
 import pe.gob.minagri.ena.entity.Point;
 import pe.gob.minagri.ena.entity.PointDao;
 import pe.gob.minagri.ena.entity.Polygon;
@@ -52,7 +60,7 @@ public class SqlHelper {
         return newRowId;
     }
 
-    public long saveLote(Lote3 lote) {
+    public long saveLote3(Lote3 lote) {
         long newRowId = -1;
         try {
 
@@ -68,8 +76,95 @@ public class SqlHelper {
         return newRowId;
     }
 
+    public NumeroParcela getNumeroParcela(String dni, String segmento) {
+        List<NumeroParcela> resultado;
+        NumeroParcela numeroParcela = null;
+        try {
+            feedReaderDbHelper = new FeedReaderDbHelper(context);
+            SQLiteDatabase db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
 
-    public Lote3 getLote(int index, String dni, String parcela, String segmento) {
+            resultado = session.getNumeroParcelaDao().queryBuilder()
+                    .where(NumeroParcelaDao.Properties.Dni.eq(dni))
+                    .where(NumeroParcelaDao.Properties.Segmento.eq(segmento)).list();
+            if (resultado != null && !resultado.isEmpty()) {
+                numeroParcela = resultado.get(0);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return numeroParcela;
+    }
+
+    public long saveNumeroParcela(NumeroParcela numeroParcela) {
+        long newRowId = -1;
+        try {
+
+            db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+            session.getNumeroParcelaDao().insertOrReplace(numeroParcela);
+            newRowId = numeroParcela.getId();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return newRowId;
+    }
+
+    public long saveOrdenB(OrdenB ordenB) {
+        long newRowId = -1;
+        try {
+
+            db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+            session.getOrdenBDao().insertOrReplace(ordenB);
+            newRowId = ordenB.getId();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return newRowId;
+    }
+
+    public long saveOrdenC(OrdenC ordenC) {
+        long newRowId = -1;
+        try {
+
+            db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+            session.getOrdenCDao().insertOrReplace(ordenC);
+            newRowId = ordenC.getId();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return newRowId;
+    }
+
+    public long saveLote4(Lote4 lote) {
+        long newRowId = -1;
+        try {
+
+            db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+            session.getLote4Dao().insertOrReplace(lote);
+            newRowId = lote.getId();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return newRowId;
+    }
+
+
+    public Lote3 getLote3(int index, String dni, String parcela, String segmento) {
         List<Lote3> resultado;
         Lote3 lote = null;
         try {
@@ -82,6 +177,81 @@ public class SqlHelper {
                     .where(Lote3Dao.Properties.Index.eq(index))
                     .where(Lote3Dao.Properties.Parcela.eq(parcela))
                     .where(Lote3Dao.Properties.Segmento.eq(segmento)).list();
+            if (resultado != null && !resultado.isEmpty()) {
+                lote = resultado.get(0);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return lote;
+    }
+
+    public OrdenB getOrdenB(int index, String dni, String parcela, String segmento) {
+        List<OrdenB> resultado;
+        OrdenB ordenB = null;
+        try {
+            feedReaderDbHelper = new FeedReaderDbHelper(context);
+            SQLiteDatabase db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+
+            resultado = session.getOrdenBDao().queryBuilder()
+                    .where(OrdenBDao.Properties.Dni.eq(dni))
+                    .where(OrdenBDao.Properties.Index.eq(index))
+                    .where(OrdenBDao.Properties.Parcela.eq(parcela))
+                    .where(OrdenBDao.Properties.Segmento.eq(segmento)).list();
+            if (resultado != null && !resultado.isEmpty()) {
+                ordenB = resultado.get(0);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return ordenB;
+    }
+
+    public OrdenC getOrdenC(int index, String dni, String parcela, String segmento) {
+        List<OrdenC> resultado;
+        OrdenC ordenC = null;
+        try {
+            feedReaderDbHelper = new FeedReaderDbHelper(context);
+            SQLiteDatabase db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+
+            resultado = session.getOrdenCDao().queryBuilder()
+                    .where(OrdenCDao.Properties.Dni.eq(dni))
+                    .where(OrdenCDao.Properties.Index.eq(index))
+                    .where(OrdenCDao.Properties.Parcela.eq(parcela))
+                    .where(OrdenCDao.Properties.Segmento.eq(segmento)).list();
+            if (resultado != null && !resultado.isEmpty()) {
+                ordenC = resultado.get(0);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return ordenC;
+    }
+
+    public Lote4 getLote4(int index, String dni, String parcela, String segmento) {
+        List<Lote4> resultado;
+        Lote4 lote = null;
+        try {
+            feedReaderDbHelper = new FeedReaderDbHelper(context);
+            SQLiteDatabase db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+
+            resultado = session.getLote4Dao().queryBuilder()
+                    .where(Lote4Dao.Properties.Dni.eq(dni))
+                    .where(Lote4Dao.Properties.Index.eq(index))
+                    .where(Lote4Dao.Properties.Parcela.eq(parcela))
+                    .where(Lote4Dao.Properties.Segmento.eq(segmento)).list();
             if (resultado != null && !resultado.isEmpty()) {
                 lote = resultado.get(0);
             }
@@ -252,6 +422,29 @@ public class SqlHelper {
         }
         return resultado;
     }
+/*
+    public Ubigeo obtenerEmpresaByNroEmpresa(String nroEmpresa) {
+        List<Ubigeo> resultado;
+        Ubigeo retornar = null;
+        try {
+            feedReaderDbHelper = new FeedReaderDbHelper(context);
+            SQLiteDatabase db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+            resultado = session.getUbigeoDao().queryBuilder()
+                    .where(UbigeoDao.Properties.Cod_segmento_empresa.eq(nroEmpresa))
+                    //.where(UbigeoDao.Properties.Num_parcela_sm.eq(nroParcela))
+                    .list();
+            if (resultado != null && !resultado.isEmpty()) {
+                retornar = resultado.get(0);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return retornar;
+    }
+    */
+
 
     public Ubigeo obtenerEmpresaByNroEmpresa(String nroEmpresa, String nroParcela) {
         List<Ubigeo> resultado;
@@ -272,6 +465,7 @@ public class SqlHelper {
         }
         return retornar;
     }
+
 
     public EnaForm obtenerEnaFormByNroEmpresaAndParcela(String NroEmpresa, String nroParcela, String dni) {
         List<EnaForm> resultado;
