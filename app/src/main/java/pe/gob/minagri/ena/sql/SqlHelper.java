@@ -422,7 +422,8 @@ public class SqlHelper {
         }
         return resultado;
     }
-/*
+
+
     public Ubigeo obtenerEmpresaByNroEmpresa(String nroEmpresa) {
         List<Ubigeo> resultado;
         Ubigeo retornar = null;
@@ -443,7 +444,8 @@ public class SqlHelper {
         }
         return retornar;
     }
-    */
+
+/*
 
 
     public Ubigeo obtenerEmpresaByNroEmpresa(String nroEmpresa, String nroParcela) {
@@ -465,6 +467,8 @@ public class SqlHelper {
         }
         return retornar;
     }
+
+    */
 
 
     public EnaForm obtenerEnaFormByNroEmpresaAndParcela(String NroEmpresa, String nroParcela, String dni) {

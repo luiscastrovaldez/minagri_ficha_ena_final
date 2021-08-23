@@ -59,10 +59,10 @@ public final class Util {
                     ubigeo.setCn(values[17]);
                     // NRO_SEGMENTO_EMPRESA;NUM_TOTAL_PARCELAS;NOMBRE_CENTRO_POBLADO;COD_CENTRO_POBLADO;NUM_PARCELA
                     ubigeo.setCod_segmento_empresa(values[18]);
-                    ubigeo.setNum_total_parcelas_sm(values[19]);
-                    ubigeo.setCcpp(values[20]);
-                    ubigeo.setCod_ccpp(values[21]);
-                    ubigeo.setNum_parcela_sm(values[22]);
+                    //ubigeo.setNum_total_parcelas_sm(values[19]);
+                    ubigeo.setCcpp(values[19]);
+                    ubigeo.setCod_ccpp(values[20]);
+                    //ubigeo.setNum_parcela_sm(values[22]);
 
                     records.add(ubigeo);
                 }

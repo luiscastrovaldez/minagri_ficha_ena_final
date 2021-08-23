@@ -849,8 +849,8 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
         formularioUbicacion = Util.loadData(getAssets(), Constants.UBICACION_FORMULARIO_JSON);
         formulario = Util.loadData(getAssets(), Constants.CAPITULO1_FORMULARIO_JSON);
 
-        ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
-        //ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa);
+        //ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+        ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa);
         if (this.formularioUbicacion == null) {
             formularioUbicacion = Util.loadData(getAssets(), Constants.UBICACION_FORMULARIO_JSON);
         }
@@ -924,8 +924,8 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                     this.formularioUbicacion = enaForm.getUbicaciongGeografica();
                     layout = findViewById(R.id.capitulo1);
 
-                    ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
-                    //ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa);
+                    //ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+                    ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa);
                     this.formularioUbicacion = this.formularioUbicacion.replace("cod_geocodigo_value", ubigeo.getCod_geocodigo());
                     this.formularioUbicacion = this.formularioUbicacion.replace("cod_ubigeo_value", ubigeo.getCod_geocodigo());
                     cod_region_natural = ubigeo.getCod_region_natural();
@@ -974,8 +974,8 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
 
 
                 } else {
-                    ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
-                    //ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa);
+                    //ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+                    ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa);
                     if (this.formularioUbicacion == null) {
                         formularioUbicacion = Util.loadData(getAssets(), Constants.UBICACION_FORMULARIO_JSON);
                     }
