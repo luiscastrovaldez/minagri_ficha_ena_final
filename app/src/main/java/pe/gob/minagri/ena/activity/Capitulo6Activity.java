@@ -725,4 +725,6 @@ public class Capitulo6Activity extends AppCompatActivity {
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         p609.setAdapter(dataAdapter);
     }
+
+
 }

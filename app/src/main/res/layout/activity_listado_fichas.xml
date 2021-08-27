@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/generarFichas"
                 style="@style/subtitulo_principal"
-                android:text="Generar Fichas">
+                android:text="Generar Encuestas">
 
             </Button>
 

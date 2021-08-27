@@ -204,6 +204,48 @@ public final class Util {
         }
     }
 
+    public static void setearInformacionArray(Resources resources, View view, String formulario) {
+        String name = null;
+        JSONObject help;
+        try {
+            //JSONObject coderollsJSONObject = new JSONObject(formulario);
+            JSONArray seccionJson = new JSONArray(formulario);
+            if (view instanceof EditText) {
+                EditText editText = (EditText) view;
+                name = resources.getResourceEntryName(editText.getId());
+                for (int i = 0; i < seccionJson.length(); i++) {
+                    help = seccionJson.getJSONObject(i);
+                    try {
+                        String valor = help.getString(name);
+                        if (!valor.contains("_value")) {
+                            editText.setText(valor);
+                        }
+                    } catch (Exception e) {
+                        continue;
+                    }
+                }
+
+            }
+
+            if (view instanceof Spinner) {
+                Spinner spinner = (Spinner) view;
+                name = resources.getResourceEntryName(spinner.getId());
+                for (int i = 0; i < seccionJson.length(); i++) {
+                    help = seccionJson.getJSONObject(i);
+                    try {
+                        String valor = help.getString(name);
+                        spinner.setSelection(Util.getIndex(spinner, valor));
+                    } catch (Exception e) {
+                        continue;
+                    }
+                }
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static String generarJson(Resources resources, View view, String formulario) {
         String name = null;
         if (view instanceof EditText) {

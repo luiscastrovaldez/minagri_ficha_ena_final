@@ -382,6 +382,7 @@
                 android:background="@drawable/border"
                 android:gravity="center"
                 android:hint="OTRO"
+                android:inputType="textCapCharacters"
                 android:textAlignment="center" />
 
             <View style="@style/Divider" />
@@ -535,6 +536,7 @@
                 android:background="@drawable/border"
                 android:gravity="center"
                 android:hint="OTRO"
+                android:inputType="textCapCharacters"
                 android:textAlignment="center" />
 
             <View style="@style/Divider" />
@@ -1474,7 +1476,7 @@
                 android:background="@drawable/border"
                 android:gravity="center"
                 android:hint="NOMBRE"
-                android:inputType="numberDecimal"
+                android:inputType="textCapCharacters"
                 android:textAlignment="center" />
 
             <View style="@style/Divider" />
@@ -1732,7 +1734,7 @@
                 style="@style/titulo_pregunta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:inputType="textCapCharacters"
                 android:background="@drawable/border"
                 android:gravity="center"
                 android:hint="OTRO"
@@ -1770,7 +1772,7 @@
                 android:background="@drawable/border"
                 android:gravity="center"
                 android:hint="NOMBRE"
-                android:inputType="numberDecimal"
+                android:inputType="textCapCharacters"
                 android:textAlignment="center" />
 
             <View style="@style/Divider" />
@@ -1938,7 +1940,7 @@
                 style="@style/titulo_pregunta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:inputType="textCapCharacters"
                 android:background="@drawable/border"
                 android:gravity="center"
                 android:hint="OTRO"
@@ -2080,6 +2082,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border"
+                android:inputType="textCapCharacters"
                 android:gravity="center"
                 android:hint="OTRO"
                 android:textAlignment="center" />
@@ -2235,6 +2238,7 @@
                 android:background="@drawable/border"
                 android:gravity="center"
                 android:hint="OTRO"
+                android:inputType="textCapCharacters"
                 android:textAlignment="center" />
 
             <View style="@style/Divider" />

@@ -7,6 +7,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -353,5 +354,14 @@ public class Capitulo4ModuloCActivity extends AppCompatActivity {
         }
     }
     */
+    public void onCheckboxClicked(View view) {
+        // Is the view now checked?
+        boolean checked = ((CheckBox) view).isChecked();
+        // Check which checkbox was clicked
 
+        int index = 0;
+        switch (view.getId()) {
+
+        }
+    }
 }

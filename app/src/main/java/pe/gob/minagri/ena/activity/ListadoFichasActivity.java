@@ -25,7 +25,7 @@ public class ListadoFichasActivity extends AppCompatActivity {
 
     ListView listadoFichas;
     List<String> fichas;
-    private String segmentoEmpresa, nroParcela, dni;
+    private String segmentoEmpresa, dni;
     private Intent mapIntent;
     private EditText totalParcelas;
     private Button generar;
@@ -52,7 +52,7 @@ public class ListadoFichasActivity extends AppCompatActivity {
             fichas = new ArrayList<>();
             int size = Integer.parseInt(totalParcelas.getText().toString());
             for (int i = 0; i < size; i++) {
-                fichas.add(i, "Ficha " + (i + 1));
+                fichas.add(i, "Encuesta " + (i + 1));
             }
 
             final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),

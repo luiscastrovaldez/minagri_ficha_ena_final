@@ -79,7 +79,7 @@ public class ModuloJCapitulo5Activity extends AppCompatActivity {
         p534b_porcino_otro = findViewById(R.id.p534b_porcino_otro);
 
         guardar5j = findViewById(R.id.guardar5j);
-        validar5j = findViewById(R.id.validar5j);
+
         salirLoteCapitulo5j = findViewById(R.id.salirLoteCapitulo5j);
         p534bPollos = new ArrayList<>();
         p534bPavos = new ArrayList<>();

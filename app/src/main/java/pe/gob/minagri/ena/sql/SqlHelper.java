@@ -16,6 +16,10 @@ import pe.gob.minagri.ena.entity.Lote3;
 import pe.gob.minagri.ena.entity.Lote3Dao;
 import pe.gob.minagri.ena.entity.Lote4;
 import pe.gob.minagri.ena.entity.Lote4Dao;
+import pe.gob.minagri.ena.entity.ModuloACapitulo5;
+import pe.gob.minagri.ena.entity.ModuloACapitulo5Dao;
+import pe.gob.minagri.ena.entity.ModuloBCCapitulo5;
+import pe.gob.minagri.ena.entity.ModuloBCCapitulo5Dao;
 import pe.gob.minagri.ena.entity.NumeroParcela;
 import pe.gob.minagri.ena.entity.NumeroParcelaDao;
 import pe.gob.minagri.ena.entity.OrdenB;
@@ -161,6 +165,88 @@ public class SqlHelper {
             throw e;
         }
         return newRowId;
+    }
+
+    public long saveModuloACapitulo5(ModuloACapitulo5 moduloACapitulo5) {
+        long newRowId = -1;
+        try {
+
+            db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+            session.getModuloACapitulo5Dao().insertOrReplace(moduloACapitulo5);
+            newRowId = moduloACapitulo5.getId();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return newRowId;
+    }
+
+    public ModuloACapitulo5 getModuloACapitulo5(String dni, String parcela, String segmento) {
+        List<ModuloACapitulo5> resultado;
+        ModuloACapitulo5 moduloACapitulo5 = null;
+        try {
+            feedReaderDbHelper = new FeedReaderDbHelper(context);
+            SQLiteDatabase db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+
+            resultado = session.getModuloACapitulo5Dao().queryBuilder()
+                    .where(ModuloACapitulo5Dao.Properties.Dni.eq(dni))
+                    //.where(ModuloACapitulo5Dao.Properties.Index.eq(index))
+                    .where(ModuloACapitulo5Dao.Properties.Parcela.eq(parcela))
+                    .where(ModuloACapitulo5Dao.Properties.Segmento.eq(segmento)).list();
+            if (resultado != null && !resultado.isEmpty()) {
+                moduloACapitulo5 = resultado.get(0);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return moduloACapitulo5;
+    }
+
+    public long saveModuloBCCapitulo5(ModuloBCCapitulo5 moduloBCCapitulo5) {
+        long newRowId = -1;
+        try {
+
+            db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+            session.getModuloBCCapitulo5Dao().insertOrReplace(moduloBCCapitulo5);
+            newRowId = moduloBCCapitulo5.getId();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return newRowId;
+    }
+
+    public ModuloBCCapitulo5 getModuloBCCapitulo5(String dni, String parcela, String segmento) {
+        List<ModuloBCCapitulo5> resultado;
+        ModuloBCCapitulo5 moduloBCCapitulo5 = null;
+        try {
+            feedReaderDbHelper = new FeedReaderDbHelper(context);
+            SQLiteDatabase db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+
+            resultado = session.getModuloBCCapitulo5Dao().queryBuilder()
+                    .where(ModuloBCCapitulo5Dao.Properties.Dni.eq(dni))
+                    //.where(ModuloACapitulo5Dao.Properties.Index.eq(index))
+                    .where(ModuloBCCapitulo5Dao.Properties.Parcela.eq(parcela))
+                    .where(ModuloBCCapitulo5Dao.Properties.Segmento.eq(segmento)).list();
+            if (resultado != null && !resultado.isEmpty()) {
+                moduloBCCapitulo5 = resultado.get(0);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return moduloBCCapitulo5;
     }
 
 

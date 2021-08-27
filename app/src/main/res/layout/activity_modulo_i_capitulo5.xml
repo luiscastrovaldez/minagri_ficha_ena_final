@@ -650,17 +650,6 @@
 
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/validar5i"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_format_align_justify_24"
-            fab:fab_colorNormal="#045D04"
-            fab:fab_colorPressed="#045D04"
-            fab:fab_label="@string/titulo_validar"
-            fab:fab_size="mini" />
-
-
-        <com.github.clans.fab.FloatingActionButton
             android:id="@+id/salirLoteCapitulo5i"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
