@@ -75,7 +75,7 @@ public class ListadoFichasActivity extends AppCompatActivity {
 
                     fichas = new ArrayList<>();
                     for (int i = 0; i < size; i++) {
-                        fichas.add(i, "Ficha " + (i + 1));
+                        fichas.add(i, "Encuesta " + (i + 1));
                     }
 
                     final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),

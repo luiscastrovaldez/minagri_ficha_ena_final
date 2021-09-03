@@ -21,7 +21,7 @@ import pe.gob.minagri.ena.sql.SqlHelper;
 import pe.gob.minagri.ena.util.Constants;
 import pe.gob.minagri.ena.util.Util;
 
-public class ModuloHCapitulo5Activity extends AppCompatActivity {
+public class    ModuloHCapitulo5Activity extends AppCompatActivity {
 
     private String formulario;
     private String segmentoEmpresa, nroParcela, dni;

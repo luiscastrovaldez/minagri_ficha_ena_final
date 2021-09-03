@@ -157,17 +157,7 @@ public class ModuloJCapitulo5Activity extends AppCompatActivity {
                         .show();
             }
         });
-        validar5j.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.O)
-            @Override
-            public void onClick(View view) {
-                if (!validarFormulario()) {
-                    guardarFormulario();
-                } else {
-                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.mensaje_error), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+
         enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela(segmentoEmpresa, nroParcela, dni);
         if (enaForm != null) {
             String json = enaForm.getJson();

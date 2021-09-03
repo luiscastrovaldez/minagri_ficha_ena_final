@@ -9,7 +9,7 @@ import pe.gob.minagri.ena.util.Constants;
 
 public class FeedReaderDbHelper extends DaoMaster.DevOpenHelper {
 
-	public static final String DATABASE_NAME = Constants.PATH_MINAGRI_DB + File.separator + "enadb3.db";
+	public static final String DATABASE_NAME = Constants.PATH_MINAGRI_DB + File.separator + "enadb5.db";
 
 	public FeedReaderDbHelper(Context context) {
 		super(context, DATABASE_NAME);

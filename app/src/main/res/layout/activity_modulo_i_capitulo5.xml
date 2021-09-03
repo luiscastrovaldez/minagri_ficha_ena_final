@@ -167,9 +167,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border"
-
                 android:gravity="center"
                 android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters"
                 android:textAlignment="center" />
 
             <View style="@style/Divider" />
@@ -250,9 +250,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border"
-
                 android:gravity="center"
                 android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters"
                 android:textAlignment="center" />
 
             <View style="@style/Divider" />
@@ -586,9 +586,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border"
-
                 android:gravity="center"
                 android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters"
                 android:textAlignment="center" />
 
             <View style="@style/Divider" />

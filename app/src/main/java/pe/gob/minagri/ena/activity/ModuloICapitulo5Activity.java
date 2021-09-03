@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
@@ -15,8 +17,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.clans.fab.FloatingActionButton;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import pe.gob.minagri.ena.R;
+import pe.gob.minagri.ena.entity.Combo;
 import pe.gob.minagri.ena.entity.ModuloBCCapitulo5;
+import pe.gob.minagri.ena.entity.ModuloICapitulo5;
 import pe.gob.minagri.ena.sql.SqlHelper;
 import pe.gob.minagri.ena.util.Constants;
 import pe.gob.minagri.ena.util.Util;
@@ -29,6 +36,7 @@ public class ModuloICapitulo5Activity extends AppCompatActivity {
     private SqlHelper sqlHelper;
 
     private FloatingActionButton guardar, salir;
+    private Spinner p531;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +50,7 @@ public class ModuloICapitulo5Activity extends AppCompatActivity {
         dni = intent.getStringExtra(Constants.DNI);
         guardar = (FloatingActionButton) findViewById(R.id.guardar5i);
         salir = (FloatingActionButton) findViewById(R.id.salirLoteCapitulo5i);
+        p531 = findViewById(R.id.p531);
 
         salir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,14 +83,15 @@ public class ModuloICapitulo5Activity extends AppCompatActivity {
                         .show();
             }
         });
-
+        agregarP531();
         obternerFormulario();
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void guardarFormulario() {
 
-        formulario = Util.loadData(getAssets(), Constants.CAPITULO5_MODULOB_FORMULARIO_JSON);
+        formulario = Util.loadData(getAssets(), Constants.CAPITULO5_MODULOI_FORMULARIO_JSON);
         LinearLayout layout = findViewById(R.id.noduloicapitulo5);
 
         for (int i = 0; i < layout.getChildCount(); i++) {
@@ -89,17 +99,17 @@ public class ModuloICapitulo5Activity extends AppCompatActivity {
             this.formulario = Util.generarJson(getResources(), view, this.formulario);
         }
 
-        ModuloBCCapitulo5 moduloBCCapitulo5 = sqlHelper.getModuloBCCapitulo5(dni, nroParcela, segmentoEmpresa);
-        if (moduloBCCapitulo5 == null) {
-            moduloBCCapitulo5 = new ModuloBCCapitulo5();
+        ModuloICapitulo5 moduloICapitulo5 = sqlHelper.getModuloICapitulo5(dni, nroParcela, segmentoEmpresa);
+        if (moduloICapitulo5 == null) {
+            moduloICapitulo5 = new ModuloICapitulo5();
             //lote.setIndex(String.valueOf(indice));
         }
         //this.formulario = this.formulario.replace("index", String.valueOf(indice));
-        moduloBCCapitulo5.setDni(dni);
-        moduloBCCapitulo5.setJson(this.formulario);
-        moduloBCCapitulo5.setParcela(nroParcela);
-        moduloBCCapitulo5.setSegmento(segmentoEmpresa);
-        sqlHelper.saveModuloBCCapitulo5(moduloBCCapitulo5);
+        moduloICapitulo5.setDni(dni);
+        moduloICapitulo5.setJson(this.formulario);
+        moduloICapitulo5.setParcela(nroParcela);
+        moduloICapitulo5.setSegmento(segmentoEmpresa);
+        sqlHelper.saveModuloICapitulo5(moduloICapitulo5);
 
         Toast.makeText(getApplicationContext(), getResources().getString(R.string.mensaje_guardo_informacion_correctamente), Toast.LENGTH_SHORT).show();
 
@@ -108,13 +118,13 @@ public class ModuloICapitulo5Activity extends AppCompatActivity {
     private void obternerFormulario() {
         try {
 
-            ModuloBCCapitulo5 moduloBCCapitulo5 = sqlHelper.getModuloBCCapitulo5(dni, nroParcela, segmentoEmpresa);
-            if (moduloBCCapitulo5 != null) {
-                this.formulario = moduloBCCapitulo5.getJson();
+            ModuloICapitulo5 moduloICapitulo5 = sqlHelper.getModuloICapitulo5(dni, nroParcela, segmentoEmpresa);
+            if (moduloICapitulo5 != null) {
+                this.formulario = moduloICapitulo5.getJson();
                 LinearLayout layout = findViewById(R.id.noduloicapitulo5);
                 for (int i = 0; i < layout.getChildCount(); i++) {
                     View view = layout.getChildAt(i);
-                    Util.setearInformacionArray(getResources(), view, this.formulario);
+                    Util.setearInformacion(getResources(), view, this.formulario);
                     //Util.setearInformacionArray(getResources(), view, this.formulario, "p304");
                 }
             }
@@ -134,5 +144,21 @@ public class ModuloICapitulo5Activity extends AppCompatActivity {
         switch (view.getId()) {
 
         }
+    }
+
+    public void agregarP531() {
+
+        List<Combo> list = new ArrayList<>();
+
+        list.add(new Combo("0", "Seleccionar"));
+        list.add(new Combo("1", "¿Comercial ?"));
+        list.add(new Combo("2", "¿De elaboración propia?"));
+
+        ArrayAdapter<Combo> dataAdapter = new ArrayAdapter<Combo>(this,
+                android.R.layout.simple_spinner_item, list);
+
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        p531.setAdapter(dataAdapter);
+
     }
 }

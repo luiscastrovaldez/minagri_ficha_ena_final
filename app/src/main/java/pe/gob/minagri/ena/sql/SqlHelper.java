@@ -20,6 +20,10 @@ import pe.gob.minagri.ena.entity.ModuloACapitulo5;
 import pe.gob.minagri.ena.entity.ModuloACapitulo5Dao;
 import pe.gob.minagri.ena.entity.ModuloBCCapitulo5;
 import pe.gob.minagri.ena.entity.ModuloBCCapitulo5Dao;
+import pe.gob.minagri.ena.entity.ModuloGCapitulo5;
+import pe.gob.minagri.ena.entity.ModuloGCapitulo5Dao;
+import pe.gob.minagri.ena.entity.ModuloICapitulo5;
+import pe.gob.minagri.ena.entity.ModuloICapitulo5Dao;
 import pe.gob.minagri.ena.entity.NumeroParcela;
 import pe.gob.minagri.ena.entity.NumeroParcelaDao;
 import pe.gob.minagri.ena.entity.OrdenB;
@@ -224,6 +228,38 @@ public class SqlHelper {
         return newRowId;
     }
 
+    public long saveModuloICapitulo5(ModuloICapitulo5 moduloICapitulo5) {
+        long newRowId = -1;
+        try {
+
+            db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+            session.getModuloICapitulo5Dao().insertOrReplace(moduloICapitulo5);
+            newRowId = moduloICapitulo5.getId();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return newRowId;
+    }
+
+    public long saveModuloGCapitulo5(ModuloGCapitulo5 moduloGCapitulo5) {
+        long newRowId = -1;
+        try {
+
+            db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+            session.getModuloGCapitulo5Dao().insertOrReplace(moduloGCapitulo5);
+            newRowId = moduloGCapitulo5.getId();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return newRowId;
+    }
+
     public ModuloBCCapitulo5 getModuloBCCapitulo5(String dni, String parcela, String segmento) {
         List<ModuloBCCapitulo5> resultado;
         ModuloBCCapitulo5 moduloBCCapitulo5 = null;
@@ -247,6 +283,56 @@ public class SqlHelper {
             throw e;
         }
         return moduloBCCapitulo5;
+    }
+
+    public ModuloICapitulo5 getModuloICapitulo5(String dni, String parcela, String segmento) {
+        List<ModuloICapitulo5> resultado;
+        ModuloICapitulo5 moduloICapitulo5 = null;
+        try {
+            feedReaderDbHelper = new FeedReaderDbHelper(context);
+            SQLiteDatabase db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+
+            resultado = session.getModuloICapitulo5Dao().queryBuilder()
+                    .where(ModuloICapitulo5Dao.Properties.Dni.eq(dni))
+                    //.where(ModuloACapitulo5Dao.Properties.Index.eq(index))
+                    .where(ModuloICapitulo5Dao.Properties.Parcela.eq(parcela))
+                    .where(ModuloICapitulo5Dao.Properties.Segmento.eq(segmento)).list();
+            if (resultado != null && !resultado.isEmpty()) {
+                moduloICapitulo5 = resultado.get(0);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return moduloICapitulo5;
+    }
+
+    public ModuloGCapitulo5 getModuloGCapitulo5(String dni, String parcela, String segmento) {
+        List<ModuloGCapitulo5> resultado;
+        ModuloGCapitulo5 moduloGCapitulo5 = null;
+        try {
+            feedReaderDbHelper = new FeedReaderDbHelper(context);
+            SQLiteDatabase db = feedReaderDbHelper.getWritableDatabase();
+            DaoSession session = new DaoMaster(db).newSession();
+
+            resultado = session.getModuloGCapitulo5Dao().queryBuilder()
+                    .where(ModuloGCapitulo5Dao.Properties.Dni.eq(dni))
+                    //.where(ModuloACapitulo5Dao.Properties.Index.eq(index))
+                    .where(ModuloGCapitulo5Dao.Properties.Parcela.eq(parcela))
+                    .where(ModuloGCapitulo5Dao.Properties.Segmento.eq(segmento)).list();
+            if (resultado != null && !resultado.isEmpty()) {
+                moduloGCapitulo5 = resultado.get(0);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return moduloGCapitulo5;
     }
 
 

@@ -16,7 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.github.clans.fab.FloatingActionButton;
 
 import pe.gob.minagri.ena.R;
-import pe.gob.minagri.ena.entity.ModuloBCCapitulo5;
+
+import pe.gob.minagri.ena.entity.ModuloGCapitulo5;
 import pe.gob.minagri.ena.sql.SqlHelper;
 import pe.gob.minagri.ena.util.Constants;
 import pe.gob.minagri.ena.util.Util;
@@ -81,7 +82,8 @@ public class ModuloGCapitulo5Activity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void guardarFormulario() {
 
-        formulario = Util.loadData(getAssets(), Constants.CAPITULO5_MODULOB_FORMULARIO_JSON);
+        formulario = Util.loadData(getAssets(), Constants.CAPITULO5_MODULOG_FORMULARIO_JSON);
+
         LinearLayout layout = findViewById(R.id.nodulogcapitulo5);
 
         for (int i = 0; i < layout.getChildCount(); i++) {
@@ -89,17 +91,17 @@ public class ModuloGCapitulo5Activity extends AppCompatActivity {
             this.formulario = Util.generarJson(getResources(), view, this.formulario);
         }
 
-        ModuloBCCapitulo5 moduloBCCapitulo5 = sqlHelper.getModuloBCCapitulo5(dni, nroParcela, segmentoEmpresa);
-        if (moduloBCCapitulo5 == null) {
-            moduloBCCapitulo5 = new ModuloBCCapitulo5();
+        ModuloGCapitulo5 moduloGCapitulo5 = sqlHelper.getModuloGCapitulo5(dni, nroParcela, segmentoEmpresa);
+        if (moduloGCapitulo5 == null) {
+            moduloGCapitulo5 = new ModuloGCapitulo5();
             //lote.setIndex(String.valueOf(indice));
         }
         //this.formulario = this.formulario.replace("index", String.valueOf(indice));
-        moduloBCCapitulo5.setDni(dni);
-        moduloBCCapitulo5.setJson(this.formulario);
-        moduloBCCapitulo5.setParcela(nroParcela);
-        moduloBCCapitulo5.setSegmento(segmentoEmpresa);
-        sqlHelper.saveModuloBCCapitulo5(moduloBCCapitulo5);
+        moduloGCapitulo5.setDni(dni);
+        moduloGCapitulo5.setJson(this.formulario);
+        moduloGCapitulo5.setParcela(nroParcela);
+        moduloGCapitulo5.setSegmento(segmentoEmpresa);
+        sqlHelper.saveModuloGCapitulo5(moduloGCapitulo5);
 
         Toast.makeText(getApplicationContext(), getResources().getString(R.string.mensaje_guardo_informacion_correctamente), Toast.LENGTH_SHORT).show();
 
@@ -108,9 +110,9 @@ public class ModuloGCapitulo5Activity extends AppCompatActivity {
     private void obternerFormulario() {
         try {
 
-            ModuloBCCapitulo5 moduloBCCapitulo5 = sqlHelper.getModuloBCCapitulo5(dni, nroParcela, segmentoEmpresa);
-            if (moduloBCCapitulo5 != null) {
-                this.formulario = moduloBCCapitulo5.getJson();
+            ModuloGCapitulo5 moduloGCapitulo5 = sqlHelper.getModuloGCapitulo5(dni, nroParcela, segmentoEmpresa);
+            if (moduloGCapitulo5 != null) {
+                this.formulario = moduloGCapitulo5.getJson();
                 LinearLayout layout = findViewById(R.id.nodulogcapitulo5);
                 for (int i = 0; i < layout.getChildCount(); i++) {
                     View view = layout.getChildAt(i);
