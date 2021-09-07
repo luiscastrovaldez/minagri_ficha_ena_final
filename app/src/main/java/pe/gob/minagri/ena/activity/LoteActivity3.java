@@ -30,7 +30,7 @@ import pe.gob.minagri.ena.util.Util;
 
 public class LoteActivity3 extends AppCompatActivity {
 
-    private Spinner p301_opcion, p301a, p301b_unidad, p301c_unidad;
+    private Spinner p301a, p301b_unidad, p301c_unidad;
     private Intent intent;
     private String segmentoEmpresa, nroParcela, dni;
     private SqlHelper sqlHelper;
@@ -49,7 +49,7 @@ public class LoteActivity3 extends AppCompatActivity {
         dni = intent.getStringExtra(Constants.DNI);
         index = intent.getStringExtra(Constants.INDEX);
         this.sqlHelper = new SqlHelper(getApplicationContext());
-        p301_opcion = (Spinner) findViewById(R.id.p301_opcion);
+
         p301a = (Spinner) findViewById(R.id.p301a);
         p301b_unidad = (Spinner) findViewById(R.id.p301b_unidad);
         p301c_unidad = (Spinner) findViewById(R.id.p301c_unidad);
@@ -61,7 +61,7 @@ public class LoteActivity3 extends AppCompatActivity {
         agregarUnidadMedidaB();
         agregarUnidadMedidaC();
         agregarP301aPastosNaturales();
-        agregarOpcion();
+
 
         salir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -215,6 +215,10 @@ public class LoteActivity3 extends AppCompatActivity {
         List<Combo> list = new ArrayList<>();
 
         list.add(new Combo("0", "Seleccionar"));
+        list.add(new Combo("1171", "TRANSITORIOS"));
+        list.add(new Combo("1171", "PERMANENTES"));
+        list.add(new Combo("1171", "FORESTALES"));
+        list.add(new Combo("1171", "PASTOS SEMBRADOS"));
         list.add(new Combo("1171", "PASTOS NATURALES"));
 
         ArrayAdapter<Combo> dataAdapter = new ArrayAdapter<Combo>(this,
@@ -224,33 +228,5 @@ public class LoteActivity3 extends AppCompatActivity {
         p301a.setAdapter(dataAdapter);
     }
 
-    public void agregarOpcion() {
 
-        List<Combo> list = new ArrayList<>();
-
-        list.add(new Combo("0", "Seleccionar"));
-        list.add(new Combo("1", "1.Lote en cultivo transitorio a nivel de variedad"));
-        list.add(new Combo("2", "2.Lote en cultivo permanente a nivel de variedad"));
-        list.add(new Combo("3", "3.Lote en plantaciones forestales"));
-        list.add(new Combo("4", "4.Lote en pastos sembrados a nivel de variedad"));
-        list.add(new Combo("5", "5.Lote en barbecho"));
-        list.add(new Combo("6", "6.Lote en descanso"));
-        list.add(new Combo("7", "7.Lote en pastos naturales"));
-        list.add(new Combo("8", "8.Lote en matorrales"));
-        list.add(new Combo("9", "9.Lote en montes y bosques naturales"));
-        list.add(new Combo("10", "10.Lote en infraestructura agrícola"));
-        list.add(new Combo("11", "11.Lote en infraestructura pecuaria"));
-        list.add(new Combo("12", "12.Lote en infraestructura no agraria"));
-        list.add(new Combo("13", "13.Lote en afloramientos rocosos, áreas sin vegetación o erosionadas, eriazas"));
-        list.add(new Combo("14", "14.Lote en cuerpos de agua (quebradas, riachuelos, lagunas, qochas o reservorios de agua)"));
-        list.add(new Combo("15", "15.Lote en otros usos (vivienda, patio, piscina, cancha deportiva, etc.)"));
-
-
-        ArrayAdapter<Combo> dataAdapter = new ArrayAdapter<Combo>(this,
-                android.R.layout.simple_spinner_item, list);
-
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        p301_opcion.setAdapter(dataAdapter);
-
-    }
 }
