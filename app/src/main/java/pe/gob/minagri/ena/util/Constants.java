@@ -68,8 +68,17 @@ public class Constants {
     public static final String CAPITULO2_FORMULARIO_JSON = "capitulo2.json";
     public static final String CAPITULO3_FORMULARIO_JSON = "capitulo3.json";
     public static final String LOTE3_FORMULARIO_JSON = "lote3.json";
+    public static final String LOTE4_FORMULARIO_JSON = "lote4.json";
     public static final String CAPITULO4_FORMULARIO_JSON = "capitulo4.json";
     public static final String CAPITULO5_FORMULARIO_JSON = "capitulo5.json";
+
+    public static final String CAPITULO5_MODULOA_FORMULARIO_JSON = "capitulo5ModuloA.json";
+    public static final String CAPITULO5_MODULOB_FORMULARIO_JSON = "capitulo5ModuloBC.json";
+    public static final String CAPITULO5_MODULOG_FORMULARIO_JSON = "capitulo5ModuloG.json";
+
+    public static final String CAPITULO5_MODULOI_FORMULARIO_JSON = "capitulo5ModuloI.json";
+
+
     public static final String CAPITULO6_FORMULARIO_JSON = "capitulo6.json";
     public static final String CAPITULO7_FORMULARIO_JSON = "capitulo7.json";
     public static final String CAPITULO8_FORMULARIO_JSON = "capitulo8.json";
@@ -81,6 +90,9 @@ public class Constants {
     public static final String INFRAESTRUCTURA_FORMULARIO_JSON = "infraestructura.json";
     public static final String PERSONA_FORMULARIO_JSON = "persona.json";
     public static final String VISITA_FORMULARIO_JSON = "visita.json";
+
+    public static final String ORDENB_FORMULARIO_JSON = "ordenb.json";
+    public static final String ORDENC_FORMULARIO_JSON = "ordenc.json";
 
 
 }

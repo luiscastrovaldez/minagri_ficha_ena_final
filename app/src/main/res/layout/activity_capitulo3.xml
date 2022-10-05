@@ -10,6 +10,8 @@
         android:layout_height="wrap_content"
         android:fillViewport="false">
 
+
+
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/capitulo3"
@@ -18,6 +20,34 @@
             android:orientation="vertical"
             android:paddingLeft="40dp"
             android:paddingRight="40dp">
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CAPÍTULO III.  ÁREA TOTAL EN USOS Y COBERTURAS DE LA TIERRA DENTRO DE LA PARCELA, NÚMERO DE PARCELAS EN EL DISTRITO Y RÉGIMEN DE TENENCIA"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="301. Hoy, ¿Qué uso y/o cobertura de la tierra tienen los lotes de la parcela?" />
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/p301_opcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
 
             <View style="@style/Divider" />
 

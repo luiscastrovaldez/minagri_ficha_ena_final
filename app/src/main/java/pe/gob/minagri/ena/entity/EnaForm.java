@@ -12,7 +12,7 @@ public class EnaForm {
     @Property(nameInDb = "_id")
     private Long id;
 
-    private String ubicaciongGeografica;
+    private String ubicacionGeografica;
     private String capitulo1;
     private String capitulo2;
     private String capitulo3;
@@ -37,10 +37,10 @@ public class EnaForm {
     public EnaForm() {
     }
 
-    @Generated(hash = 1635816115)
-    public EnaForm(Long id, String ubicaciongGeografica, String capitulo1, String capitulo2, String capitulo3, String capitulo4, String capitulo5, String capitulo6, String capitulo7, String capitulo8, String capitulo9, String capitulo10, String capitulo11, String capitulo12, String json, String dni, String nroParcela, String segmentoEmpresa, String code) {
+    @Generated(hash = 619066911)
+    public EnaForm(Long id, String ubicacionGeografica, String capitulo1, String capitulo2, String capitulo3, String capitulo4, String capitulo5, String capitulo6, String capitulo7, String capitulo8, String capitulo9, String capitulo10, String capitulo11, String capitulo12, String json, String dni, String nroParcela, String segmentoEmpresa, String code) {
         this.id = id;
-        this.ubicaciongGeografica = ubicaciongGeografica;
+        this.ubicacionGeografica = ubicacionGeografica;
         this.capitulo1 = capitulo1;
         this.capitulo2 = capitulo2;
         this.capitulo3 = capitulo3;
@@ -205,18 +205,18 @@ public class EnaForm {
     }
 
     public String getUbicaciongGeografica() {
-        return ubicaciongGeografica;
+        return ubicacionGeografica;
     }
 
-    public void setUbicaciongGeografica(String ubicaciongGeografica) {
-        this.ubicaciongGeografica = ubicaciongGeografica;
+    public void setUbicacionGeografica(String ubicacionGeografica) {
+        this.ubicacionGeografica = ubicacionGeografica;
     }
 
     @Override
     public String toString() {
         return "EnaForm{" +
                 "id=" + id +
-                ", ubicaciongGeografica='" + ubicaciongGeografica + '\'' +
+                ", ubicacionGeografica='" + ubicacionGeografica + '\'' +
                 ", capitulo1='" + capitulo1 + '\'' +
                 ", capitulo2='" + capitulo2 + '\'' +
                 ", capitulo3='" + capitulo3 + '\'' +
@@ -235,6 +235,10 @@ public class EnaForm {
                 ", segmentoEmpresa='" + segmentoEmpresa + '\'' +
                 ", code='" + code + '\'' +
                 '}';
+    }
+
+    public String getUbicacionGeografica() {
+        return this.ubicacionGeografica;
     }
 }
 

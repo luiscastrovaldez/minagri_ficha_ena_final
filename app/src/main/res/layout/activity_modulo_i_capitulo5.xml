@@ -10,705 +10,590 @@
         android:layout_height="wrap_content"
         android:fillViewport="false">
 
-        <LinearLayout
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/noduloicapitulo5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TableLayout
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/subtitulo_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:gravity="center"
+                android:text="Módulo V.I.  BUENAS PRÁCTICAS PECUARIAS ENTRE ENERO DE 2020 HASTA EL DÍA DE ENTREVISTA "
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/table_layout_marginTop"
+                android:gravity="left"
+                android:text="530. ¿Qué tipo de alimentación brinda a los animales en esta unidad agraria?      (Nota: Selección múltiple, leer alternativas) " />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p531_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="1 ¿Pastoreo en pastos naturales?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p531_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="2 ¿Pastoreo en pastos cultivados?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p531_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="3 ¿Corte de pastos sembrados?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p531_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="4 ¿Heno?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p531_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="5 ¿Ensilaje?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p531_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="6 ¿Suplementos alimenticios?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p531_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="7 ¿Forraje verde hidropónico?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p531_8"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="8 Alimento balanceado?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p531_9"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="9 Otro:" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p530_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
                 android:gravity="center"
-                android:paddingLeft="@dimen/table_layout_padding_left"
-                android:paddingRight="@dimen/table_layout_padding_right"
-                android:stretchColumns="*">
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/tablerow_background_titulo"
-                    android:padding="@dimen/table_row_padding">
-
-                    <TextView
-                        style="@style/subtitulo_principal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_span="4"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="Módulo V.I.  BUENAS PRÁCTICAS PECUARIAS ENTRE ENERO DE 2020 HASTA EL DÍA DE ENTREVISTA "
-                        android:textAlignment="center" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <TextView
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:text="530. ¿Qué tipo de alimentación brinda a los animales en esta unidad agraria?      (Nota: Selección múltiple, leer alternativas) " />
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p531_1"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="1 ¿Pastoreo en pastos naturales?" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p531_2"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="2 ¿Pastoreo en pastos cultivados?" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p531_3"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="3 ¿Corte de pastos sembrados?" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p531_4"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="4 ¿Heno?" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p531_5"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="5 ¿Ensilaje?" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p531_6"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="6 ¿Suplementos alimenticios?" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-
-                    <CheckBox
-                        android:id="@+id/p531_7"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="7 ¿Forraje verde hidropónico?" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p531_8"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="8 Alimento balanceado?" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p531_9"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="9 Otro:" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <EditText
-                        android:id="@+id/p530_otro"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:hint="ESPECIFIQUE"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <TextView
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:text="531. ¿Cuál es la procedencia del  alimento balanceado que utiliza en la unidad agraria?" />
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <Spinner
-                        android:id="@+id/p531"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:prompt="@string/comunidad_prompt"
-                        tools:ignore="MissingConstraints" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <TextView
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:text="532. ¿Qué tipo de alimento balanceado utiliza?" />
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p532_1"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="1 ¿Peletizado?" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p532_2"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="2 ¿Harina?" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p532_3"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="3 ¿Otra?:" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <EditText
-                        android:id="@+id/p532_otro"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:hint="ESPECIFIQUE"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <TextView
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:text="533. ¿Qué tipo de insumos utiliza para la elaboración propia del alimento balanceado? " />
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_1"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="1 Alfalfa" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_2"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="2 Aceite hidrogenado de pescado" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_3"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="3 Alimento de maíz molido (Hominy Feed)" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_4"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="4 Avena forrajera" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_5"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="5 Broza de espárrago" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_6"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="6 Cebada" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_7"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="7 Harina de alfalfa" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_8"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="8 Harina de huesos" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_9"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="9 Harina de pescado" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_10"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="10 Hoja de camote" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_11"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="11 Forraje hidropónico de cebada" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_12"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="12 Leche descremada" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_13"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="13 Maíz amarillo duro" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_14"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="14 Maíz chala" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_15"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="15 Maíz panca" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_16"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="16 Melaza de caña" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_17"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="17 Orujo de cebada" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_18"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="18 Pasta de algodón" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_19"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="19 Polvillo de arroz" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_20"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="20 Sorgo" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_21"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="21 Subproducto de trigo" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_22"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="22 Premezcla" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_23"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="23 Mezcla" />
-
-                </TableRow>
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <CheckBox
-                        android:id="@+id/p533_24"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:checked="false"
-                        android:onClick="onCheckboxClicked"
-                        android:text="24 Otra:" />
-
-                </TableRow>
-
-                <TableRow
-                    android:background="@color/tablerow_background_contenido"
-                    android:padding="@dimen/table_row_padding">
-
-                    <EditText
-                        android:id="@+id/p533_otro"
-                        style="@style/titulo_pregunta"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:hint="ESPECIFIQUE"
-                        android:textAlignment="center" />
-                </TableRow>
-
-            </TableLayout>
+                android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="531. ¿Cuál es la procedencia del  alimento balanceado que utiliza en la unidad agraria?" />
+
+            <View style="@style/Divider" />
+
+
+            <Spinner
+                android:id="@+id/p531"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/comunidad_prompt"
+                tools:ignore="MissingConstraints" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="532. ¿Qué tipo de alimento balanceado utiliza?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p532_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="1 ¿Peletizado?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p532_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="2 ¿Harina?" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p532_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="3 ¿Otra?:" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p532_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
+            <TextView
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="533. ¿Qué tipo de insumos utiliza para la elaboración propia del alimento balanceado? " />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_1"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="1 Alfalfa" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_2"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="2 Aceite hidrogenado de pescado" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_3"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="3 Alimento de maíz molido (Hominy Feed)" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_4"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="4 Avena forrajera" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_5"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="5 Broza de espárrago" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_6"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="6 Cebada" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_7"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="7 Harina de alfalfa" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_8"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="8 Harina de huesos" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_9"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="9 Harina de pescado" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_10"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="10 Hoja de camote" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_11"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="11 Forraje hidropónico de cebada" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_12"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="12 Leche descremada" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_13"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="13 Maíz amarillo duro" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_14"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="14 Maíz chala" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_15"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="15 Maíz panca" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_16"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="16 Melaza de caña" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_17"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="17 Orujo de cebada" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_18"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="18 Pasta de algodón" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_19"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="19 Polvillo de arroz" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_20"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="20 Sorgo" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_21"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="21 Subproducto de trigo" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_22"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="22 Premezcla" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_23"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="23 Mezcla" />
+
+            <View style="@style/Divider" />
+
+
+            <CheckBox
+                android:id="@+id/p533_24"
+                style="@style/titulo_pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="24 Otra:" />
+
+            <View style="@style/Divider" />
+
+
+            <EditText
+                android:id="@+id/p533_otro"
+                style="@style/titulo_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:hint="ESPECIFIQUE"
+                android:inputType="textCapCharacters"
+                android:textAlignment="center" />
+
+            <View style="@style/Divider" />
+
+
         </LinearLayout>
     </ScrollView>
 
@@ -763,15 +648,6 @@
             fab:fab_label="@string/titulo_guardar"
             fab:fab_size="mini" />
 
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/validar5i"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_format_align_justify_24"
-            fab:fab_colorNormal="#045D04"
-            fab:fab_colorPressed="#045D04"
-            fab:fab_label="@string/titulo_validar"
-            fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/salirLoteCapitulo5i"
@@ -782,6 +658,7 @@
             fab:fab_colorPressed="#045D04"
             fab:fab_label="@string/titulo_salir"
             fab:fab_size="mini" />
+
 
     </com.github.clans.fab.FloatingActionMenu>
 </RelativeLayout>

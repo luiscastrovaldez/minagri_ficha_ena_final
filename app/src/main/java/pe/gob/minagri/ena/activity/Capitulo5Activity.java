@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.ListView;
 
 import java.util.List;
@@ -100,6 +101,17 @@ public class Capitulo5Activity extends AppCompatActivity {
 
         });
 
+    }
+
+    public void onCheckboxClicked(View view) {
+        // Is the view now checked?
+        boolean checked = ((CheckBox) view).isChecked();
+        // Check which checkbox was clicked
+
+        int index = 0;
+        switch (view.getId()) {
+
+        }
     }
 
 

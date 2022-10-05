@@ -31,23 +31,7 @@
 
             <View style="@style/Divider" />
 
-            <TextView
-                style="@style/titulo_pregunta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:text="301. Hoy, ¿Qué uso y/o cobertura de la tierra tienen los lotes de la parcela?" />
 
-            <View style="@style/Divider" />
-
-            <Spinner
-                android:id="@+id/p301_opcion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:prompt="@string/comunidad_prompt"
-                tools:ignore="MissingConstraints" />
-
-            <View style="@style/Divider" />
 
             <TextView
                 style="@style/titulo_pregunta"
@@ -81,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Cantidad" />
+                android:text="301b1 Cantidad" />
 
             <View style="@style/Divider" />
 
@@ -102,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Unidad de Medida" />
+                android:text="301b2 Unidad de Medida" />
 
             <View style="@style/Divider" />
 
@@ -120,7 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Equivalencia" />
+                android:text="301b3 Equivalencia" />
 
             <View style="@style/Divider" />
 
@@ -150,7 +134,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Cantidad" />
+                android:text="301c1 Cantidad" />
 
             <View style="@style/Divider" />
 
@@ -171,7 +155,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Unidad de Medida" />
+                android:text="301c2 Unidad de Medida" />
 
             <View style="@style/Divider" />
 
@@ -189,7 +173,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Equivalencia" />
+                android:text="301c3 Equivalencia" />
 
             <View style="@style/Divider" />
 

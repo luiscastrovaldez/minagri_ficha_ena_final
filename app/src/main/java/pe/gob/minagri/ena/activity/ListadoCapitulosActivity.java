@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -123,6 +124,9 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
     private Intent mapIntent;
     private ObjectMapper obj;
     private Ubigeo ubigeo;
+    private TextView num_total_parcelas_sm;
+    private String totalParcelas;
+    private ListView listadoFichas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,6 +137,7 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
         this.dni = mapIntent.getStringExtra(Constants.DNI);
         this.segmentoEmpresa = mapIntent.getStringExtra(Constants.SEGMENTO_EMPRESA);
         this.nroParcela = mapIntent.getStringExtra(Constants.NRO_PARCELA);
+        this.totalParcelas = mapIntent.getStringExtra("totalParcelas");
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -149,8 +154,8 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
         this.distritos = (Spinner) findViewById(R.id.distritos);
         this.centroPoblados = (Spinner) findViewById(R.id.centroPoblados);
         this.comunidad = (Spinner) findViewById(R.id.comunidad);
-
-
+        num_total_parcelas_sm = findViewById(R.id.num_total_parcelas_sm);
+        num_total_parcelas_sm.setText(this.totalParcelas);
         this.p101_1 = (CheckBox) findViewById(R.id.p101_1);
         this.p101_2 = (CheckBox) findViewById(R.id.p101_2);
         this.p101_3 = (CheckBox) findViewById(R.id.p101_3);
@@ -165,10 +170,11 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
         this.p101_12 = (CheckBox) findViewById(R.id.p101_12);
         this.p101_observaciones = (EditText) findViewById(R.id.p101_observaciones);
 
+
         if (this.p101_12.isChecked()) {
-            this.p101_observaciones.setEnabled(Boolean.TRUE);
+            this.p101_observaciones.setVisibility(View.VISIBLE);
         } else {
-            this.p101_observaciones.setEnabled(Boolean.FALSE);
+            this.p101_observaciones.setVisibility(View.GONE);
         }
 
         this.sqlHelper = new SqlHelper(getApplicationContext());
@@ -178,7 +184,7 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
 
         enviar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                /*
+
                 AlertDialog alertDialog = new AlertDialog.Builder(ListadoCapitulosActivity.this)
                         .setIcon(android.R.drawable.ic_dialog_info)
                         .setTitle("Enviar informacion Minagri")
@@ -187,7 +193,7 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                             @RequiresApi(api = Build.VERSION_CODES.O)
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela(segmentoEmpresa, nroParcela);
+                                enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela(segmentoEmpresa, nroParcela, dni);
                                 EnviarPost post = new EnviarPost(sqlHelper, enaForm);
                                 post.execute();
                                 //Toast.makeText(getApplicationContext(), "Se Envio la informacion Correctamente", Toast.LENGTH_SHORT).show();
@@ -199,7 +205,7 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "Cancelado", Toast.LENGTH_LONG).show();
                             }
                         })
-                        .show();*/
+                        .show();
             }
         });
         obternerFormulario();
@@ -215,7 +221,23 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                             @RequiresApi(api = Build.VERSION_CODES.O)
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
+                                //enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela(segmentoEmpresa, nroParcela, dni);
+                                //if (enaForm.getCapitulo1() != null) {
                                 guardarFormulario();
+                                listView.setVisibility(View.VISIBLE);
+
+                               /* } else {
+                                    AlertDialog alertDialog = new AlertDialog.Builder(ListadoCapitulosActivity.this)
+                                            .setIcon(android.R.drawable.ic_dialog_alert)
+                                            .setTitle(getResources().getString(R.string.titulo_informacion))
+                                            .setMessage(getResources().getString(R.string.titulo_alerta_sincronizando))
+                                            .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                                }
+                                            }).show();
+                                }*/
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -229,128 +251,6 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
         });
 
     }
-/*
-    private void cargandoInformacion() {
-        try {
-            long count = sqlHelper.countUbigeo();
-            if (count == 0) {
-                AlertDialog alertDialog = new AlertDialog.Builder(ListadoCapitulosActivity.this)
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .setTitle(getResources().getString(R.string.titulo_informacion))
-                        .setMessage(getResources().getString(R.string.titulo_alerta_sincronizando))
-                        .setPositiveButton(getResources().getString(R.string.si), new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                finish();
-                            }
-                        }).show();
-            } else {
-
-                enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela(segmentoEmpresa, nroParcela);
-                if (enaForm != null) {
-                    String json = enaForm.getCapitulo1();
-                    envio = obj.readValue(json, Envio.class);
-                    String p101Value = envio.getCapitulo1().getP101();
-                    p101 = new ArrayList<>(Arrays.asList(p101Value.split("\\s*,\\s*")));
-
-                    List<String> p101Values = Arrays.asList(p101Value.split("\\s*,\\s*"));
-
-                    if (p101Values.contains("1") || p101Values.contains("2") || p101Values.contains("3")) {
-                        noAgricola = Boolean.FALSE;
-                    } else {
-                        noAgricola = Boolean.TRUE;
-                    }
-                    if (!p101Values.isEmpty()) {
-                        listView.setVisibility(View.VISIBLE);
-                    } else {
-                        listView.setVisibility(View.GONE);
-                    }
-                    if (p101Values.contains("1")) {
-                        p101_1.setChecked(Boolean.TRUE);
-                    }
-                    if (p101Values.contains("2")) {
-                        p101_2.setChecked(Boolean.TRUE);
-                    }
-                    if (p101Values.contains("3")) {
-                        p101_3.setChecked(Boolean.TRUE);
-                    }
-                    if (p101Values.contains("4")) {
-                        p101_4.setChecked(Boolean.TRUE);
-                    }
-                    if (p101Values.contains("5")) {
-                        p101_5.setChecked(Boolean.TRUE);
-                    }
-                    if (p101Values.contains("6")) {
-                        p101_6.setChecked(Boolean.TRUE);
-                    }
-                    if (p101Values.contains("7")) {
-                        p101_7.setChecked(Boolean.TRUE);
-                    }
-                    if (p101Values.contains("8")) {
-                        p101_8.setChecked(Boolean.TRUE);
-                    }
-                    if (p101Values.contains("9")) {
-                        p101_9.setChecked(Boolean.TRUE);
-                    }
-                    if (p101Values.contains("10")) {
-                        p101_10.setChecked(Boolean.TRUE);
-                    }
-                    if (p101Values.contains("11")) {
-                        p101_11.setChecked(Boolean.TRUE);
-                    }
-                    if (p101Values.contains("12")) {
-                        p101_12.setChecked(Boolean.TRUE);
-                        noHabilitar();
-                    } else {
-                        habilitar();
-                    }
-                    p101_observaciones.setText(envio.getCapitulo1().getP101Observaciones());
-                }
-                ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
-                if (ubigeo != null) {
-                    txtUbigeo.setText(ubigeo.getCod_distrito());
-                    cod_region_natural = ubigeo.getCod_region_natural();
-                    cod_piso_ecologico = ubigeo.getCod_piso_ecologico();
-                    txtRegionNatural.setText(ubigeo.getRegion_natural());
-                    txtPisoEcologico.setText(ubigeo.getPiso_ecologico());
-                    txtSubEstrato.setText(ubigeo.getCod_subestrato());
-                    txtTipoGrilla.setText(ubigeo.getCod_tipo_grilla());
-                    txtNumeroSerpentin.setText(ubigeo.getCod_serpentin());
-                    geocodigo = ubigeo.getCod_geocodigo();
-                    txtGeocodigo.setText("UBICACIÓN GEOGRÁFICA DEL SEGMENTO Y LA PARCELA AGRARIA: " + ubigeo.getCod_segmento_empresa());
-                    txtSegmentoEmpresa.setText(ubigeo.getCod_segmento_empresa());
-                    txtNumeroParcela.setText(ubigeo.getNum_parcela_sm());
-                    txtTotalParcelas.setText(ubigeo.getNum_total_parcelas_sm());
-                    departamentos.setSelection(Util.getIndex(departamentos, ubigeo.getCod_departamento()));
-                    agregarProvincias(ubigeo.getCod_departamento());
-                    provincias.setSelection(Util.getIndex(provincias, ubigeo.getCod_provincia()));
-                    agregarDistritos(ubigeo.getCod_departamento(), ubigeo.getCod_provincia());
-                    distritos.setSelection(Util.getIndex(distritos, ubigeo.getCod_distrito()));
-                    agregarCentroPoblados(ubigeo.getCod_departamento(), ubigeo.getCod_provincia(), ubigeo.getCod_distrito(), segmentoEmpresa);
-                    agregarComunidad(ubigeo.getCod_departamento(), ubigeo.getCod_provincia(), ubigeo.getCod_distrito(), segmentoEmpresa);
-
-                    if (ubigeo.getCod_cn().isEmpty()) {
-                        txtCcCn = ubigeo.getCod_cc();
-                    } else {
-                        txtCcCn = ubigeo.getCod_cn();
-                    }
-                    comunidad.setSelection(Util.getIndex(comunidad, txtCcCn));
-                    centroPoblados.setSelection(Util.getIndex(centroPoblados, ubigeo.getCod_ccpp()));
-                    this.codDepartamento = ubigeo.getCod_departamento();
-                    this.codProvincia = ubigeo.getCod_provincia();
-                    this.codDistrito = ubigeo.getCod_distrito();
-                } else {
-                    Toast.makeText(this, "No existe Información para mostrar para la parcela " + segmentoEmpresa + " " + nroParcela, Toast.LENGTH_SHORT).show();
-                    finish();
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(this, "Error en la aplicacion " + e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-    }
-    */
-
 
     public void cargarListaCapitulos() {
         listView = findViewById(R.id.listView);
@@ -383,19 +283,19 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                 }
 
                 if (position == 6) {
-                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
+                    intent = new Intent(getApplicationContext(), Capitulo8Activity.class);
                 }
                 if (position == 7) {
-                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
+                    intent = new Intent(getApplicationContext(), Capitulo9Activity.class);
                 }
                 if (position == 8) {
-                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
+                    intent = new Intent(getApplicationContext(), Capitulo10Activity.class);
                 }
                 if (position == 9) {
-                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
+                    intent = new Intent(getApplicationContext(), Capitulo11Activity.class);
                 }
                 if (position == 10) {
-                    intent = new Intent(getApplicationContext(), Capitulo2Activity.class);
+                    intent = new Intent(getApplicationContext(), Capitulo12Activity.class);
                 }
                 intent.putExtra(Constants.DEPARTAMENTO, codDepartamento);
                 intent.putExtra(Constants.PROVINCIA, codProvincia);
@@ -409,7 +309,7 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
 
 
         });
-        listView.setVisibility(View.GONE);
+
     }
 
     class MyAdapter extends ArrayAdapter<String> {
@@ -680,7 +580,8 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
     }
 
     private void noHabilitar() {
-        p101_observaciones.setEnabled(Boolean.TRUE);
+        //p101_observaciones.setEnabled(Boolean.TRUE);
+        this.p101_observaciones.setVisibility(View.VISIBLE);
         p101_1.setClickable(Boolean.FALSE);
         p101_2.setClickable(Boolean.FALSE);
         p101_3.setClickable(Boolean.FALSE);
@@ -695,7 +596,8 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
     }
 
     private void habilitar() {
-        p101_observaciones.setEnabled(Boolean.FALSE);
+        //p101_observaciones.setEnabled(Boolean.FALSE);
+        this.p101_observaciones.setVisibility(View.GONE);
         p101_1.setClickable(Boolean.TRUE);
         p101_2.setClickable(Boolean.TRUE);
         p101_3.setClickable(Boolean.TRUE);
@@ -732,7 +634,7 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
 
         @RequiresApi(api = Build.VERSION_CODES.O)
         protected Void doInBackground(final String... args) {
-
+            String jsontTotal = "";
             try {
                 Thread.sleep(1000);
                 try {
@@ -745,9 +647,18 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                     System.out.println("enviar json =" + enaForm.getJson());
 
                     String path = Constants.PATH_MINAGRI + File.separator + enaForm.getSegmentoEmpresa() + enaForm.getNroParcela() + ".json";
-                    Files.write(Paths.get(path), enaForm.getJson().getBytes());
+                    jsontTotal = Util.loadData(getAssets(), Constants.FORMULARIO_JSON);
+                    jsontTotal = jsontTotal.replace("datos_generales_value", enaForm.getUbicaciongGeografica());
+                    jsontTotal = jsontTotal.replace("capitulo_1_value", enaForm.getCapitulo1());
+                    //jsontTotal = jsontTotal.replace("capitulo_2_value", enaForm.getCapitulo2());
+
+                    System.out.println("jsontTotal = " + jsontTotal);
+
+                    Files.write(Paths.get(path), jsontTotal.getBytes());
+
+
                     StringRequestEntity requestEntity = new StringRequestEntity(
-                            enaForm.getJson(),
+                            jsontTotal,
                             "application/json",
                             "UTF-8");
                     ;
@@ -840,7 +751,8 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
         formularioUbicacion = Util.loadData(getAssets(), Constants.UBICACION_FORMULARIO_JSON);
         formulario = Util.loadData(getAssets(), Constants.CAPITULO1_FORMULARIO_JSON);
 
-        ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+        //ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+        ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa);
         if (this.formularioUbicacion == null) {
             formularioUbicacion = Util.loadData(getAssets(), Constants.UBICACION_FORMULARIO_JSON);
         }
@@ -856,9 +768,10 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
             this.formularioUbicacion = this.formularioUbicacion.replace("cod_serpentin_value", ubigeo.getCod_serpentin());
             codDepartamento = ubigeo.getCod_departamento();
             codProvincia = ubigeo.getCod_provincia();
-            codDistrito = ubigeo.getDistrito();
-            this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", ubigeo.getNum_parcela_sm());
-            this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+            codDistrito = ubigeo.getCod_distrito();
+            this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", nroParcela);
+            //this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+            this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", num_total_parcelas_sm.getText());
             this.formularioUbicacion = this.formularioUbicacion.replace("cod_ccpp_value", ubigeo.getCod_ccpp());
             this.formularioUbicacion = this.formularioUbicacion.replace("cod_segmento_empresa_value", ubigeo.getCod_segmento_empresa());
             this.formularioUbicacion = this.formularioUbicacion.replace("cod_cc_cn_value", ubigeo.getCod_cn());
@@ -876,7 +789,8 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
             enaForm = new EnaForm();
         }
         this.formulario = this.formulario.replace("p101_value", String.join(",", p101));
-        enaForm.setUbicaciongGeografica(this.formularioUbicacion);
+        this.formulario = this.formulario.replace("fec_encuesta_value", (new Date().toString()));
+        enaForm.setUbicacionGeografica(this.formularioUbicacion);
         enaForm.setCapitulo1(this.formulario);
         enaForm.setSegmentoEmpresa(segmentoEmpresa);
         enaForm.setNroParcela(nroParcela);
@@ -913,7 +827,8 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                     this.formularioUbicacion = enaForm.getUbicaciongGeografica();
                     layout = findViewById(R.id.capitulo1);
 
-                    ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+                    //ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+                    ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa);
                     this.formularioUbicacion = this.formularioUbicacion.replace("cod_geocodigo_value", ubigeo.getCod_geocodigo());
                     this.formularioUbicacion = this.formularioUbicacion.replace("cod_ubigeo_value", ubigeo.getCod_geocodigo());
                     cod_region_natural = ubigeo.getCod_region_natural();
@@ -926,8 +841,9 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                     codDepartamento = ubigeo.getCod_departamento();
                     codProvincia = ubigeo.getCod_provincia();
                     codDistrito = ubigeo.getDistrito();
-                    this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", ubigeo.getNum_parcela_sm());
-                    this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+                    this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", nroParcela);
+                    //this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+                    this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", num_total_parcelas_sm.getText());
                     this.formularioUbicacion = this.formularioUbicacion.replace("cod_ccpp_value", ubigeo.getCod_ccpp());
                     this.formularioUbicacion = this.formularioUbicacion.replace("cod_segmento_empresa_value", ubigeo.getCod_segmento_empresa());
                     this.formularioUbicacion = this.formularioUbicacion.replace("cod_cc_cn_value", ubigeo.getCod_cn());
@@ -959,9 +875,10 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                         Util.setearInformacion(getResources(), view, this.formularioUbicacion);
                     }
 
-
+                    listView.setVisibility(View.VISIBLE);
                 } else {
-                    ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa, nroParcela);
+                    listView.setVisibility(View.GONE);
+                    ubigeo = sqlHelper.obtenerEmpresaByNroEmpresa(segmentoEmpresa);
                     if (this.formularioUbicacion == null) {
                         formularioUbicacion = Util.loadData(getAssets(), Constants.UBICACION_FORMULARIO_JSON);
                     }
@@ -978,8 +895,9 @@ public class ListadoCapitulosActivity extends AppCompatActivity {
                         codDepartamento = ubigeo.getCod_departamento();
                         codProvincia = ubigeo.getCod_provincia();
                         codDistrito = ubigeo.getDistrito();
-                        this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", ubigeo.getNum_parcela_sm());
-                        this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+                        this.formularioUbicacion = this.formularioUbicacion.replace("num_parcela_sm_value", nroParcela);
+                        //this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", ubigeo.getNum_total_parcelas_sm());
+                        this.formularioUbicacion = this.formularioUbicacion.replace("num_total_parcelas_sm_value", num_total_parcelas_sm.getText());
                         this.formularioUbicacion = this.formularioUbicacion.replace("cod_ccpp_value", ubigeo.getCod_ccpp());
                         this.formularioUbicacion = this.formularioUbicacion.replace("cod_segmento_empresa_value", ubigeo.getCod_segmento_empresa());
                         this.formularioUbicacion = this.formularioUbicacion.replace("cod_cc_cn_value", ubigeo.getCod_cn());

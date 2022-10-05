@@ -40,7 +40,7 @@ public class Capitulo3Activity extends AppCompatActivity {
     private SqlHelper sqlHelper;
     private FloatingActionButton guardar, lote, salir;
     private String formulario;
-    private Spinner p301d_unidad_segmento, p301d_unidad_parcela, p302, p304_um_parcela_2, p304_um_parcela_3, p304_um_parcela_4;
+    private Spinner p301_opcion, p301d_unidad_segmento, p301d_unidad_parcela, p302, p304_um_parcela_2, p304_um_parcela_3, p304_um_parcela_4;
 
     private CheckBox p305_1, p305_2, p305_3, p305_4, p305_5;
     private List<String> p305List;
@@ -66,7 +66,7 @@ public class Capitulo3Activity extends AppCompatActivity {
         p304_um_parcela_3 = findViewById(R.id.p304_um_parcela_3);
         p304_um_parcela_4 = findViewById(R.id.p304_um_parcela_4);
         p302 = findViewById(R.id.p302);
-
+        p301_opcion = (Spinner) findViewById(R.id.p301_opcion);
         formulario = Util.loadData(getAssets(), Constants.CAPITULO3_FORMULARIO_JSON);
         agregarUnidadMedidaParcela();
         agregarUnidadMedidaSegmento();
@@ -85,6 +85,37 @@ public class Capitulo3Activity extends AppCompatActivity {
         for (int i = 0; i < 20; i++) {
             lotes.add(i, "Lote " + (i + 1));
         }
+
+        agregarOpcion();
+        findViewById(R.id.p305_otro).setVisibility(View.GONE);
+        if (this.p305_5.isChecked()) {
+            findViewById(R.id.p305_otro).setVisibility(View.VISIBLE);
+        } else {
+            findViewById(R.id.p305_otro).setVisibility(View.GONE);
+        }
+
+
+        p302.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                // Get the spinner selected item text
+                Combo combo = (Combo) adapterView.getItemAtPosition(i);
+
+                if (combo.getId().equals("2")) {
+                    //findViewById(R.id.departamentos1).setVisibility(View.VISIBLE);
+
+                } else {
+                    //findViewById(R.id.departamentos1).setVisibility(View.GONE);
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(Capitulo3Activity.this, "No selection", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, lotes);
@@ -409,12 +440,44 @@ public class Capitulo3Activity extends AppCompatActivity {
             case R.id.p305_5:
                 if (checked) {
                     p305List.add("5");
+                    findViewById(R.id.p305_otro).setVisibility(View.VISIBLE);
                 } else {
                     if (p305List.contains("5")) {
                         p305List.remove("5");
+                        findViewById(R.id.p305_otro).setVisibility(View.GONE);
                     }
                 }
                 break;
         }
+    }
+
+    public void agregarOpcion() {
+
+        List<Combo> list = new ArrayList<>();
+
+        list.add(new Combo("0", "Seleccionar"));
+        list.add(new Combo("1", "1.Lote en cultivo transitorio a nivel de variedad"));
+        list.add(new Combo("2", "2.Lote en cultivo permanente a nivel de variedad"));
+        list.add(new Combo("3", "3.Lote en plantaciones forestales"));
+        list.add(new Combo("4", "4.Lote en pastos sembrados a nivel de variedad"));
+        list.add(new Combo("5", "5.Lote en barbecho"));
+        list.add(new Combo("6", "6.Lote en descanso"));
+        list.add(new Combo("7", "7.Lote en pastos naturales"));
+        list.add(new Combo("8", "8.Lote en matorrales"));
+        list.add(new Combo("9", "9.Lote en montes y bosques naturales"));
+        list.add(new Combo("10", "10.Lote en infraestructura agrícola"));
+        list.add(new Combo("11", "11.Lote en infraestructura pecuaria"));
+        list.add(new Combo("12", "12.Lote en infraestructura no agraria"));
+        list.add(new Combo("13", "13.Lote en afloramientos rocosos, áreas sin vegetación o erosionadas, eriazas"));
+        list.add(new Combo("14", "14.Lote en cuerpos de agua (quebradas, riachuelos, lagunas, qochas o reservorios de agua)"));
+        list.add(new Combo("15", "15.Lote en otros usos (vivienda, patio, piscina, cancha deportiva, etc.)"));
+
+
+        ArrayAdapter<Combo> dataAdapter = new ArrayAdapter<Combo>(this,
+                android.R.layout.simple_spinner_item, list);
+
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        p301_opcion.setAdapter(dataAdapter);
+
     }
 }

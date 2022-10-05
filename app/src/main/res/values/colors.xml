@@ -9,9 +9,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="colorPrimary">#056E4B</color>
-    <color name="colorPrimaryDark">#056E4B</color>
-    <color name="colorAccent">#056E4B</color>
-    <color name="black_overlay">#056E4B</color>
+    <color name="colorPrimaryDark">#E7EDEB</color>
+    <color name="colorAccent">#E5ECE9</color>
+    <color name="black_overlay">#EEF1F0</color>
     <color name="tablerow_background_titulo">#045D04</color>
     <color name="tablerow_background_contenido">#F9FAF9</color>
     <color name="tablerow_background_contenido_1">#A9DAA9</color>

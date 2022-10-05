@@ -79,7 +79,7 @@ public class ModuloJCapitulo5Activity extends AppCompatActivity {
         p534b_porcino_otro = findViewById(R.id.p534b_porcino_otro);
 
         guardar5j = findViewById(R.id.guardar5j);
-        validar5j = findViewById(R.id.validar5j);
+
         salirLoteCapitulo5j = findViewById(R.id.salirLoteCapitulo5j);
         p534bPollos = new ArrayList<>();
         p534bPavos = new ArrayList<>();
@@ -157,17 +157,7 @@ public class ModuloJCapitulo5Activity extends AppCompatActivity {
                         .show();
             }
         });
-        validar5j.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.O)
-            @Override
-            public void onClick(View view) {
-                if (!validarFormulario()) {
-                    guardarFormulario();
-                } else {
-                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.mensaje_error), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+
         enaForm = sqlHelper.obtenerEnaFormByNroEmpresaAndParcela(segmentoEmpresa, nroParcela, dni);
         if (enaForm != null) {
             String json = enaForm.getJson();
